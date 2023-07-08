@@ -1,0 +1,199 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 2.3vmin;
+  color: rgb(240, 18, 103);
+  user-select: none;
+}
+
+scene {
+  width: 1920px;
+  height: 1080px;
+  display: inline-block;
+  position: absolute;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+}
+
+/* Fudge Intro */
+dialog[type="splash"] {
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("Images/Splash.png");
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+dialog[type="splash"] > img#FudgeStoryLogo {
+  width: 35%;
+  display: block;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+
+/* Menu */
+
+.inGameMenu {
+  background: none;
+  border: none;
+}
+
+.inGameMenu button {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+  transition: all 0.3s ease 0s;
+}
+
+.inGameMenu button:hover {
+  background-color: rgb(123, 178, 218);
+  color: #fff;
+  transform:scale(1.5);
+}
+
+/* Choices */
+.choices {
+  border: none;
+  background: none;
+}
+
+.choices button {
+  background-color: white;
+  color: black;
+  border: 5px solid rgb(123, 178, 218);
+  cursor: pointer;
+  margin: 10px;
+  width: 250px;
+  height: 200px;
+  font-size: 16px;
+  padding: 10px 20px;
+  display: block;
+}
+
+.choices button:hover {
+  background-color: rgb(123, 178, 218);;
+  color: white;
+}
+
+/* SpeechContent */
+speech {
+  position: absolute;
+  display: block;
+  padding: 20px;
+  margin: 2vw;
+  left: 60px;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  height: 15%;
+  line-height: 1.5;
+  max-width: 40em;
+  border-radius: 1rem;
+}
+
+speech name {
+  font-size: 2vmin;
+  font-weight: bolder;
+  display: block;
+  color: rgb(123, 178, 218);
+  margin-bottom: 10px;
+}
+
+speech content {
+  color: black;
+  font-size: 1.7vmin;
+  position: absolute;
+  left: 40px;
+}
+
+speech input {
+  padding: 5px;
+  margin-top: 15px;
+  border: 5px black;
+}
+
+speech input:focus {
+  outline: none;
+}
+
+/* Novel Pages */
+
+dialog[type="text"] {
+  width: 100%;
+  height: 100%;
+  background-image: url("Images/Backgrounds/black.png");
+  background-size: 100% 100%; 
+}
+
+.newspaper {
+  width: 70%;
+  position: fixed;
+  left: 20%;
+  top: 35%
+}
+
+
+/* Metar-Bar */
+meter::-webkit-meter-bar {
+  background-color: #ececec;
+}
+
+meter[id="meterbar"] { 
+  position: absolute;
+  transform:rotate(-90deg);
+  bottom: 50%;
+  left: -14%;
+  width: 35%;
+  height: 10%;
+}
+
+meter[id="meterbar"]::-webkit-meter-optimum-value {
+  background-image: linear-gradient(
+    90deg, 
+    #8bcf69 5%, 
+    #e6d450 5%,
+    #e6d450 15%,
+    #f28f68 15%,
+    #f28f68 55%,
+    #cf82bf 55%,
+    #cf82bf 95%,
+    #719fd1 95%,
+    #719fd1 100%
+  );
+  /* background-color: #719fd1; */
+}
+
+input[id="lovepoints"] {
+  color: rgb(255, 248, 253);
+  background-color:rgb(155, 42, 95);
+  font-size: 11pt;
+  position: absolute;
+  left: 1.2%;
+  bottom: 19.5%;
+  width: 4%;
+}
