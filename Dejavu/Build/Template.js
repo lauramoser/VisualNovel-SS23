@@ -62,14 +62,21 @@ var Dejavu;
         //background Music
         packing: "/Dejavu/Audio/boxes.mp3",
         circus: "/Dejavu/Audio/circus-11794.mp3",
-        dejavu: "/Dejavu/Audio/dreamMusic.mp3",
+        dejavu: "/Dejavu/Audio/ambient-dream-16671.mp3",
+        crowdTalking: "/Dejavu/Audio/crowd-talking-138493.mp3",
+        divineroom: "/Dejavu/Audio/magical-background-6892.mp3",
+        badEnding: "/Dejavu/Audio/evil-cue-111895.mp3",
         //sounds
         cafePouring: "/Dejavu/Audio/pouring-coffee-6743.mp3",
+        fallingDown: "/Dejavu/Audio/person-knocked-down-14798.mp3",
+        phoneRinging: "/Dejavu/Audio/smartphone_vibrating_alarm_silent-7040.mp3",
+        phoneCalling: "/Dejavu/Audio/phone-calling-153844.mp3",
+        phoneMessage: "/Dejavu/Audio/notifications-sound-127856.mp3",
         //voices
         rosiLaughing: "/Dejavu/Audio/womenLaughing.mp3",
-        rosiWow: "/Dejavu/Audio/Wow.mp3",
         divineLaughing: "/Dejavu/Audio/wichtlaughing.mp3",
         RosaliaScreaming: "/Dejavu/Audio/loud-female-scream-41894.mp3",
+        wheeze: "/Dejavu/Audio/huff-and-puff-63816.mp3",
     };
     //Location
     Dejavu.locations = {
@@ -132,6 +139,18 @@ var Dejavu;
         MansionDreaming: {
             name: "MansionDreaming",
             background: "/Dejavu/Images/Backgrounds/MansionDreaming.png",
+        },
+        Divineroom: {
+            name: "Divine Room",
+            background: "/Dejavu/Images/Backgrounds/Divineroom.png",
+        },
+        Graveyard: {
+            name: "Graveyard",
+            background: "/Dejavu/Images/Backgrounds/Graveyard.png",
+        },
+        Psychiatry: {
+            name: "Psychiatry",
+            background: "/Dejavu/Images/Backgrounds/Psychatrie.png",
         },
     };
     //Characters
@@ -281,14 +300,32 @@ var Dejavu;
             // Act one
             { scene: Dejavu.home, name: "Arriving and Finding Diary" },
             //Act two
-            { scene: Dejavu.firstMorning, name: "Arriving and Finding Diary" },
+            { scene: Dejavu.firstMorning, id: "FirstMorning", name: "Arriving and Finding Diary" },
             { scene: Dejavu.arrivingAtHome, id: "ArrivingAtHome", name: "Back from the Flowergarden" },
             { scene: Dejavu.meetingPIC, id: "MeetingPIC", name: "Meeting your PIC" },
             //Act three
+            { scene: Dejavu.decisiveDream, id: "DecisiveDream", name: "The Crucial Dream" },
+            { scene: Dejavu.wakingUp, id: "WakingUp", name: "Deciding what to do" },
+            { scene: Dejavu.makingPlan, id: "MakingPlan", name: "How to find out what happened?" },
             //Act four
+            { scene: Dejavu.arrivingCircus, id: "ArrivingCircus", name: "Deciding who to ask first" },
+            { scene: Dejavu.directorFirst, id: "DirectorFirst", name: "Asking Director first" },
+            { scene: Dejavu.clownFirst, id: "ClownFirst", name: "Asking Divine first" },
+            { scene: Dejavu.divineFirst, id: "DivineFirst", name: "Asking Clown first" },
+            { scene: Dejavu.directorSeconde, id: "DirectorSeconde", name: "Asking Director seconde" },
+            { scene: Dejavu.clownSeconde, id: "ClownSeconde", name: "Asking Divine seconde" },
+            { scene: Dejavu.divineSeconde, id: "DivineSeconde", name: "Asking Clown seconde" },
+            { scene: Dejavu.finalDecision, id: "FinalDecision", name: "Deciding what happened" },
             //Endings
             { scene: Dejavu.badEnding, id: "BadEnding", name: "bad Ending" },
+            { scene: Dejavu.neutralEnding, id: "NeutralEnding", name: "neutral Ending" },
+            { scene: Dejavu.goodEnding, id: "GoodEnding", name: "good Ending" },
+            //Clues
+            { scene: Dejavu.clueOne, id: "ClueOne", name: "big fight with Rosalia and her Mother" },
+            { scene: Dejavu.clueThree, id: "ClueThree", name: "threatening letter" },
         ];
+        let uiElement = document.querySelector("[type=interface]");
+        Dejavu.dataForSave = Dejavu.ƒS.Progress.setData(Dejavu.dataForSave, uiElement);
         // start the sequence
         Dejavu.ƒS.Progress.go(scenes);
     }
@@ -313,9 +350,10 @@ var Dejavu;
         };
         //ClueOne
         Dejavu.ƒS.Speech.hide();
+        Dejavu.ƒS.Sound.play(Dejavu.sounds.dejavu, 0.5, true);
         await Dejavu.ƒS.Location.show(Dejavu.locations.MansionDreaming);
         await Dejavu.ƒS.update(2);
-        await Dejavu.ƒS.Character.show(Dejavu.characters.Rosalia, Dejavu.characters.Rosalia.pose.angry, Dejavu.ƒS.positionPercent(80, 90));
+        await Dejavu.ƒS.Character.show(Dejavu.characters.Rosalia, Dejavu.characters.Rosalia.pose.angry, Dejavu.ƒS.positionPercent(70, 90));
         await Dejavu.ƒS.update(0.5);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Rosalia, text.Rosalia.R1);
         await Dejavu.ƒS.Character.show(Dejavu.characters.RosaliasMother, Dejavu.characters.RosaliasMother.pose.angry, Dejavu.ƒS.positionPercent(30, 90));
@@ -330,9 +368,11 @@ var Dejavu;
         await Dejavu.ƒS.update(0.5);
         await Dejavu.ƒS.Character.hide(Dejavu.characters.Rosalia);
         await Dejavu.ƒS.update(0.5);
+        Dejavu.ƒS.Sound.fade(Dejavu.sounds.dejavu, 0, 1);
         await Dejavu.ƒS.Location.show(Dejavu.locations.Black);
         await Dejavu.ƒS.update(2);
         Dejavu.ƒS.Speech.hide();
+        return "FirstMorning";
     }
     Dejavu.clueOne = clueOne;
 })(Dejavu || (Dejavu = {}));
@@ -397,10 +437,14 @@ var Dejavu;
         Dejavu.ƒS.Speech.hide();
         await Dejavu.ƒS.Location.show(Dejavu.locations.Uni);
         await Dejavu.ƒS.update(1);
+        Dejavu.ƒS.Sound.play(Dejavu.sounds.crowdTalking, 0.5, true);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A1_S1_01);
+        Dejavu.ƒS.Sound.play(Dejavu.sounds.phoneRinging, 0.5, true);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A1_S1_02);
+        Dejavu.ƒS.Sound.fade(Dejavu.sounds.phoneRinging, 0, 1);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A1_S1_03);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A1_S1_04);
+        Dejavu.ƒS.Sound.fade(Dejavu.sounds.crowdTalking, 0, 1);
         await Dejavu.ƒS.Location.show(Dejavu.locations.Hallway);
         await Dejavu.ƒS.update(1);
         await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A1_S1_05);
@@ -424,10 +468,8 @@ var Dejavu;
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A1_S3_06);
         await Dejavu.ƒS.Character.hide(Dejavu.characters.Mom);
         await Dejavu.ƒS.update(1);
-        //Transition? Bild verschwommen mit Sound von zusammenpacken  await ƒS.Character.hideAll();
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A1_S4_01);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A1_S4_02);
-        // Item Tagebuch
         await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A1_S4_03);
         await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A1_S4_04);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A1_S4_05);
@@ -438,6 +480,7 @@ var Dejavu;
             case choicesTakeDiary.takeDiary:
                 Dejavu.dataForSave.lifepoints += 10;
                 await Dejavu.ƒS.Character.show(Dejavu.characters.Mom, Dejavu.characters.Mom.pose.smiling, Dejavu.ƒS.positionPercent(50, 90));
+                await Dejavu.ƒS.update(1);
                 await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A1_S5_01_A);
                 await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A1_S5_02_A);
                 await Dejavu.ƒS.Character.hide(Dejavu.characters.Mom);
@@ -451,7 +494,7 @@ var Dejavu;
                 await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A1_S5_04_A);
                 Dejavu.ƒS.Sound.play(Dejavu.sounds.rosiLaughing, 0.5);
                 await Dejavu.ƒS.Speech.tell("Rosi lesend", text.Rosi.A1_S5_05_A);
-                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A1_S5_06_A);
+                await Dejavu.ƒS.Speech.tell("Rosi lesend", text.Rosi.A1_S5_06_A);
                 await Dejavu.ƒS.Location.show(Dejavu.locations.Bedroom);
                 await Dejavu.ƒS.update(0);
                 await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A1_S5_07_A);
@@ -483,7 +526,7 @@ var Dejavu;
                 await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A1_S5_04_A);
                 Dejavu.ƒS.Sound.play(Dejavu.sounds.rosiLaughing, 0.5);
                 await Dejavu.ƒS.Speech.tell("Rosi lesend", text.Rosi.A1_S5_05_A);
-                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A1_S5_06_A);
+                await Dejavu.ƒS.Speech.tell("Rosi lesend", text.Rosi.A1_S5_06_A);
                 await Dejavu.ƒS.Location.show(Dejavu.locations.Bedroom);
                 await Dejavu.ƒS.update(0);
                 break;
@@ -498,40 +541,82 @@ var Dejavu;
         // SPEECH
         let text = {
             Narrator: {
-                A2_S1_01: "Du ziehst dich an um runter zu deiner Familie zu gehen",
+                A2_S9_04: "Du entscheidest dich dafür heute wieder etwas früher ins Bett zu gehen, der Tag hat dich doch mehr geschlaucht als du dachtest",
             },
             Rosi: {
-                A2_S1_03: "Ehm ja ich denke",
+                A2_S9_01: "Hallo Mama, ich bin wieder Zuhause.",
+                A2_S9_03: "Ja, ich liebe diesen Blumengarten wirklich sehr",
+                A2_S9_05: "Phu was für ein Tag, jetzt bin ich bereit fürs schlafen.",
+                R3: "Warte mal... du bist mir nicht sauer, obwohl du immer sagst, dass du die Geschichten von Opa nie gut fandest?",
+                R6: "Meinst du? Ich glaube für Opa waren seine Geschichten echt.",
+                R14: "Wow, das hab ich ja garnicht gewusst, das hört sich eigentlich nach einer schönen Liebesgeschichte an... Wenn es doch nicht so ein tragisches Ende gegeben hätte.",
+                R16: "Gute Nacht Mama",
             },
             Mom: {
-                A2_S1_02: "Guten Morgen Rosi, hast du gut geschlafen?",
-                A2_S1_04: "Soll ich dir etwas zum Frühstück vorbereiten?",
+                A2_S9_02: "Ah, Hallo mein Schatz, hattest du einen schönen Tag?",
+                M1: "Ich hab mich schon gewundert, das hätte ja beim aufräumen auftauchen sollen",
+                M2: "Hast du denn schon etwas über deine Urgroßmutter herausfinden können?",
+                M4: "Ach quatsch, das ist das Tagebuch deines Großvaters, da sind wahre Gefühle und Begebenheiten drin.",
+                M5: "Dein Opa hatte nur wilde Geschichten, die wenig mit der Wahrheit zu tun hatten.",
+                M7: "ja das stimmt natürlich mein Schatz, aber weißt du was wirklich echt war?",
+                M8: "Ich glaube mein Opa, also dein Urgroßvater, hat oft nicht gedacht, dass ich vieles nicht verstehe als ich noch klein war.",
+                M9: "Aber ich habe schon schnell verstanden, dass mein Opa und Rosalia sich für die Liebe und gegen die Familie entschieden haben.",
+                M10: "Soweit ich das weiß kam Rosalia aus gutem Hause und Opa war nur ein normaler Arbeiter, das hat zu der Zeit nicht wirklich zusammen gepasst.",
+                M11: "Ihre Mutter hat nach der Hochzeit nie wieder mehr ein Wort mit ihr gesprochen und wenn dann nur um sie zu überzeugen doch noch so einen komischen Kerl zu heiraten den die Familie irgendwie kannte.",
+                M12: "Wie hieß dieser Kerl nochmal?... Opa hat diesen Namen immer so mit Verachtung ausgesprochen.... Josua... nein Jak... nein Julius! Er hieß Julius genau!",
+                M13: "Wie manche Männer nun mal sind, hatten die beiden sogar einen Kampf um Rosalia... aber dieser Julius hat wohl nicht mit fairen Karten gespielt....",
+                M15: "Ja da hast du Recht, aber jetzt ab ins Bett mit dir",
             },
         };
         // CHOICES
-        let choicesbreakfast = {
-            nobreakfast: "Nein danke, ich habe gerade keinen großen Hunger",
-            apple: "nur einen Apfel bitte",
-            egg: "Ja gerne, würdest du mir ein Spiegelei zubereiten?",
+        let choicesTellDiary = {
+            tellMom: "Mama vom Tagebuch erzählen",
+            dontTellMom: "lieber nicht vom Tagebuch erzählen",
         };
-        //Zweiter Akt
+        //Seconde Act
         Dejavu.ƒS.Speech.hide();
-        await Dejavu.ƒS.Location.show(Dejavu.locations.Kitchen);
+        await Dejavu.ƒS.Location.show(Dejavu.locations.livingroom);
         await Dejavu.ƒS.update(2);
-        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A2_S1_01);
-        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A2_S1_02);
-        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S1_03);
-        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A2_S1_04);
-        let choicebreakfast = await Dejavu.ƒS.Menu.getInput(choicesbreakfast, "choices");
-        switch (choicebreakfast) {
-            case choicesbreakfast.egg:
-                Dejavu.dataForSave.lifepoints -= 10;
-                return "";
-            case choicesbreakfast.apple:
+        await Dejavu.ƒS.Character.show(Dejavu.characters.Mom, Dejavu.characters.Mom.pose.smiling, Dejavu.ƒS.positionPercent(50, 90));
+        await Dejavu.ƒS.update(1);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S9_01);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A2_S9_02);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S9_03);
+        let choiceTellDiary = await Dejavu.ƒS.Menu.getInput(choicesTellDiary, "choices");
+        switch (choiceTellDiary) {
+            case choicesTellDiary.tellMom:
                 Dejavu.dataForSave.lifepoints += 10;
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.M1);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.M2);
+                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.R3);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.M4);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.M5);
+                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.R6);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.M7);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.M8);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.M9);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.M10);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.M11);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.M12);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.M13);
+                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.R14);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.M15);
+                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.R16);
                 break;
-            case choicesbreakfast.nobreakfast:
+            case choicesTellDiary.dontTellMom:
+                Dejavu.dataForSave.lifepoints -= 10;
+                break;
         }
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A2_S9_04);
+        await Dejavu.ƒS.Character.hide(Dejavu.characters.Mom);
+        await Dejavu.ƒS.update(1);
+        await Dejavu.ƒS.Location.show(Dejavu.locations.Bedroom);
+        await Dejavu.ƒS.update(2);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S9_05);
+        Dejavu.ƒS.Speech.hide();
+        await Dejavu.ƒS.Location.show(Dejavu.locations.Black);
+        await Dejavu.ƒS.update(Dejavu.transitions.blinkClose.duration, Dejavu.transitions.blinkClose.alpha, Dejavu.transitions.blinkClose.edge);
+        return "DecisiveDream";
     }
     Dejavu.arrivingAtHome = arrivingAtHome;
 })(Dejavu || (Dejavu = {}));
@@ -555,7 +640,7 @@ var Dejavu;
                 A2_S3_08: "Mach ich, bis dann!",
                 A2_S4_09: "Endlich wieder hier, wie ich diesen Garten vermisst habe",
                 A2_S4_10: "Perfekt, meine Lieblingsbank ist frei",
-                A2_S5_14: "Oh hi <br>",
+                A2_S5_14: "Oh hi ",
                 A2_S5_16: "Ehm.... eigentlich würde ich gerne etwas Zeit für mich haben... sei mir nicht böse",
             },
             Mom: {
@@ -579,11 +664,12 @@ var Dejavu;
             portrait: "Ein Portrait von Rosalia",
             bee: "Die Biene die es sich gerade auf einer Rose bequem gemacht hat",
         };
-        //Zweiter Akt
+        //Seconde Act
         Dejavu.ƒS.Speech.hide();
         await Dejavu.ƒS.Location.show(Dejavu.locations.Bedroom);
         await Dejavu.ƒS.update(2);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A2_S2_01);
+        Dejavu.ƒS.Speech.hide();
         await Dejavu.ƒS.Location.show(Dejavu.locations.Kitchen);
         await Dejavu.ƒS.update(2);
         await Dejavu.ƒS.Character.show(Dejavu.characters.Mom, Dejavu.characters.Mom.pose.smiling, Dejavu.ƒS.positionPercent(50, 90));
@@ -610,8 +696,8 @@ var Dejavu;
                 await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A2_S4_11);
                 await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A2_S4_12);
                 //Drawing Choice
-                let choiceDraw1 = await Dejavu.ƒS.Menu.getInput(choicesDraw, "choices");
-                switch (choiceDraw1) {
+                let choiceDraw = await Dejavu.ƒS.Menu.getInput(choicesDraw, "choices");
+                switch (choiceDraw) {
                     case choicesDraw.portrait:
                         Dejavu.dataForSave.lifepoints -= 10;
                         break;
@@ -630,29 +716,23 @@ var Dejavu;
                 await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A2_S5_17);
                 await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A2_S5_18);
                 return "ArrivingAtHome";
-            case choicesBreakfast.apple || choicesBreakfast.nobreakfast:
+            case choicesBreakfast.apple:
                 Dejavu.dataForSave.lifepoints += 10;
                 await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S3_06);
                 await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A2_S3_07);
                 await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S3_08);
-                Dejavu.ƒS.Speech.hide();
                 await Dejavu.ƒS.Character.hide(Dejavu.characters.Mom);
                 await Dejavu.ƒS.update(1);
-                await Dejavu.ƒS.Location.show(Dejavu.locations.Flowergarden);
-                await Dejavu.ƒS.update(2);
-                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S4_09);
-                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S4_10);
-                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A2_S4_11);
-                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A2_S4_12);
-                let choiceDraw2 = await Dejavu.ƒS.Menu.getInput(choicesDraw, "choices");
-                switch (choiceDraw2) {
-                    case choicesDraw.portrait:
-                        Dejavu.dataForSave.lifepoints -= 10;
-                        break;
-                    case choicesDraw.bee:
-                        Dejavu.dataForSave.lifepoints += 10;
-                        break;
-                }
+                Dejavu.ƒS.Speech.hide();
+                return "MeetingPIC";
+            case choicesBreakfast.nobreakfast:
+                Dejavu.dataForSave.lifepoints += 10;
+                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S3_06);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A2_S3_07);
+                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S3_08);
+                await Dejavu.ƒS.Character.hide(Dejavu.characters.Mom);
+                await Dejavu.ƒS.update(1);
+                Dejavu.ƒS.Speech.hide();
                 return "MeetingPIC";
         }
     }
@@ -663,9 +743,335 @@ var Dejavu;
     async function meetingPIC() {
         console.log("meetingPIC scene: starting");
         // SPEECH
+        let text = {
+            Narrator: {
+                A2_S4_11: "Du setzt dich auf die Bank und nimmst einen großen Atemzug, um die Düfte der Blumen aufzunehmen",
+                A2_S4_12: "Du überlegst was du malen sollst?",
+                A2_S5_01: "Du bist so in dein Bild vertieft, dass dir gar nicht aufgefallen ist, dass sich jemand neben dich gesetzt.hat",
+                A2_S7_01_A: "du erzählst ihm alles was dir dein Opa über Rosalia erzählt hat und das sie plötzlich verschwunden ist.",
+            },
+            Rosi: {
+                A2_S4_09: "Endlich wieder hier, wie ich diesen Garten vermisst habe",
+                A2_S4_10: "Perfekt, meine Lieblingsbank ist frei",
+                A2_S5_02: "Huch...Ach du meine Güte hast du mich erschrocken!.... Wie lange sitzt du denn schon hier?",
+                A2_S5_05: "Vielleicht ein bisschen hihihihi... aber es freut mich dich zu sehen   ",
+                A2_S5_07_A: "Nein, das soll meine Urgroßmutter sein, ich sehe ihr nur sehr ähnlich, außer dass sie viel Hübscher ist als ich",
+                A2_S5_05_B: "Danke",
+                A2_S6_01_A: "Mein Opa ist gestern verstorben... dementsprechend bin ich eher etwas betrübt.",
+                A2_S6_03_A: "Ja schon, da ich seiner Mutter sehr ähnliche sehe hat er mich immer etwas bevorzugt.",
+                A2_S6_01_B: "ganz ok eigentlich, nichts besonderes... und wie geht es dir?",
+                A2_S7_02_B: "Gleichfalls, machs gut",
+                A2_S8_01: "30.August 1887. Rosalia musste heute etwas länger arbeiten, deswegen habe ich auf unseren kleinen Jungen aufgepasst. Um seiner Mutter etwas näher zu sein, haben wir uns dafür entschieden den Abend im Blumengarten zu verbringen und sie dort zu treffen. Wir haben gewartet und gewartet, doch sie kam nicht. Nach einer Weile, wurde unser Junge quenglig und müde und wir sind nach Hause gegangen.",
+                A2_S8_02: "Sie ist seitdem nicht nach Hause gekommen... Ich mache mir Sorgen. Ich hoffe Sie ist nicht mit diesem Julius abgehauen, das wird sie mir sonst noch büßen.",
+            },
+            PIC: {
+                A2_S5_03: "Schon ein Weile.... Ich hab dir ein bisschen beim zeichnen zu geschaut.",
+                A2_S5_04: "Ich hoffe du findest das jetzt nicht komisch",
+                A2_S5_06_A: "Bist du das auf deiner Zeichnung?",
+                A2_S5_08_A: "Ich finde dich auch sehr hübsch",
+                A2_S5_04_B: "mir gefällt deine Zeichnung, sieht sehr schön aus.",
+                A2_S5_09: "Wie geht es dir?",
+                A2_S6_02_A: "Oh das tut mir leid, mein herzliches Beileid... standest du ihm sehr nah?",
+                A2_S6_02_B: "auch ganz gut",
+                A2_S7_02_A: "Wow das klingt aber sehr spannend und nach einem großen Abenteuer.... Wenn du etwas Unterstützung brauchst, bin ich nur ein Anruf entfernt.",
+                A2_S7_03_A: "Ich würde dann aber wieder weiter gehen.. es war schön dich wieder zu sehen Rosi",
+                A2_S7_01_B: "Na dann, lass ich dich mal wieder alleine zeichnen... Hat mich gefreut dich wieder zu sehen Rosalia.",
+            },
+        };
         // CHOICES
+        let choicesDraw = {
+            portrait: "Ein Portrait von Rosalia",
+            bee: "Die Biene die es sich gerade auf einer Rose bequem gemacht hat",
+        };
+        let choicesCompliment = {
+            ignore: "ignorieren",
+            takeCompliment: "Danke, dass ist sehr nett von dir",
+        };
+        let choicesFeeling = {
+            ok: "alles ok",
+            grandpaDead: "Von Opas Tod erzählen",
+        };
+        let choicesDiary = {
+            dontTell: "nicht erzählen",
+            tell: "von Tagebuch erzählen",
+        };
+        let ChoicesDoingNext = {
+            readingDiary: "Tagebuch weiterlesen",
+            goHome: "nach Hause gehen",
+        };
+        document.getElementsByName("lovepoints").forEach(meterStuff => meterStuff.hidden = false);
+        //Seconde Act
+        Dejavu.ƒS.Speech.hide();
+        await Dejavu.ƒS.Location.show(Dejavu.locations.Flowergarden);
+        await Dejavu.ƒS.update(Dejavu.transitions.hearts.duration, Dejavu.transitions.hearts.alpha, Dejavu.transitions.hearts.edge);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S4_09);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S4_10);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A2_S4_11);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A2_S4_12);
+        let choiceDraw = await Dejavu.ƒS.Menu.getInput(choicesDraw, "choices");
+        switch (choiceDraw) {
+            case choicesDraw.portrait:
+                Dejavu.dataForSave.lifepoints -= 10;
+                break;
+            case choicesDraw.bee:
+                Dejavu.dataForSave.lifepoints += 10;
+                break;
+        }
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A2_S5_01);
+        await Dejavu.ƒS.Character.show(Dejavu.characters.PIC, Dejavu.characters.PIC.pose.normal, Dejavu.ƒS.positionPercent(50, 90));
+        await Dejavu.ƒS.update(1);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S5_02);
+        await Dejavu.ƒS.Speech.tell("stiller Beobachter", text.PIC.A2_S5_03);
+        await Dejavu.ƒS.Speech.tell("stiller Beobachter", text.PIC.A2_S5_04);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S5_05);
+        let name = await Dejavu.ƒS.Speech.getInput();
+        Dejavu.dataForSave.partnerInCrimeName = name;
+        Dejavu.characters.PIC.name = name;
+        switch (choiceDraw) {
+            case choicesDraw.portrait:
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A2_S5_06_A);
+                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S5_07_A);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A2_S5_08_A);
+                let choiceCompliment = await Dejavu.ƒS.Menu.getInput(choicesCompliment, "choices");
+                switch (choiceCompliment) {
+                    case choicesCompliment.ignore:
+                        break;
+                    case choicesCompliment.takeCompliment:
+                        Dejavu.dataForSave.lovepoints += 12.5;
+                        break;
+                }
+                break;
+            case choicesDraw.bee:
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A2_S5_04_B);
+                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S5_05_B);
+                break;
+        }
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A2_S5_09);
+        let choiceFeeling = await Dejavu.ƒS.Menu.getInput(choicesFeeling, "choices");
+        switch (choiceFeeling) {
+            case choicesFeeling.ok:
+                Dejavu.dataForSave.lifepoints -= 10;
+                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S6_01_B);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A2_S6_02_B);
+                break;
+            case choicesFeeling.grandpaDead:
+                Dejavu.dataForSave.lifepoints += 10;
+                Dejavu.dataForSave.lovepoints += 12.5;
+                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S6_01_A);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A2_S6_02_A);
+                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S6_03_A);
+                break;
+        }
+        let choiceDiary = await Dejavu.ƒS.Menu.getInput(choicesDiary, "choices");
+        switch (choiceDiary) {
+            case choicesDiary.dontTell:
+                Dejavu.dataForSave.lifepoints -= 10;
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A2_S6_02_B);
+                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S6_01_B + Dejavu.dataForSave.partnerInCrimeName + ".");
+                await Dejavu.ƒS.Character.hide(Dejavu.characters.PIC);
+                await Dejavu.ƒS.update(1);
+                Dejavu.ƒS.Speech.hide();
+                break;
+            case choicesDiary.tell:
+                Dejavu.dataForSave.lifepoints += 10;
+                Dejavu.dataForSave.lovepoints += 12.5;
+                await Dejavu.ƒS.Speech.tell(undefined, text.Narrator.A2_S7_01_A);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A2_S7_02_A);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A2_S7_03_A);
+                await Dejavu.ƒS.Character.hide(Dejavu.characters.PIC);
+                await Dejavu.ƒS.update(1);
+                Dejavu.ƒS.Speech.hide();
+                break;
+        }
+        let ChoiceDoingNext = await Dejavu.ƒS.Menu.getInput(ChoicesDoingNext, "choices");
+        switch (ChoiceDoingNext) {
+            case ChoicesDoingNext.goHome:
+                Dejavu.dataForSave.lifepoints -= 10;
+                return "ArrivingAtHome";
+            case ChoicesDoingNext.readingDiary:
+                Dejavu.dataForSave.lifepoints += 10;
+                await Dejavu.ƒS.Location.show(Dejavu.locations.FlowergardenDiary);
+                await Dejavu.ƒS.update(0);
+                await Dejavu.ƒS.Speech.tell("Rosi lesend", text.Rosi.A2_S8_01);
+                await Dejavu.ƒS.Speech.tell("Rosi lesend", text.Rosi.A2_S8_02);
+                Dejavu.ƒS.Speech.hide();
+                await Dejavu.ƒS.update(2);
+                return "ArrivingAtHome";
+        }
     }
     Dejavu.meetingPIC = meetingPIC;
+})(Dejavu || (Dejavu = {}));
+var Dejavu;
+(function (Dejavu) {
+    async function clueThree() {
+        console.log("clueThree scene: starting");
+        // SPEECH
+        let text = {
+            Narrator: {
+                A3_S13_13: "DU rufst gleich anch dem Gespräch PIC an um dich mit ihm im Blumengarten zu verabreden.",
+            },
+            Rosi: {
+                A3_S13_01: "Guten Morgen Mama",
+                A3_S13_03: "Oh ich hab geschrien?... Naja ich hatte mal wieder einen Alptraum, also nichts neues.",
+                A3_S13_04: "Du Mom, weißt du etwas über das Verschwinden von Urgroßmutter Rosalia?",
+                A3_S13_11: "Wow, das hab ich ja garnicht gewusst, das hört sich eigentlich nach einer schönen Liebesgeschichte an... Wenn es doch nicht so ein tragisches Ende gegeben hätte.",
+                A3_S13_13: "ja auf jeden Fall, danke Mama!!",
+            },
+            Mom: {
+                A3_S13_02: "Guten Morgen mein Schatz, geht es dir gut? Ich habe dich vorhin schreien hören",
+                A3_S13_05: "Phu, da wirbelst du aber was auf",
+                A3_S13_06: " weißt du mein Schatz, ich glaube mein Opa, also dein Urgroßvater, hat oft nicht gedacht, dass ich vieles nicht verstehe als ich noch klein war.",
+                A3_S13_07: "Aber ich habe schon schnell verstanden, dass mein Opa und Rosalia sich für die Liebe und gegen die Familie entschieden haben.",
+                A3_S13_08: "Soweit ich das weiß kam Rosalia aus gutem Hause und Opa war nur ein normaler Arbeiter, das hat zu der Zeit nicht wirklich zusammen gepasst.",
+                A3_S13_09: "Ihre Mutter hat nach der Hochzeit nie wieder mehr ein Wort mit ihr gesprochen und wenn dann nur um sie zu überzeugen doch noch so einen komischen Kerl zu heiraten den die Familie irgendwie kannte.",
+                A3_S13_10: "Wie hieß dieser Kerl nochmal?... Opa hat diesen Namen immer so mit Verachtung ausgesprochen.... Josua... nein Jak... nein Julius! Er hieß Julius genau!",
+                A3_S13_12: "Ja, das ist wohl richtig... Ich hoffe ich konnte dir etwas helfen."
+            },
+        };
+        //Third Act
+        Dejavu.ƒS.Speech.hide();
+        await Dejavu.ƒS.Location.show(Dejavu.locations.Kitchen);
+        await Dejavu.ƒS.update(2);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_01);
+        await Dejavu.ƒS.Character.show(Dejavu.characters.Mom, Dejavu.characters.Mom.pose.smiling, Dejavu.ƒS.positionPercent(50, 90));
+        await Dejavu.ƒS.update(1);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A3_S13_02);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_03);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_04);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A3_S13_05);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A3_S13_06);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A3_S13_07);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A3_S13_08);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A3_S13_09);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A3_S13_10);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_11);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A3_S13_12);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_13);
+        await Dejavu.ƒS.Character.hide(Dejavu.characters.Mom);
+        await Dejavu.ƒS.update(2);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A3_S13_13);
+        return "MakingPlan";
+    }
+    Dejavu.clueThree = clueThree;
+})(Dejavu || (Dejavu = {}));
+var Dejavu;
+(function (Dejavu) {
+    async function decisiveDream() {
+        console.log("desisiveDream scene: starting");
+        // SPEECH
+        let text = {
+            Narrator: {
+                A3_S10_03: "..........",
+            },
+            Rosalia: {
+                A3_S10_01: "Ich fühle mich heute richtig gut, das wird eine super Show!",
+                A3_S10_02: "Bevor die Gäste kommen übe ich noch einmal die letzte Drehung",
+                A3_S10_04: "Hilfe....Hilfe",
+            },
+            Unknown: {
+                A3_S10_05: "So wie du mit den Gefühlen anderer umgehst, hast du keine Hilfe verdient!",
+            },
+        };
+        //Third Act
+        Dejavu.ƒS.Speech.hide();
+        Dejavu.ƒS.Sound.play(Dejavu.sounds.dejavu, 0.5, true);
+        await Dejavu.ƒS.Location.show(Dejavu.locations.CircusDreaming);
+        await Dejavu.ƒS.update(2);
+        await Dejavu.ƒS.Character.show(Dejavu.characters.Rosalia, Dejavu.characters.Rosalia.pose.training_confident, Dejavu.ƒS.positionPercent(20, 90));
+        await Dejavu.ƒS.update(1);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Rosalia, text.Rosalia.A3_S10_01);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Rosalia, text.Rosalia.A3_S10_02);
+        await Dejavu.ƒS.Character.hide(Dejavu.characters.Rosalia);
+        await Dejavu.ƒS.update(1);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A3_S10_03);
+        Dejavu.ƒS.Sound.fade(Dejavu.sounds.dejavu, 0, 1);
+        Dejavu.ƒS.Sound.play(Dejavu.sounds.RosaliaScreaming, 0.5);
+        Dejavu.ƒS.Sound.play(Dejavu.sounds.fallingDown, 0.5);
+        Dejavu.ƒS.Sound.play(Dejavu.sounds.dejavu, 0.5, true);
+        await Dejavu.ƒS.Character.show(Dejavu.characters.Rosalia, Dejavu.characters.Rosalia.pose.traning_sad, Dejavu.ƒS.positionPercent(20, 90));
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Rosalia + "flüsternd", text.Rosalia.A3_S10_04);
+        await Dejavu.ƒS.Speech.tell("???", text.Unknown.A3_S10_05);
+        Dejavu.ƒS.Sound.fade(Dejavu.sounds.dejavu, 0, 1);
+        await Dejavu.ƒS.Location.show(Dejavu.locations.Black);
+        await Dejavu.ƒS.update(2);
+        Dejavu.ƒS.Speech.hide();
+        return "WakingUp";
+    }
+    Dejavu.decisiveDream = decisiveDream;
+})(Dejavu || (Dejavu = {}));
+var Dejavu;
+(function (Dejavu) {
+    async function makingPlan() {
+        console.log("MakingPlan scene: starting");
+        // SPEECH
+        let text = {
+            PIC: {
+                A3_S13_01: "Hallo Rosi",
+                A3_S13_03: "Wo sollen wir anfangen? Hast du schon eine Idee wie wir das Geheimnis lüften können?",
+                A3_S13_06: "hmm komisch, war sie Tänzerin?",
+                A3_S13_09: "Los dann ruf sie gleich an",
+                A3_S13_16: "Schau mal da steht der Name vom Zirkus",
+                A3_S13_17: "Irgendwie kommt mir der bekannt vor....",
+                A3_S13_18: "AHHH ich weiß, die sind noch bis heute in der Stadt",
+            },
+            Rosi: {
+                A3_S13_02: "Hallo",
+                A3_S13_04: "In meinem Traum ist sie von etwas runtergestürzt...",
+                A3_S13_05: "Und sie meinte sie übt die letzte Drehung nochmal",
+                A3_S13_07: "Opa hat mir mal was erzählt, dass sich Rosalia oben in der Luft am wohlsten gefühlt hat",
+                A3_S13_11: "Nein, alles gut Mama... aber ich hab da eine Frage. Weißt du ob Großmutter Rosalia getanzt hat?",
+                A3_S13_14: "Danke Mama, du bist die BESTE!",
+                A3_S13_15: "Wow, das ging aber schnell, das ist also das Bild.",
+                A3_S13_19: "Wirklich? Das ist ja perfekt.... Lass uns gleich hingehen"
+            },
+            Mom: {
+                A3_S13_10: "Hallo, Rosi, ist etwas passiert?",
+                A3_S13_12: "Hmm da muss ich nachdenken. Ich glaube Rosalia hat früher in einem Zirkus gearbeitet.",
+                A3_S13_13: "Ich habe noch einen alten Zeitungsartikel von ihr, als sie einen Auftritt als Seiltänzerin hatte. Ich schick dir das Bild, wenn ich es gefunden habe."
+            },
+        };
+        //Third Act
+        Dejavu.ƒS.Speech.hide();
+        await Dejavu.ƒS.Location.show(Dejavu.locations.Flowergarden);
+        await Dejavu.ƒS.update(Dejavu.transitions.hearts.duration, Dejavu.transitions.hearts.alpha, Dejavu.transitions.hearts.edge);
+        await Dejavu.ƒS.Character.show(Dejavu.characters.PIC, Dejavu.characters.PIC.pose.normal, Dejavu.ƒS.positionPercent(50, 90));
+        await Dejavu.ƒS.update(2);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A3_S13_01);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_02 + Dejavu.dataForSave.partnerInCrimeName);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A3_S13_03);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_04);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_05);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A3_S13_06);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_07);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A3_S13_09);
+        Dejavu.ƒS.Sound.play(Dejavu.sounds.phoneCalling, 0.5);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A3_S13_10);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_11);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A3_S13_12);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A3_S13_13);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_14);
+        Dejavu.ƒS.Sound.play(Dejavu.sounds.phoneMessage, 0.5);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_15);
+        await Dejavu.ƒS.Location.show(Dejavu.locations.FlowergardenHandy);
+        await Dejavu.ƒS.update(0);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A3_S13_16);
+        await Dejavu.ƒS.Character.hide(Dejavu.characters.PIC);
+        await Dejavu.ƒS.update(0);
+        await Dejavu.ƒS.Character.show(Dejavu.characters.PIC, Dejavu.characters.PIC.pose.unsure, Dejavu.ƒS.positionPercent(50, 90));
+        await Dejavu.ƒS.update(0);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A3_S13_17);
+        await Dejavu.ƒS.Character.hide(Dejavu.characters.PIC);
+        await Dejavu.ƒS.update(0);
+        await Dejavu.ƒS.Character.show(Dejavu.characters.PIC, Dejavu.characters.PIC.pose.havingAnIdea, Dejavu.ƒS.positionPercent(50, 90));
+        await Dejavu.ƒS.update(0);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A3_S13_18);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_19);
+        await Dejavu.ƒS.Character.hide(Dejavu.characters.PIC);
+        await Dejavu.ƒS.update(1);
+        Dejavu.ƒS.Speech.hide();
+        return "ArrivingCircus";
+    }
+    Dejavu.makingPlan = makingPlan;
 })(Dejavu || (Dejavu = {}));
 var Dejavu;
 (function (Dejavu) {
@@ -679,6 +1085,293 @@ var Dejavu;
         await Dejavu.ƒS.Text.print("Hi");
     }
     Dejavu.neutralEnding = neutralEnding;
+})(Dejavu || (Dejavu = {}));
+var Dejavu;
+(function (Dejavu) {
+    async function wakingUp() {
+        console.log("wakingUp scene: starting");
+        // SPEECH
+        let text = {
+            Narrator: {
+                A3_S11_01: "Nachdem du dich entschieden hast, dieses Abenteuer erst",
+                A3_S12_01: "Du rufst PIC an und erzählst im von deinem Traum und deinem Vorhaben, dass Geheimnis von dem Verschwinden deiner Urgroßmutter zu lüften",
+            },
+            Rosi: {
+                A3_S11_01: "W... W...Was.... war das?",
+                A3_S11_02: "Mir tut alles weh",
+                A3_S11_03: "Das können doch nicht nur Träume sein???",
+                A3_S11_04: "Das war eindeutig Rosalia die da gefallen ist!... Aber wer war diese dunkle Gestalt?",
+                A3_S11_05: "Ich muss herausfinden was wirklich passiert ist!....",
+            },
+            PIC: {
+                A3_S12_01: "Da bin ich sowas von dabei, sollen wir uns gleich treffen?",
+            }
+        };
+        // CHOICES
+        let ChoicesDoingNext = {
+            withPIC: "...aber das schaffe ich nicht alleine, am besten rufe ich" +
+                Dejavu.dataForSave.partnerInCrimeName +
+                "an",
+            alone: "...am besten alleine, das glaubt mir ja niemand!",
+            tooLong: "...oder nein, das ist alles schon viel zu lange her",
+        };
+        let ChoicesMeeting = {
+            no: "Ich muss mich erstmal von diesem Schreck erholen. " +
+                Dejavu.dataForSave.partnerInCrimeName +
+                "an",
+            yes: "Ja auf jeden Fall, der Blumengarten?",
+        };
+        //Third Act
+        Dejavu.ƒS.Speech.hide();
+        await Dejavu.ƒS.Location.show(Dejavu.locations.Bedroom);
+        await Dejavu.ƒS.update(Dejavu.transitions.swirl.duration, Dejavu.transitions.swirl.alpha, Dejavu.transitions.swirl.edge);
+        Dejavu.ƒS.Sound.play(Dejavu.sounds.wheeze, 0.5, true);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S11_01);
+        Dejavu.ƒS.Sound.fade(Dejavu.sounds.wheeze, 0, 1);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S11_02);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S11_03);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S11_04);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S11_05);
+        let ChoiceDoingNext = await Dejavu.ƒS.Menu.getInput(ChoicesDoingNext, "choices");
+        switch (ChoiceDoingNext) {
+            case ChoicesDoingNext.withPIC:
+                Dejavu.dataForSave.lifepoints += 10;
+                Dejavu.dataForSave.lovepoints += 12.5;
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A3_S12_01);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A3_S12_01);
+                let ChoiceMeeting = await Dejavu.ƒS.Menu.getInput(ChoicesMeeting, "choices");
+                switch (ChoiceMeeting) {
+                    case ChoicesMeeting.no:
+                        Dejavu.dataForSave.lifepoints += 10;
+                        return "ClueThree";
+                    case ChoicesMeeting.yes:
+                        Dejavu.dataForSave.lifepoints -= 10;
+                        Dejavu.dataForSave.lovepoints += 12.5;
+                        return "MakingPlan";
+                }
+            case ChoicesDoingNext.alone:
+                Dejavu.dataForSave.lifepoints -= 10;
+                return "ClueThree";
+            case ChoicesDoingNext.tooLong:
+                return "NeutralEnding";
+        }
+    }
+    Dejavu.wakingUp = wakingUp;
+})(Dejavu || (Dejavu = {}));
+var Dejavu;
+(function (Dejavu) {
+    async function specialScene() {
+        console.log("specialScene: starting");
+    }
+    Dejavu.specialScene = specialScene;
+})(Dejavu || (Dejavu = {}));
+var Dejavu;
+(function (Dejavu) {
+    async function arrivingCircus() {
+        console.log("ArrivingCircus scene: starting");
+        // SPEECH
+        let text = {
+            PIC: {
+                A3_S14_02: "Echt? ich war früher immer mit meiner Familie",
+                A3_S14_04: "Beim Zirkus sind immer die spannendsten Menschen.. Ich würde sagen, dass wir die Leute hier befragen, ob sie etwas von einem Tod einer Seiltänzerin wissen",
+                A3_S14_06: "Wen wollen wir als erstes Fragen?",
+            },
+            Rosi: {
+                A3_S14_01: "Wow ich war noch nie im Zirkus.",
+                A3_S14_03: "Und wie wollen wir hier jetzt etwas herausfinden?",
+                A3_S14_05: "Ich bin mir unsicher, ich glaube nicht, dass jeder auf diese Frage gut reagiert... aber ich vertraue dir",
+            },
+        };
+        // CHOICES
+        let choicesAskingFirst = {
+            Clown: "Clown",
+            Director: "Direktor",
+            Divine: "Wahrsagerin",
+        };
+        //Fourth Act
+        Dejavu.ƒS.Speech.hide();
+        await Dejavu.ƒS.Location.show(Dejavu.locations.CircusNow);
+        await Dejavu.ƒS.update(2);
+        Dejavu.ƒS.Sound.play(Dejavu.sounds.circus, 0.5, true);
+        await Dejavu.ƒS.Character.show(Dejavu.characters.PIC, Dejavu.characters.PIC.pose.normal, Dejavu.ƒS.positionPercent(50, 90));
+        await Dejavu.ƒS.update(2);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S14_01);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A3_S14_02);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S14_03);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A3_S14_04);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S14_05);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A3_S14_06);
+        let choiceAskingFirst = await Dejavu.ƒS.Menu.getInput(choicesAskingFirst, "choices");
+        switch (choiceAskingFirst) {
+            case choicesAskingFirst.Clown:
+                Dejavu.dataForSave.lifepoints += 10;
+                Dejavu.ƒS.Sound.fade(Dejavu.sounds.circus, 0, 1);
+                await Dejavu.ƒS.Character.hide(Dejavu.characters.PIC);
+                return "ClownFirst";
+            case choicesAskingFirst.Director:
+                Dejavu.ƒS.Sound.fade(Dejavu.sounds.circus, 0, 1);
+                await Dejavu.ƒS.Character.hide(Dejavu.characters.PIC);
+                return "DirectorFirst";
+            case choicesAskingFirst.Divine:
+                Dejavu.dataForSave.lifepoints -= 10;
+                Dejavu.dataForSave.lovepoints += 12.5;
+                Dejavu.ƒS.Sound.fade(Dejavu.sounds.circus, 0, 1);
+                await Dejavu.ƒS.Character.hide(Dejavu.characters.PIC);
+                return "DivineFirst";
+        }
+    }
+    Dejavu.arrivingCircus = arrivingCircus;
+})(Dejavu || (Dejavu = {}));
+var Dejavu;
+(function (Dejavu) {
+    async function finalDecision() {
+        console.log("finalDecision: starting");
+    }
+    Dejavu.finalDecision = finalDecision;
+})(Dejavu || (Dejavu = {}));
+var Dejavu;
+(function (Dejavu) {
+    async function clownFirst() {
+        console.log("divineFirst: starting");
+    }
+    Dejavu.clownFirst = clownFirst;
+})(Dejavu || (Dejavu = {}));
+var Dejavu;
+(function (Dejavu) {
+    async function clownSeconde() {
+        console.log("clownSeconde: starting");
+    }
+    Dejavu.clownSeconde = clownSeconde;
+})(Dejavu || (Dejavu = {}));
+var Dejavu;
+(function (Dejavu) {
+    async function directorFirst() {
+        console.log("divineFirst: starting");
+    }
+    Dejavu.directorFirst = directorFirst;
+})(Dejavu || (Dejavu = {}));
+var Dejavu;
+(function (Dejavu) {
+    async function directorSeconde() {
+        console.log("directorSeconde: starting");
+    }
+    Dejavu.directorSeconde = directorSeconde;
+})(Dejavu || (Dejavu = {}));
+var Dejavu;
+(function (Dejavu) {
+    async function divineFirst() {
+        console.log("divineFirst: starting");
+        // SPEECH
+        let text = {
+            Rosi: {
+                R1: "Hallo ist hier jemand?",
+                R4: " Wie bitte?... Ich kenne sie doch garnicht?",
+                R11_A: "Was ist denn jetzt los?",
+                P10_B: "Oh mein Gott du hast recht... irgendwie kam das einfach so aus mir raus",
+                P14_B: "Oh.. hihihi... danke",
+            },
+            PIC: {
+                P6: "Nein nein, ihr Name ist Rosalia... sie haben Recht... aber woher wissen sie das?",
+                P12_A: "Ich glaube die ist verrückt!",
+                P9_B: "Rosi, das kann doch nicht die wichtigste Frage gerade sein?",
+                P15_B: "<i>erötet</i>",
+                P16: "Wen möchtest du als nächstes Fragen?",
+                P17: "Ich glaube aber, dass wir nur noch eine Person fragen können...der Zirkus macht bald zu.",
+            },
+            Divine: {
+                D2: "Hallo liebe Gäste, kommt herein.",
+                D3: "Huch, Rosalia was machst du denn hier?",
+                D5: "Oh Entschuldigung, da muss ich mich wohl vertan haben.",
+                D7: "Ich weiß viel... Das Wissen meiner Ahnen wurde an mich weitergegeben.",
+                D8: "Ihr könnt mir genau eine Frage stellen... also überlegt gut",
+                D9_A: "Ich sehe einen jungen Mann... viel Hass steckt in ihm drin... sehr viel Hass....Er ist umgeben von Seilen...Oh da bricht die Verbindung ab....",
+                D10_A: "Da will wohl jemand nicht, dass ich da weiter in der Vergangenheit schnüffle",
+                D13_A: "HÖRT AUF IN DER VERGANGENHEIT HERUM ZU WÜHLEN! SONST SEIT IHR DIE NÄCHSTEN..... ODER SOLLTE ICH EHER SAGEN IHR SEIT DIE NÄCHSTEN",
+                P11_B: "man wählt immer das zuerst was einem am wichtigsten ist",
+                P12_B: "Lass uns mal schauen, was die Kugel sagt",
+                P13_B: "Oh, wie es scheint hast du deine große Liebe schon kennen gelernt... und ich glaube ihr seit bereits dabei ein großes Abenteuer zu erleben.... Du scheinst deiner Urgroßmutter doch ähnlicher zu sein als du glaubst",
+                P16_B: "So ihr habt eure Frage gewählt. Viel Spaß noch bei eurem Besuch unseres Zirkus.",
+            },
+        };
+        // CHOICES
+        let choicesAskingDivine = {
+            trueLove: "Wer ist meine große Liebe",
+            lookingInPast: "Kannst du zurück an den Todestag meiner Urgroßmutter?",
+            reasonOfDeath: "Weißt du warum Rosalia umgebracht wurde?",
+        };
+        let choicesAskingSeconde = {
+            Clown: "Clown",
+            Director: "Director",
+        };
+        //ClueOne
+        Dejavu.ƒS.Speech.hide();
+        Dejavu.ƒS.Sound.play(Dejavu.sounds.divineroom, 0.5, true);
+        await Dejavu.ƒS.Location.show(Dejavu.locations.Divineroom);
+        await Dejavu.ƒS.update(2);
+        await Dejavu.ƒS.Character.show(Dejavu.characters.PIC, Dejavu.characters.PIC.pose.unsure, Dejavu.ƒS.positionPercent(70, 90));
+        await Dejavu.ƒS.update(2);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.R1);
+        await Dejavu.ƒS.Character.show(Dejavu.characters.Diviner, Dejavu.characters.Diviner.pose.normal, Dejavu.ƒS.positionPercent(30, 90));
+        await Dejavu.ƒS.update(1);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Diviner, text.Divine.D2);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Diviner, text.Divine.D3);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.R4);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Diviner, text.Divine.D5);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.P6);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Diviner, text.Divine.D7);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Diviner, text.Divine.D8);
+        let choiceAskingDivine = await Dejavu.ƒS.Menu.getInput(choicesAskingDivine, "choices");
+        switch (choiceAskingDivine) {
+            case choicesAskingDivine.lookingInPast:
+                Dejavu.ƒS.Sound.fade(Dejavu.sounds.divineroom, 0, 1);
+                Dejavu.ƒS.Sound.play(Dejavu.sounds.badEnding, 0.5, true);
+                await Dejavu.ƒS.Character.hide(Dejavu.characters.Diviner);
+                await Dejavu.ƒS.Character.show(Dejavu.characters.Diviner, Dejavu.characters.Diviner.pose.trance, Dejavu.ƒS.positionPercent(30, 90));
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Diviner, text.Divine.D9_A);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Diviner, text.Divine.D10_A);
+                Dejavu.ƒS.Sound.play(Dejavu.sounds.divineLaughing, 0.5);
+                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.R11_A);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.P12_A);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Diviner, text.Divine.D13_A);
+                await Dejavu.ƒS.Location.show(Dejavu.locations.Black);
+                await Dejavu.ƒS.update(Dejavu.transitions.swirl.duration, Dejavu.transitions.swirl.alpha, Dejavu.transitions.swirl.edge);
+                Dejavu.ƒS.Speech.hide();
+                return "BadEnding";
+            case choicesAskingDivine.reasonOfDeath:
+                break;
+            case choicesAskingDivine.trueLove:
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.P9_B);
+                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.P10_B);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Diviner, text.Divine.P11_B);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Diviner, text.Divine.P12_B);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Diviner, text.Divine.P13_B);
+                await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.P14_B);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.P15_B);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Diviner, text.Divine.P16_B);
+                break;
+        }
+        await Dejavu.ƒS.Character.hide(Dejavu.characters.Diviner);
+        Dejavu.ƒS.Speech.hide();
+        await Dejavu.ƒS.Location.show(Dejavu.locations.CircusNow);
+        await Dejavu.ƒS.update(2);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.P16);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.P17);
+        let choiceAskingSeconde = await Dejavu.ƒS.Menu.getInput(choicesAskingSeconde, "choices");
+        switch (choiceAskingSeconde) {
+            case choicesAskingSeconde.Clown:
+                return "ClownSeconde";
+            case choicesAskingSeconde.Director:
+                return "DirectorSeconde";
+        }
+    }
+    Dejavu.divineFirst = divineFirst;
+})(Dejavu || (Dejavu = {}));
+var Dejavu;
+(function (Dejavu) {
+    async function divineSeconde() {
+        console.log("divineSeconde: starting");
+    }
+    Dejavu.divineSeconde = divineSeconde;
 })(Dejavu || (Dejavu = {}));
 var Dejavu;
 (function (Dejavu) {

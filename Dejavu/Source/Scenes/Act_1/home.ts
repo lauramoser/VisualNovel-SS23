@@ -104,11 +104,14 @@ namespace Dejavu {
     ƒS.Speech.hide();
     await ƒS.Location.show(locations.Uni);
     await ƒS.update(1);
+    ƒS.Sound.play(sounds.crowdTalking, 0.5, true);
     await ƒS.Speech.tell(characters.Narrator, text.Narrator.A1_S1_01);
+    ƒS.Sound.play(sounds.phoneRinging, 0.5, true);
     await ƒS.Speech.tell(characters.Narrator, text.Narrator.A1_S1_02);
+    ƒS.Sound.fade(sounds.phoneRinging,0,1);
     await ƒS.Speech.tell(characters.Narrator, text.Narrator.A1_S1_03);
     await ƒS.Speech.tell(characters.Narrator, text.Narrator.A1_S1_04);
-
+    ƒS.Sound.fade(sounds.crowdTalking, 0, 1);
     await ƒS.Location.show(locations.Hallway);
     await ƒS.update(1);
     await ƒS.Speech.tell("Rosi", text.Rosi.A1_S1_05);
@@ -137,11 +140,8 @@ namespace Dejavu {
     await ƒS.Speech.tell(characters.Mom, text.Mom.A1_S3_06);
     await ƒS.Character.hide(characters.Mom);
     await ƒS.update(1);
-
-    //Transition? Bild verschwommen mit Sound von zusammenpacken  await ƒS.Character.hideAll();
     await ƒS.Speech.tell(characters.Narrator, text.Narrator.A1_S4_01);
     await ƒS.Speech.tell(characters.Narrator, text.Narrator.A1_S4_02);
-    // Item Tagebuch
     await ƒS.Speech.tell("Rosi", text.Rosi.A1_S4_03);
     await ƒS.Speech.tell("Rosi", text.Rosi.A1_S4_04);
     await ƒS.Speech.tell(characters.Narrator, text.Narrator.A1_S4_05);
@@ -157,6 +157,7 @@ namespace Dejavu {
           characters.Mom.pose.smiling,
           ƒS.positionPercent(50, 90)
         );
+        await ƒS.update(1);
         await ƒS.Speech.tell("Rosi", text.Rosi.A1_S5_01_A);
         await ƒS.Speech.tell(characters.Mom, text.Mom.A1_S5_02_A);
         await ƒS.Character.hide(characters.Mom);
@@ -170,7 +171,7 @@ namespace Dejavu {
         await ƒS.Speech.tell("Rosi", text.Rosi.A1_S5_04_A);
         ƒS.Sound.play(sounds.rosiLaughing, 0.5);
         await ƒS.Speech.tell("Rosi lesend", text.Rosi.A1_S5_05_A);
-        await ƒS.Speech.tell("Rosi", text.Rosi.A1_S5_06_A);
+        await ƒS.Speech.tell("Rosi lesend", text.Rosi.A1_S5_06_A);
         await ƒS.Location.show(locations.Bedroom);
         await ƒS.update(0);
         await ƒS.Speech.tell("Rosi", text.Rosi.A1_S5_07_A);
@@ -214,7 +215,7 @@ namespace Dejavu {
         await ƒS.Speech.tell("Rosi", text.Rosi.A1_S5_04_A);
         ƒS.Sound.play(sounds.rosiLaughing, 0.5);
         await ƒS.Speech.tell("Rosi lesend", text.Rosi.A1_S5_05_A);
-        await ƒS.Speech.tell("Rosi", text.Rosi.A1_S5_06_A);
+        await ƒS.Speech.tell("Rosi lesend", text.Rosi.A1_S5_06_A);
         await ƒS.Location.show(locations.Bedroom);
         await ƒS.update(0);
         break;

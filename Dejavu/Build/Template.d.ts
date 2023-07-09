@@ -34,11 +34,18 @@ declare namespace Dejavu {
         packing: string;
         circus: string;
         dejavu: string;
+        crowdTalking: string;
+        divineroom: string;
+        badEnding: string;
         cafePouring: string;
+        fallingDown: string;
+        phoneRinging: string;
+        phoneCalling: string;
+        phoneMessage: string;
         rosiLaughing: string;
-        rosiWow: string;
         divineLaughing: string;
         RosaliaScreaming: string;
+        wheeze: string;
     };
     let locations: {
         Black: {
@@ -98,6 +105,18 @@ declare namespace Dejavu {
             background: string;
         };
         MansionDreaming: {
+            name: string;
+            background: string;
+        };
+        Divineroom: {
+            name: string;
+            background: string;
+        };
+        Graveyard: {
+            name: string;
+            background: string;
+        };
+        Psychiatry: {
             name: string;
             background: string;
         };
@@ -194,7 +213,46 @@ declare namespace Dejavu {
     function meetingPIC(): ƒS.SceneReturn;
 }
 declare namespace Dejavu {
+    function clueThree(): ƒS.SceneReturn;
+}
+declare namespace Dejavu {
+    function decisiveDream(): ƒS.SceneReturn;
+}
+declare namespace Dejavu {
+    function makingPlan(): ƒS.SceneReturn;
+}
+declare namespace Dejavu {
     function neutralEnding(): ƒS.SceneReturn;
+}
+declare namespace Dejavu {
+    function wakingUp(): ƒS.SceneReturn;
+}
+declare namespace Dejavu {
+    function specialScene(): ƒS.SceneReturn;
+}
+declare namespace Dejavu {
+    function arrivingCircus(): ƒS.SceneReturn;
+}
+declare namespace Dejavu {
+    function finalDecision(): ƒS.SceneReturn;
+}
+declare namespace Dejavu {
+    function clownFirst(): ƒS.SceneReturn;
+}
+declare namespace Dejavu {
+    function clownSeconde(): ƒS.SceneReturn;
+}
+declare namespace Dejavu {
+    function directorFirst(): ƒS.SceneReturn;
+}
+declare namespace Dejavu {
+    function directorSeconde(): ƒS.SceneReturn;
+}
+declare namespace Dejavu {
+    function divineFirst(): ƒS.SceneReturn;
+}
+declare namespace Dejavu {
+    function divineSeconde(): ƒS.SceneReturn;
 }
 declare namespace Dejavu {
     function badEnding(): ƒS.SceneReturn;

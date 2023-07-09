@@ -13,7 +13,6 @@ namespace Dejavu {
         "Pff der hat doch keine Ahnung von Liebe!... Ich werde gehen, wenn du das nicht akzeptierst",
         R7:
         "Darauf würde ich nicht wetten!",
-     
       },
       RosaliasMother: {
         M2:
@@ -22,15 +21,15 @@ namespace Dejavu {
         "Wenn du dich nicht sofort beruhigst und Julius heiratest will ich dich nie wieder mehr hier sehen! .... Wir haben euch einander versprochen und Julius liebt dich!",
         M6:
         "Dann verschwinde doch, aber du wirst wieder zurück kommen da bin ich mir sicher!",
-  
       },
     };
 
     //ClueOne
     ƒS.Speech.hide();
+    ƒS.Sound.play(sounds.dejavu, 0.5, true);
     await ƒS.Location.show(locations.MansionDreaming);
     await ƒS.update(2);
-    await ƒS.Character.show(characters.Rosalia,characters.Rosalia.pose.angry,ƒS.positionPercent(80, 90));
+    await ƒS.Character.show(characters.Rosalia,characters.Rosalia.pose.angry,ƒS.positionPercent(70, 90));
     await ƒS.update(0.5);
     await ƒS.Speech.tell(characters.Rosalia, text.Rosalia.R1);
     await ƒS.Character.show(characters.RosaliasMother,characters.RosaliasMother.pose.angry,ƒS.positionPercent(30, 90));
@@ -45,8 +44,10 @@ namespace Dejavu {
     await ƒS.update(0.5);
     await ƒS.Character.hide(characters.Rosalia);
     await ƒS.update(0.5);
+    ƒS.Sound.fade(sounds.dejavu, 0, 1);
     await ƒS.Location.show(locations.Black);
     await ƒS.update(2);
     ƒS.Speech.hide();
+    return "FirstMorning";
   }
 }

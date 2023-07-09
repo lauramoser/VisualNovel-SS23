@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-07-08T20:09:53.702Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="KzpKbNFWvSEfOFsZPz7e" version="21.6.1" type="device">
+<mxfile host="app.diagrams.net" modified="2023-07-09T19:56:46.257Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="2LKxiNoHRwbdTEa9fsOs" version="21.6.1" type="device">
   <diagram name="Seite-1" id="UkwXG7Ko2avV4vK8nV22">
-    <mxGraphModel dx="3663" dy="1203" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4919" dy="1813" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -174,13 +174,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="tl9KZuzmo9LQeoau1raO-51" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Entscheidung&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-330.37" y="2862" width="60.74" height="60" as="geometry" />
+          <mxGeometry x="-330.04" y="2892" width="60.74" height="60" as="geometry" />
         </mxCell>
         <mxCell id="tl9KZuzmo9LQeoau1raO-52" value="Danke, dass ist sehr nett von dir&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-213.39" y="2884.5" width="99.25" height="15" as="geometry" />
+          <mxGeometry x="-213.05999999999997" y="2914.5" width="99.25" height="15" as="geometry" />
         </mxCell>
         <mxCell id="tl9KZuzmo9LQeoau1raO-53" value="ignorieren" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-463" y="2884.5" width="99.25" height="15" as="geometry" />
+          <mxGeometry x="-462.67" y="2914.5" width="99.25" height="15" as="geometry" />
         </mxCell>
         <mxCell id="tl9KZuzmo9LQeoau1raO-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="tl9KZuzmo9LQeoau1raO-66" target="tl9KZuzmo9LQeoau1raO-75" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -255,7 +255,7 @@
         <mxCell id="tl9KZuzmo9LQeoau1raO-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="tl9KZuzmo9LQeoau1raO-81" target="tl9KZuzmo9LQeoau1raO-90" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tl9KZuzmo9LQeoau1raO-81" value="N: &quot; du erzählst ihm alles was dir dein Opa über Rosalia erzählt hat und das sie plötzlich verschwunden ist.&amp;nbsp;&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="tl9KZuzmo9LQeoau1raO-81" value="N: &quot; du erzählst ihm alles was dir dein Opa über Rosalia erzählt hat und das sie plötzlich verschwunden ist.&amp;nbsp;&amp;nbsp;&lt;br&gt;PIC:&quot; Wow das klingt aber sehr spannend und nach einem großen Abenteuer.... Wenn du etwas Unterstützung brauchst, bin ich nur ein Anruf entfernt.&quot;&lt;br&gt;PIC: &quot;Ich würde dann aber wieder weiter gehen.. es war schön dich wieder zu sehen Rosi&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-630" y="3660" width="308.39" height="120" as="geometry" />
         </mxCell>
         <mxCell id="tl9KZuzmo9LQeoau1raO-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="tl9KZuzmo9LQeoau1raO-83" target="tl9KZuzmo9LQeoau1raO-90" edge="1">
@@ -324,7 +324,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="tl9KZuzmo9LQeoau1raO-54" value="" style="shape=mxgraph.signs.healthcare.heart_1;html=1;pointerEvents=1;fillColor=#000000;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;" parent="1" vertex="1">
-          <mxGeometry x="-257.64" y="2884.5" width="20" height="20" as="geometry" />
+          <mxGeometry x="-257.31" y="2914.5" width="20" height="20" as="geometry" />
         </mxCell>
         <mxCell id="tl9KZuzmo9LQeoau1raO-109" value="" style="shape=mxgraph.signs.healthcare.heart_1;html=1;pointerEvents=1;fillColor=#000000;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;" parent="1" vertex="1">
           <mxGeometry x="-850" y="2763" width="50" height="47" as="geometry" />
@@ -341,12 +341,11 @@
         <mxCell id="tl9KZuzmo9LQeoau1raO-114" value="" style="shape=mxgraph.signs.healthcare.heart_1;html=1;pointerEvents=1;fillColor=#000000;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;" parent="1" vertex="1">
           <mxGeometry x="-489.13" y="3550" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="tl9KZuzmo9LQeoau1raO-117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="tl9KZuzmo9LQeoau1raO-118" target="tl9KZuzmo9LQeoau1raO-124" edge="1">
+        <mxCell id="tl9KZuzmo9LQeoau1raO-117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="tl9KZuzmo9LQeoau1raO-118" target="m0jVCM9L-4Xvr7T7UgM1-1" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-461.75" y="4620" as="targetPoint" />
+            <mxPoint x="-750" y="4610" as="targetPoint" />
             <Array as="points">
               <mxPoint x="-590" y="4500" />
-              <mxPoint x="-590" y="4620" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -377,21 +376,21 @@
         <mxCell id="tl9KZuzmo9LQeoau1raO-122" value="lieber nicht vom Tagebuch erzählen" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-159.19" y="4500" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="tl9KZuzmo9LQeoau1raO-126" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="tl9KZuzmo9LQeoau1raO-124" target="tl9KZuzmo9LQeoau1raO-125" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="tl9KZuzmo9LQeoau1raO-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="tl9KZuzmo9LQeoau1raO-124" edge="1">
+        <mxCell id="tl9KZuzmo9LQeoau1raO-126" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1.006;exitY=0.779;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="m0jVCM9L-4Xvr7T7UgM1-1" target="tl9KZuzmo9LQeoau1raO-125" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-668.7142857142853" y="4950" as="targetPoint" />
+            <mxPoint x="-668.521739130435" y="4930" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tl9KZuzmo9LQeoau1raO-124" value="Clue 2&lt;br&gt;Ort: Wohnzimmer&lt;br&gt;&lt;br&gt;Mom: &quot;Ich hab mich schon gewundert, das hätte ja beim aufräumen auftauchen sollen&quot;&lt;br&gt;Mom: &quot;Hast du denn schon etwas über deine Urgroßmutter herausfinden können?&lt;br&gt;Rosi: &quot; Warte mal... du bist mir nicht sauer, obwohl du immer sagst, dass du die Geschichten von Opa nie gut fandest?&lt;br&gt;Mom: &quot;Ach quatsch, das ist das Tagebuch deines Großvaters, da sind wahre Gefühle und Begebenheiten drin.&quot;&lt;br&gt;Mom: &quot;Dein Opa hatte nur wilde Geschichten, die wenig mit der Wahrheit zu tun hatten.&quot;&lt;br&gt;Rosi:&quot;Meinst du? Ich glaube für Opa waren seine Geschichten echt.&quot;&lt;br&gt;Mom:&quot; ja das stimmt natürlich mein Schatz, aber weußt du was wirklich echt ist?&quot;&lt;br&gt;&lt;br&gt;Audio: rumkramen&lt;br&gt;&lt;br&gt;Mom: &quot;Nicht nur du hast deine kleinen Geheimnisse. Ich habe deinem Opa als kleines Kind mal ein Bild von Rosalia geklaut.&lt;br&gt;&lt;br&gt;Bild Seiltänzerin --&amp;gt; Item&lt;br&gt;&lt;br&gt;Mom: &quot;Ich glaube Sie war damals eine Seiltänzerin. Wenn du willst kannst du es behalten.&quot;&lt;br&gt;Rosi: &quot;Wow, danke Mom, das Bild lege ich gleich ins Tagebuch.&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-990" y="4620" width="643" height="310" as="geometry" />
+        <mxCell id="tl9KZuzmo9LQeoau1raO-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-668.7142857142853" y="4950" as="targetPoint" />
+            <mxPoint x="-668.5" y="4930" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="tl9KZuzmo9LQeoau1raO-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="tl9KZuzmo9LQeoau1raO-125" target="tl9KZuzmo9LQeoau1raO-129" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tl9KZuzmo9LQeoau1raO-125" value="Tagesende&lt;br&gt;Ort: Schlafzimmer&lt;br&gt;&lt;br&gt;Rosi: &quot;Phu was für ein Tag, jetzt bin ich bereit fürs schlafen.&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="tl9KZuzmo9LQeoau1raO-125" value="Tagesende&lt;br&gt;Ort: Schlafzimmer&lt;br&gt;N:&quot;Du entscheidest dich dafür heute wieder etwas früher ins Bett zu gehen, der Tag hat dich doch mehr geschlaucht als du dachtest&quot;&lt;br&gt;Rosi: &quot;Phu was für ein Tag, jetzt bin ich bereit fürs schlafen.&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-455" y="5070" width="350" height="100" as="geometry" />
         </mxCell>
         <mxCell id="tl9KZuzmo9LQeoau1raO-137" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="tl9KZuzmo9LQeoau1raO-129" target="tl9KZuzmo9LQeoau1raO-136" edge="1">
@@ -553,6 +552,9 @@
         <mxCell id="tl9KZuzmo9LQeoau1raO-197" value="Enthüllungsszene&lt;br&gt;Ort: Zirkus&lt;br&gt;&lt;br&gt;Julius: &quot;So wie du mit den Gefühlen anderer umgehst, hast du keine Hilfe verdient!&quot;&lt;br&gt;Rosalia: &quot;Julius was hast du nur getan?&quot;&lt;br&gt;Julius: &quot;Das was ich schon viel früher hätte tun müssen, als du diesen Dreck geheiratet hast!&quot;&lt;br&gt;Rosalia: &quot;Wie kannst du nur... mein Sohn....&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="1900.3700000000001" y="9200" width="390" height="160" as="geometry" />
         </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ay3apNEdG9EY7qlDHxBp-1" target="Ay3apNEdG9EY7qlDHxBp-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-1" value="Wahrsagerin First&lt;br&gt;Ort: Wahrsagerzimmer&lt;br&gt;&lt;br&gt;Rosi: &quot;Hallo ist hier jemand?&quot;&lt;br&gt;Wahrsagerin: &quot;Hallo liebe Gäste, kommt herein.&quot;&lt;br&gt;Wahrsagerin: &quot; Huch, Rosalia was machst du denn hier?&quot;&lt;br&gt;Rosi:&quot; Wie bitte?... Ich kenne sie doch garnicht?&quot;&lt;br&gt;Wahrsagerin: &quot;Oh Entschuldigung, da muss ich mich wohl vertan haben.&quot;&lt;br&gt;PIC: &quot;Nein nein, ihr Name ist Rosalia... sie haben Recht... aber woher wissen sie das?&quot;&lt;br&gt;Wahrsagerin: &quot;Ich weiß viel... Das Wissen meiner Ahnen wurde an mich weitergegeben.&quot;&lt;br&gt;Wahrsagerin: &quot;Ihr könnt mir genau eine Frage stellen.. also überlegt gut&quot;&lt;br&gt;&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="337.49999999999983" y="7599" width="455" height="269" as="geometry" />
         </mxCell>
@@ -575,8 +577,11 @@
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-3" value="Direktor First&lt;br&gt;Ort: Zirkus&lt;br&gt;&lt;br&gt;Rosi: &quot;Entschuldigung Herr Direktor?&quot;&lt;br&gt;Direktor: &quot;Einen wunderschönen Guten Tag&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-538.0200000000001" y="7599" width="455" height="269" as="geometry" />
         </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ay3apNEdG9EY7qlDHxBp-4" target="m0jVCM9L-4Xvr7T7UgM1-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-4" value="Clown First" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1170.1799999999998" y="7599" width="455" height="269" as="geometry" />
+          <mxGeometry x="1310.3899999999999" y="7599" width="455" height="269" as="geometry" />
         </mxCell>
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-5" value="&lt;font style=&quot;font-size: 48px;&quot;&gt;Punkte speichern und Meter-bar&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-480.74" y="100" width="385" height="80" as="geometry" />
@@ -606,6 +611,9 @@
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Ay3apNEdG9EY7qlDHxBp-12" target="tl9KZuzmo9LQeoau1raO-196" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ay3apNEdG9EY7qlDHxBp-12" target="Ay3apNEdG9EY7qlDHxBp-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-12" value="N: &quot; Ihr zwie überlegt wes passiert sein könnte?&lt;br&gt;N: &quot;Wer hat Rosalia umgebracht?&quot;&lt;br&gt;&lt;br&gt;&lt;br&gt;1. Rosalias Mutter weil sie so sauer war&lt;br&gt;2. Julius&lt;br&gt;3. Rosalias Ehemann&lt;br&gt;4.Der damalige Zirkus-Direktor" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="750.8000000000001" y="9150" width="519.57" height="260" as="geometry" />
         </mxCell>
@@ -624,12 +632,6 @@
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-18" value="1,3,4" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="815.3700000000001" y="9470" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Ay3apNEdG9EY7qlDHxBp-21" value="Clue 2&lt;br&gt;Ort: Wohnzimmer&lt;br&gt;&lt;br&gt;Mom: &quot;Ich hab mich schon gewundert, das hätte ja beim aufräumen auftauchen sollen&quot;&lt;br&gt;Mom: &quot;Hast du denn schon etwas über deine Urgroßmutter herausfinden können?&lt;br&gt;Rosi: &quot; Warte mal... du bist mir nicht sauer, obwohl du immer sagst, dass du die Geschichten von Opa nie gut fandest?&lt;br&gt;Mom: &quot;Ach quatsch, das ist das Tagebuch deines Großvaters, da sind wahre Gefühle und Begebenheiten drin.&quot;&lt;br&gt;Mom: &quot;Dein Opa hatte nur wilde Geschichten, die wenig mit der Wahrheit zu tun hatten.&quot;&lt;br&gt;Rosi:&quot;Meinst du? Ich glaube für Opa waren seine Geschichten echt.&quot;&lt;br&gt;Mom:&quot; ja das stimmt natürlich mein Schatz, aber weißt du was wirklich echt war?&quot;&lt;br&gt;&lt;br&gt;Mom:&quot; Ich glaube mein Opa, also dein Urgroßvater, hat oft nicht gedacht, dass ich vieles nicht verstehe als ich noch klein war.&quot;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Mom: &quot;Aber ich habe schon schnell verstanden, dass mein Opa und Rosalia sich für die Liebe und gegen die Familie entschieden haben.&quot;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Mom: &quot;Soweit ich das weiß kam Rosalia aus gutem Hause und Opa war nur ein normaler Arbeiter, das hat zu der Zeit nicht wirklich zusammen gepasst.&quot;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Mom:&quot; Ihre Mutter hat nach der Hochzeit nie wieder mehr ein Wort mit ihr gesprochen und wenn dann nur um sie zu überzeugen doch noch so einen komischen Kerl zu heiraten den die Familie irgendwie kannte.&quot;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Mom: &quot;Wie hieß dieser Kerl nochmal?... Opa hat diesen Namen immer so mit Verachtung ausgesprochen.... Josua... nein Jak... nein Julius!&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Er hieß Julius genau!&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Rosi: &quot;Wow, das hab ich ja garnicht gewusst, das hört sich eigentlich nach einer schönen Liebesgeschichte an... Wenn es doch nicht so ein tragisches Ende gegeben hätte.&quot;&lt;br&gt;Mom:&quot; Ja da hast du Recht, aber jetzt ab ins Bett mit dir&quot;&lt;br&gt;Rosi: &quot;Gute Nacht Mama&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-1160" y="6040" width="643" height="390" as="geometry" />
-        </mxCell>
-        <mxCell id="Ay3apNEdG9EY7qlDHxBp-22" value="Clue 2&lt;br&gt;Ort: Wohnzimmer&lt;br&gt;&lt;br&gt;Mom: &quot;Ich hab mich schon gewundert, das hätte ja beim aufräumen auftauchen sollen&quot;&lt;br&gt;Mom: &quot;Hast du denn schon etwas über deine Urgroßmutter herausfinden können?&lt;br&gt;Rosi: &quot; Warte mal... du bist mir nicht sauer, obwohl du immer sagst, dass du die Geschichten von Opa nie gut fandest?&lt;br&gt;Mom: &quot;Ach quatsch, das ist das Tagebuch deines Großvaters, da sind wahre Gefühle und Begebenheiten drin.&quot;&lt;br&gt;Mom: &quot;Dein Opa hatte nur wilde Geschichten, die wenig mit der Wahrheit zu tun hatten.&quot;&lt;br&gt;Rosi:&quot;Meinst du? Ich glaube für Opa waren seine Geschichten echt.&quot;&lt;br&gt;Mom:&quot; ja das stimmt natürlich mein Schatz, aber weißt du was wirklich echt war?&quot;&lt;br&gt;&lt;br&gt;Audio: rumkramen&lt;br&gt;&lt;br&gt;Mom: &quot;Nicht nur du hast deine kleinen Geheimnisse. Ich habe deinem Opa als kleines Kind mal ein Bild von Rosalia geklaut.&lt;br&gt;&lt;br&gt;Bild Seiltänzerin --&amp;gt; Item&lt;br&gt;&lt;br&gt;Mom: &quot;Ich glaube Sie war damals eine Seiltänzerin. Wenn du willst kannst du es behalten.&quot;&lt;br&gt;Rosi: &quot;Wow, danke Mom, das Bild lege ich gleich ins Tagebuch.&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-1171.22" y="6455" width="643" height="310" as="geometry" />
-        </mxCell>
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Ay3apNEdG9EY7qlDHxBp-23" target="Ay3apNEdG9EY7qlDHxBp-53" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -637,7 +639,7 @@
           <mxGeometry x="38.760000000000005" y="8074" width="336.65" height="340" as="geometry" />
         </mxCell>
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-24" value="Clown: &quot;Mein Opa Julius hat alles über Seile gewusst. Von ihm hab ich mein können die Luftballons richtig zu binden.&amp;nbsp;&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1200" y="8014" width="264.41" height="140" as="geometry" />
+          <mxGeometry x="1090" y="8070" width="264.41" height="140" as="geometry" />
         </mxCell>
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Ay3apNEdG9EY7qlDHxBp-25" target="Ay3apNEdG9EY7qlDHxBp-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -679,12 +681,15 @@
           <mxGeometry x="550" y="7450" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-44" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;-10P&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="140" y="7350" width="60" height="30" as="geometry" />
+          <mxGeometry x="469.24" y="7490" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-45" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;+10 P&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1090" y="7350" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Ay3apNEdG9EY7qlDHxBp-46" target="Ay3apNEdG9EY7qlDHxBp-55" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Ay3apNEdG9EY7qlDHxBp-46" target="Ay3apNEdG9EY7qlDHxBp-52">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-46" value="Entscheidung" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -705,16 +710,16 @@
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-50" value="Wahrsagerin" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="639.9999999999999" y="7920" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ay3apNEdG9EY7qlDHxBp-52" target="nvY-KlJdmfwofK_SIzbv-2">
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Ay3apNEdG9EY7qlDHxBp-52" target="nvY-KlJdmfwofK_SIzbv-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Ay3apNEdG9EY7qlDHxBp-52" value="Wahrsagerin: &quot;Ich sehe eine ältere Dame... sie sieht deiner Urgroßmutter sehr ähnlich... Sie streiten sich... sehr laut... ich spüre eine böse Energie die von ihr kommt&lt;br&gt;Rosi: &quot;Wer könnte das sein?&quot;&lt;br&gt;PIC: &quot;ich weiß nicht, können sie uns diese Frau etwas genauer beschreiben&quot;&lt;br&gt;Wahrsagerin: &quot;&lt;br&gt;&lt;br&gt;&lt;br&gt;Ort: Zirkus" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="Ay3apNEdG9EY7qlDHxBp-52" value="Wahrsagerin: &quot;Ich sehe eine ältere Dame... sie sieht deiner Urgroßmutter sehr ähnlich... Sie streiten sich... sehr laut... ich spüre eine böse Energie die von ihr kommt&lt;br&gt;Rosi: &quot;Wer könnte das sein?&quot;&lt;br&gt;PIC: &quot;ich weiß nicht, können sie uns diese Frau etwas genauer beschreiben&quot;&lt;br&gt;Wahrsagerin: &quot;&lt;br&gt;&lt;br&gt;&lt;br&gt;Ort: Zirkus" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="730" y="8070" width="244.96" height="340" as="geometry" />
         </mxCell>
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-53" value="Bad Ending&lt;br&gt;Ort: Wohnzimmer&lt;br&gt;&lt;br&gt;Novel Page&amp;nbsp;&lt;br&gt;Zeitungsartikel vom Verschwinden von Rosi" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="78.97" y="8440" width="256.22" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Ay3apNEdG9EY7qlDHxBp-55" target="nvY-KlJdmfwofK_SIzbv-2">
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Ay3apNEdG9EY7qlDHxBp-55" target="nvY-KlJdmfwofK_SIzbv-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-55" value="PIC: &quot;Rosi, das kann doch nicht die wichtigste Frage gerade sein?&quot;&lt;br&gt;Rosi: &quot;Oh mein Gott du hast recht... irgendwie kam das einfach so aus mir raus&quot;&lt;br&gt;Wahrsagerin: &quot;man wählt immer das zuerst was einem am wichtigsten ist&quot;&lt;br&gt;Wahrsagerin: &quot;Lass uns mal schauen, was die Kugel sagt&quot;&lt;br&gt;Wahrsagerin: &quot;Oh, wie es scheint hast du deine große Liebe schon kennen gelernt... und ich glaube ihr seit bereits dabei ein großes Abenteuer zu erleben.... Du scheinst deiner Urgroßmutter doch ähnlicher zu sein als du glaubst&quot;&lt;br&gt;Rosi: &quot;Oh.. hihihi... danke&quot;&lt;br&gt;PIC: erötet&lt;br&gt;&amp;nbsp;&lt;br&gt;Wahrsager: &quot;So ihr habt eure Frage gewählt. Viel Spaß noch bei eurem Besuch unseres Zirkus.&quot;&lt;br&gt;&lt;br&gt;Ort: Zirkus" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -723,76 +728,160 @@
         <mxCell id="Ay3apNEdG9EY7qlDHxBp-57" value="" style="shape=mxgraph.signs.healthcare.heart_1;html=1;pointerEvents=1;fillColor=#000000;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;" parent="1" vertex="1">
           <mxGeometry x="554.18" y="8030" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-1" value="Clown: &quot;Aber passt auf, wenn euch der Direktor erwischt, werdet ihr bestimmt raus geschmissen. Er mag keine Leute die in der Vergangenheit rumschnüffeln&quot;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1538.46" y="8014" width="264.41" height="140" as="geometry" />
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nvY-KlJdmfwofK_SIzbv-1" target="m0jVCM9L-4Xvr7T7UgM1-14">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nvY-KlJdmfwofK_SIzbv-2" target="nvY-KlJdmfwofK_SIzbv-10">
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-1" value="Clown: &quot;Aber passt auf, wenn euch der Direktor erwischt, werdet ihr bestimmt raus geschmissen. Er mag keine Leute die in der Vergangenheit rumschnüffeln&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1405.69" y="8070" width="264.41" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="nvY-KlJdmfwofK_SIzbv-2" target="nvY-KlJdmfwofK_SIzbv-10" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="468" y="8560" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nvY-KlJdmfwofK_SIzbv-2" target="nvY-KlJdmfwofK_SIzbv-11">
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="nvY-KlJdmfwofK_SIzbv-2" target="nvY-KlJdmfwofK_SIzbv-11" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="952" y="8560" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-2" value="Entscheidung" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-2" value="Entscheidung" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="656.26" y="8510" width="101.49" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-5" value="Direktor" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-5" value="Direktor" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="469.24" y="8530" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-6" value="Clown" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-6" value="Clown" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="792.5000000000001" y="8530" width="130" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-10" value="Direktor Seconde&lt;br&gt;Ort: Zirkus&lt;br&gt;&lt;br&gt;Rosi: &quot;Entschuldigung Herr Direktor?&quot;&lt;br&gt;Direktor: &quot;Einen wunderschönen Guten Tag&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nvY-KlJdmfwofK_SIzbv-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1010" y="9140" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="468" y="9050" />
+              <mxPoint x="1011" y="9050" />
+              <mxPoint x="1011" y="9140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-10" value="Direktor Seconde&lt;br&gt;Ort: Zirkus&lt;br&gt;&lt;br&gt;Rosi: &quot;Entschuldigung Herr Direktor?&quot;&lt;br&gt;Direktor: &quot;Einen wunderschönen Guten Tag&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="239.9999999999999" y="8680" width="455" height="269" as="geometry" />
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-11" value="Clown Seconde&lt;br&gt;Ort: Clownraum" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nvY-KlJdmfwofK_SIzbv-11" target="Ay3apNEdG9EY7qlDHxBp-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-11" value="Clown Seconde&lt;br&gt;Ort: Clownraum" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="724.9999999999998" y="8680" width="455" height="269" as="geometry" />
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-14" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" target="nvY-KlJdmfwofK_SIzbv-15">
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-14" value="" style="endArrow=none;html=1;rounded=0;" parent="1" target="nvY-KlJdmfwofK_SIzbv-15" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-1600" y="5200" as="sourcePoint" />
             <mxPoint x="2412.8571428571427" y="5180" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-15" value="&lt;font style=&quot;font-size: 72px;&quot;&gt;Akt 3&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-15" value="&lt;font style=&quot;font-size: 72px;&quot;&gt;Akt 3&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="2210" y="5180" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-16" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-16" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-1550" y="1825" as="sourcePoint" />
             <mxPoint x="2260" y="1820" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-17" value="&lt;font style=&quot;font-size: 72px;&quot;&gt;Akt 2&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-17" value="&lt;font style=&quot;font-size: 72px;&quot;&gt;Akt 2&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="2260" y="1800" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-18" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-18" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-1542.5" y="65" as="sourcePoint" />
             <mxPoint x="2267.5" y="60" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-19" value="&lt;font style=&quot;font-size: 72px;&quot;&gt;Akt 1&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-19" value="&lt;font style=&quot;font-size: 72px;&quot;&gt;Akt 1&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="2267.5" y="40" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-20" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1" target="nvY-KlJdmfwofK_SIzbv-21">
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-20" value="" style="endArrow=none;html=1;rounded=0;" parent="1" target="nvY-KlJdmfwofK_SIzbv-21" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-1550" y="6970" as="sourcePoint" />
             <mxPoint x="2462.8571428571427" y="6950" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-21" value="&lt;font style=&quot;font-size: 72px;&quot;&gt;Akt 4&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-21" value="&lt;font style=&quot;font-size: 72px;&quot;&gt;Akt 4&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="2260" y="6950" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="nvY-KlJdmfwofK_SIzbv-23" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;+10P&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="nvY-KlJdmfwofK_SIzbv-23" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;+10P&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="220" y="2280" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-1" value="Clue 2&lt;br&gt;Ort: Wohnzimmer&lt;br&gt;&lt;br&gt;Mom: &quot;Ich hab mich schon gewundert, das hätte ja beim aufräumen auftauchen sollen&quot;&lt;br&gt;Mom: &quot;Hast du denn schon etwas über deine Urgroßmutter herausfinden können?&lt;br&gt;Rosi: &quot; Warte mal... du bist mir nicht sauer, obwohl du immer sagst, dass du die Geschichten von Opa nie gut fandest?&lt;br&gt;Mom: &quot;Ach quatsch, das ist das Tagebuch deines Großvaters, da sind wahre Gefühle und Begebenheiten drin.&quot;&lt;br&gt;Mom: &quot;Dein Opa hatte nur wilde Geschichten, die wenig mit der Wahrheit zu tun hatten.&quot;&lt;br&gt;Rosi:&quot;Meinst du? Ich glaube für Opa waren seine Geschichten echt.&quot;&lt;br&gt;Mom:&quot; ja das stimmt natürlich mein Schatz, aber weißt du was wirklich echt war?&quot;&lt;br&gt;&lt;br&gt;Mom:&quot; Ich glaube mein Opa, also dein Urgroßvater, hat oft nicht gedacht, dass ich vieles nicht verstehe als ich noch klein war.&quot;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Mom: &quot;Aber ich habe schon schnell verstanden, dass mein Opa und Rosalia sich für die Liebe und gegen die Familie entschieden haben.&quot;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Mom: &quot;Soweit ich das weiß kam Rosalia aus gutem Hause und Opa war nur ein normaler Arbeiter, das hat zu der Zeit nicht wirklich zusammen gepasst.&quot;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Mom:&quot; Ihre Mutter hat nach der Hochzeit nie wieder mehr ein Wort mit ihr gesprochen und wenn dann nur um sie zu überzeugen doch noch so einen komischen Kerl zu heiraten den die Familie irgendwie kannte.&quot;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Mom: &quot;Wie hieß dieser Kerl nochmal?... Opa hat diesen Namen immer so mit Verachtung ausgesprochen.... Josua... nein Jak... nein Julius!&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Er hieß Julius genau!&amp;nbsp;&lt;br&gt;Mom:&quot;Wie manche Männer nun mal sind, hatten die beiden sogar einen Kampf um Rosalia... aber dieser Julius hat wohl nicht mit fairen Karten gespielt....&quot;&lt;br&gt;Rosi: &quot;Wow, das hab ich ja garnicht gewusst, das hört sich eigentlich nach einer schönen Liebesgeschichte an... Wenn es doch nicht so ein tragisches Ende gegeben hätte.&quot;&lt;br&gt;Mom:&quot; Ja da hast du Recht, aber jetzt ab ins Bett mit dir&quot;&lt;br&gt;Rosi: &quot;Gute Nacht Mama&quot;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1132.1299999999999" y="4590" width="643" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="m0jVCM9L-4Xvr7T7UgM1-4" target="m0jVCM9L-4Xvr7T7UgM1-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-4" value="Clown: &quot;Aber passt auf, wenn euch der Direktor erwischt, werdet ihr bestimmt raus geschmissen. Er mag keine Leute die in der Vergangenheit rumschnüffeln&quot;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1720" y="8070" width="264.41" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="m0jVCM9L-4Xvr7T7UgM1-5" target="nvY-KlJdmfwofK_SIzbv-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="m0jVCM9L-4Xvr7T7UgM1-5" target="m0jVCM9L-4Xvr7T7UgM1-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="m0jVCM9L-4Xvr7T7UgM1-5" target="Ay3apNEdG9EY7qlDHxBp-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-5" value="Entscheidung" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1487.1399999999999" y="7920" width="101.49" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-6" value="Kannst du in die Vergangenheit schauen und mir sagen was an dem Todestag meiner Urgroßmutter passiert ist?" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1232.5" y="7926" width="233.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-7" value="Wahrsagerin" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1622.5" y="7926" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="m0jVCM9L-4Xvr7T7UgM1-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1460" y="8560" />
+            </Array>
+            <mxPoint x="1460" y="8680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="m0jVCM9L-4Xvr7T7UgM1-14" target="m0jVCM9L-4Xvr7T7UgM1-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1944" y="8560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-14" value="Entscheidung" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1648.26" y="8510" width="101.49" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-15" value="Direktor" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1461.24" y="8530" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-16" value="Wahrsagerin" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1784.5" y="8530" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="m0jVCM9L-4Xvr7T7UgM1-17" target="Ay3apNEdG9EY7qlDHxBp-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1945" y="9050" />
+              <mxPoint x="1011" y="9050" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-17" value="Clown Seconde&lt;br&gt;Ort: Clownraum" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1716.9999999999998" y="8680" width="455" height="269" as="geometry" />
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="m0jVCM9L-4Xvr7T7UgM1-18" target="Ay3apNEdG9EY7qlDHxBp-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m0jVCM9L-4Xvr7T7UgM1-18" value="Direktor Seconde&lt;br&gt;Ort: Zirkus&lt;br&gt;&lt;br&gt;Rosi: &quot;Entschuldigung Herr Direktor?&quot;&lt;br&gt;Direktor: &quot;Einen wunderschönen Guten Tag&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1242.4699999999998" y="8680" width="455" height="269" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

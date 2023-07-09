@@ -132,13 +132,9 @@ speech content {
 }
 
 speech input {
-  padding: 5px;
-  margin-top: 15px;
-  border: 5px black;
-}
-
-speech input:focus {
-  outline: none;
+  background-color: rgb(212, 167, 167);
+  border: none;
+  height: 25px;
 }
 
 /* Novel Pages */
@@ -163,37 +159,31 @@ meter::-webkit-meter-bar {
   background-color: #ececec;
 }
 
-meter[id="meterbar"] { 
+meter[id="metarbar"] { 
   position: absolute;
   transform:rotate(-90deg);
   bottom: 50%;
-  left: -14%;
+  left: -13%;
   width: 35%;
   height: 10%;
 }
 
-meter[id="meterbar"]::-webkit-meter-optimum-value {
+meter[id="metarbar"]::-webkit-meter-optimum-value {
   background-image: linear-gradient(
     90deg, 
-    #8bcf69 5%, 
-    #e6d450 5%,
-    #e6d450 15%,
-    #f28f68 15%,
-    #f28f68 55%,
-    #cf82bf 55%,
-    #cf82bf 95%,
-    #719fd1 95%,
-    #719fd1 100%
+    #8a7076 5%, 
+    #804351 50%,
+    #a3002e 100%
   );
-  /* background-color: #719fd1; */
 }
 
-input[id="lovepoints"] {
+input[id="scoreForPIC"] {
   color: rgb(255, 248, 253);
-  background-color:rgb(155, 42, 95);
+  background-color:rgb(212, 167, 167);
   font-size: 11pt;
   position: absolute;
   left: 1.2%;
-  bottom: 19.5%;
-  width: 4%;
+  top: 10%;
+  width: 6.5%;
+  text-align: center;
 }

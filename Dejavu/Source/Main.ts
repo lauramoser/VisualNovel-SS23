@@ -68,16 +68,23 @@ namespace Dejavu {
 
     packing: "/Dejavu/Audio/boxes.mp3",
     circus: "/Dejavu/Audio/circus-11794.mp3",
-    dejavu: "/Dejavu/Audio/dreamMusic.mp3",
+    dejavu: "/Dejavu/Audio/ambient-dream-16671.mp3",
+    crowdTalking:"/Dejavu/Audio/crowd-talking-138493.mp3",
+    divineroom: "/Dejavu/Audio/magical-background-6892.mp3",
+    badEnding: "/Dejavu/Audio/evil-cue-111895.mp3",
 
     //sounds
     cafePouring: "/Dejavu/Audio/pouring-coffee-6743.mp3",
+    fallingDown: "/Dejavu/Audio/person-knocked-down-14798.mp3",
+    phoneRinging: "/Dejavu/Audio/smartphone_vibrating_alarm_silent-7040.mp3",
+    phoneCalling: "/Dejavu/Audio/phone-calling-153844.mp3",
+    phoneMessage: "/Dejavu/Audio/notifications-sound-127856.mp3",
 
     //voices
     rosiLaughing: "/Dejavu/Audio/womenLaughing.mp3",
-    rosiWow: "/Dejavu/Audio/Wow.mp3",
     divineLaughing: "/Dejavu/Audio/wichtlaughing.mp3",
     RosaliaScreaming: "/Dejavu/Audio/loud-female-scream-41894.mp3",
+    wheeze: "/Dejavu/Audio/huff-and-puff-63816.mp3",
   };
 
   //Location
@@ -141,6 +148,18 @@ namespace Dejavu {
     MansionDreaming: {
       name: "MansionDreaming",
       background: "/Dejavu/Images/Backgrounds/MansionDreaming.png",
+    },
+    Divineroom: {
+      name: "Divine Room",
+      background: "/Dejavu/Images/Backgrounds/Divineroom.png",
+    },
+    Graveyard: {
+      name: "Graveyard",
+      background: "/Dejavu/Images/Backgrounds/Graveyard.png",
+    },
+    Psychiatry: {
+      name: "Psychiatry",
+      background: "/Dejavu/Images/Backgrounds/Psychatrie.png",
     },
   };
 
@@ -306,16 +325,33 @@ namespace Dejavu {
       // Act one
       { scene: home, name: "Arriving and Finding Diary" },
       //Act two
-      { scene: firstMorning, name: "Arriving and Finding Diary" },
+      { scene: firstMorning, id: "FirstMorning", name: "Arriving and Finding Diary" },
       { scene: arrivingAtHome, id: "ArrivingAtHome", name: "Back from the Flowergarden" },
       { scene: meetingPIC, id: "MeetingPIC", name: "Meeting your PIC" },
       //Act three
-
+      { scene: decisiveDream, id: "DecisiveDream", name: "The Crucial Dream" },
+      { scene: wakingUp, id: "WakingUp", name: "Deciding what to do" },
+      { scene: makingPlan, id: "MakingPlan", name: "How to find out what happened?" },
       //Act four
-
+      { scene: arrivingCircus, id: "ArrivingCircus", name: "Deciding who to ask first" },
+      { scene: directorFirst, id: "DirectorFirst", name: "Asking Director first" },
+      { scene: clownFirst, id: "ClownFirst", name: "Asking Divine first" },
+      { scene: divineFirst, id: "DivineFirst", name: "Asking Clown first" },
+      { scene: directorSeconde, id: "DirectorSeconde", name: "Asking Director seconde" },
+      { scene: clownSeconde, id: "ClownSeconde", name: "Asking Divine seconde" },
+      { scene: divineSeconde, id: "DivineSeconde", name: "Asking Clown seconde" },
+      { scene: finalDecision, id: "FinalDecision", name: "Deciding what happened" },
       //Endings
       { scene: badEnding, id: "BadEnding", name: "bad Ending" },
+      { scene: neutralEnding, id: "NeutralEnding", name: "neutral Ending" },
+      { scene: goodEnding, id: "GoodEnding", name: "good Ending" },
+      //Clues
+      { scene: clueOne, id: "ClueOne", name: "big fight with Rosalia and her Mother"},
+      { scene: clueThree, id: "ClueThree", name: "threatening letter"},
     ];
+
+    let uiElement: HTMLElement = document.querySelector("[type=interface]");
+    dataForSave = ƒS.Progress.setData(dataForSave, uiElement);
 
     // start the sequence
     ƒS.Progress.go(scenes);

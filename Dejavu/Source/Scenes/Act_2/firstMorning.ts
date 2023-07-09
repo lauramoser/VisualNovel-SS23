@@ -25,7 +25,7 @@ namespace Dejavu {
         A2_S4_09: "Endlich wieder hier, wie ich diesen Garten vermisst habe",
         A2_S4_10: "Perfekt, meine Lieblingsbank ist frei",
 
-        A2_S5_14: "Oh hi <br>",
+        A2_S5_14: "Oh hi ",
         A2_S5_16: "Ehm.... eigentlich würde ich gerne etwas Zeit für mich haben... sei mir nicht böse",
       },
       Mom: {
@@ -51,11 +51,12 @@ namespace Dejavu {
       bee: "Die Biene die es sich gerade auf einer Rose bequem gemacht hat",
     };
 
-    //Zweiter Akt
+    //Seconde Act
     ƒS.Speech.hide();
     await ƒS.Location.show(locations.Bedroom);
     await ƒS.update(2);
     await ƒS.Speech.tell(characters.Narrator, text.Narrator.A2_S2_01);
+    ƒS.Speech.hide();
     await ƒS.Location.show(locations.Kitchen);
     await ƒS.update(2);
     await ƒS.Character.show(
@@ -88,8 +89,8 @@ namespace Dejavu {
         await ƒS.Speech.tell(characters.Narrator, text.Narrator.A2_S4_12);
 
         //Drawing Choice
-        let choiceDraw1 = await ƒS.Menu.getInput(choicesDraw, "choices");
-        switch (choiceDraw1) {
+        let choiceDraw = await ƒS.Menu.getInput(choicesDraw, "choices");
+        switch (choiceDraw) {
           case choicesDraw.portrait:
             dataForSave.lifepoints -= 10;
             break;
@@ -109,30 +110,26 @@ namespace Dejavu {
         await ƒS.Speech.tell(characters.Narrator, text.Narrator.A2_S5_18);
         return "ArrivingAtHome";
 
-      case choicesBreakfast.apple || choicesBreakfast.nobreakfast:
+      case choicesBreakfast.apple:  
         dataForSave.lifepoints += 10;
         await ƒS.Speech.tell("Rosi", text.Rosi.A2_S3_06);
         await ƒS.Speech.tell(characters.Mom, text.Mom.A2_S3_07);
         await ƒS.Speech.tell("Rosi", text.Rosi.A2_S3_08);
-        ƒS.Speech.hide();
         await ƒS.Character.hide(characters.Mom);
         await ƒS.update(1);
-        await ƒS.Location.show(locations.Flowergarden);
-        await ƒS.update(2);
-        await ƒS.Speech.tell("Rosi", text.Rosi.A2_S4_09);
-        await ƒS.Speech.tell("Rosi", text.Rosi.A2_S4_10);
-        await ƒS.Speech.tell(characters.Narrator, text.Narrator.A2_S4_11);
-        await ƒS.Speech.tell(characters.Narrator, text.Narrator.A2_S4_12);
-        let choiceDraw2 = await ƒS.Menu.getInput(choicesDraw, "choices");
-        switch (choiceDraw2) {
-          case choicesDraw.portrait:
-            dataForSave.lifepoints -= 10;
-            break;
-          case choicesDraw.bee:
-            dataForSave.lifepoints += 10;
-            break;
-        }
+        ƒS.Speech.hide();
+        return "MeetingPIC"
+
+      case choicesBreakfast.nobreakfast:
+        dataForSave.lifepoints += 10;
+        await ƒS.Speech.tell("Rosi", text.Rosi.A2_S3_06);
+        await ƒS.Speech.tell(characters.Mom, text.Mom.A2_S3_07);
+        await ƒS.Speech.tell("Rosi", text.Rosi.A2_S3_08);
+        await ƒS.Character.hide(characters.Mom);
+        await ƒS.update(1);
+        ƒS.Speech.hide();
         return "MeetingPIC"
     }
   }
 }
+
