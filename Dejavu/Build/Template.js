@@ -869,7 +869,7 @@ var Dejavu;
                 await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A2_S6_02_B);
                 await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S6_01_B + Dejavu.dataForSave.partnerInCrimeName + ".");
                 await Dejavu.ƒS.Character.hide(Dejavu.characters.PIC);
-                await Dejavu.ƒS.update(1);
+                await Dejavu.ƒS.update(2);
                 Dejavu.ƒS.Speech.hide();
                 break;
             case choicesDiary.tell:
@@ -879,7 +879,7 @@ var Dejavu;
                 await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A2_S7_02_A);
                 await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A2_S7_03_A);
                 await Dejavu.ƒS.Character.hide(Dejavu.characters.PIC);
-                await Dejavu.ƒS.update(1);
+                await Dejavu.ƒS.update(2);
                 Dejavu.ƒS.Speech.hide();
                 break;
         }
@@ -1246,7 +1246,7 @@ var Dejavu;
 var Dejavu;
 (function (Dejavu) {
     async function directorFirst() {
-        console.log("divineFirst: starting");
+        console.log("directorFirst: starting");
     }
     Dejavu.directorFirst = directorFirst;
 })(Dejavu || (Dejavu = {}));

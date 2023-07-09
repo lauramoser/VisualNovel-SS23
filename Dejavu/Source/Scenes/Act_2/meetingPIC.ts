@@ -154,7 +154,7 @@ namespace Dejavu {
         await ƒS.Speech.tell(characters.PIC, text.PIC.A2_S6_02_B);
         await ƒS.Speech.tell("Rosi", text.Rosi.A2_S6_01_B + dataForSave.partnerInCrimeName + ".");
         await ƒS.Character.hide(characters.PIC);
-        await ƒS.update(1);
+        await ƒS.update(2);
         ƒS.Speech.hide();
         break;
       case choicesDiary.tell:
@@ -164,7 +164,7 @@ namespace Dejavu {
         await ƒS.Speech.tell(characters.PIC, text.PIC.A2_S7_02_A);
         await ƒS.Speech.tell(characters.PIC, text.PIC.A2_S7_03_A);
         await ƒS.Character.hide(characters.PIC);
-        await ƒS.update(1);
+        await ƒS.update(2);
         ƒS.Speech.hide();
         break;
     }
