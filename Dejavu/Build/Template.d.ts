@@ -147,6 +147,10 @@ declare namespace Dejavu {
             name: string;
             background: string;
         };
+        LetterRosi: {
+            name: string;
+            background: string;
+        };
     };
     let characters: {
         Narrator: {

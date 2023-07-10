@@ -187,6 +187,10 @@ namespace Dejavu {
       name: "Newspaper Bad Ending",
       background: "/Dejavu/Images/Backgrounds/Newspaper.png",
     },
+    LetterRosi: {
+      name: "Diary Rosi",
+      background: "/Dejavu/Images/Backgrounds/LetterRosiEnding.png",
+    },
   };
 
   //Characters
@@ -261,14 +265,14 @@ namespace Dejavu {
       name: "Julius",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
-        angry: "/Dejavu/Images/Characters/Director/Direktor_angry.png",
+        angry: "/Dejavu/Images/Characters/Julius/Julius_angry.png",
       },
     },
     RosaliasMother: {
       name: "Rosalias Mother",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
-        angry: "/Dejavu/Images/Characters/Director/Direktor_angry.png",
+        angry: "/Dejavu/Images/Characters/RosaliasMother/RosaliasMother_angry.png",
       },
     },
   };

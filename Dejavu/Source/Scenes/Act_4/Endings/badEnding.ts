@@ -4,8 +4,8 @@ namespace Dejavu {
 
     ƒS.Character.hideAll();
     ƒS.Speech.hide();
-    await ƒS.Location.show(locations.livingroom);
+    await ƒS.Location.show(locations.Newspaper);
     await ƒS.update(2);
-    await ƒS.Text.print("<div class='newspaper'><h1>THEFT AT IRIS HILL MANOR</h1>At yesterday's auction, a very expensive and luxurious red diamond necklace disappeared!<br><br>It all happened during a blackout. Although the doors automatically closed with the electricity shortage and the thief technically still had to be in the building, the police were not able to find the criminal.</div>");
+    await ƒS.Text.print("<div class='novelpage'><h1>VERMISST</h1>Seit Samstag 25.06.2022 werden zwei Jugendliche vermisst. <br> Sie wurden zuletzt in dem Zikrus in der Stadt gesehen. <br> Wenn Sie etwas wissen, rufen sie bitte 02934/290342 an!</div>");
   }
 }

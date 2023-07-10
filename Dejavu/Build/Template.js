@@ -179,6 +179,10 @@ var Dejavu;
             name: "Newspaper Bad Ending",
             background: "/Dejavu/Images/Backgrounds/Newspaper.png",
         },
+        LetterRosi: {
+            name: "Diary Rosi",
+            background: "/Dejavu/Images/Backgrounds/LetterRosiEnding.png",
+        },
     };
     //Characters
     Dejavu.characters = {
@@ -246,14 +250,14 @@ var Dejavu;
             name: "Julius",
             origin: Dejavu.ƒS.ORIGIN.BOTTOMCENTER,
             pose: {
-                angry: "/Dejavu/Images/Characters/Director/Direktor_angry.png",
+                angry: "/Dejavu/Images/Characters/Julius/Julius_angry.png",
             },
         },
         RosaliasMother: {
             name: "Rosalias Mother",
             origin: Dejavu.ƒS.ORIGIN.BOTTOMCENTER,
             pose: {
-                angry: "/Dejavu/Images/Characters/Director/Direktor_angry.png",
+                angry: "/Dejavu/Images/Characters/RosaliasMother/RosaliasMother_angry.png",
             },
         },
     };
@@ -826,7 +830,9 @@ var Dejavu;
             readingDiary: "Tagebuch weiterlesen",
             goHome: "nach Hause gehen",
         };
-        document.getElementsByName("lovepoints").forEach(meterStuff => meterStuff.hidden = false);
+        document
+            .getElementsByName("lovepoints")
+            .forEach((meterStuff) => (meterStuff.hidden = false));
         //Seconde Act
         Dejavu.ƒS.Speech.hide();
         await Dejavu.ƒS.Location.show(Dejavu.locations.Flowergarden);
@@ -895,9 +901,8 @@ var Dejavu;
                 Dejavu.dataForSave.lifepoints -= 10;
                 await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A2_S6_02_B);
                 await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A2_S6_01_B + Dejavu.dataForSave.partnerInCrimeName + ".");
-                await Dejavu.ƒS.Character.hide(Dejavu.characters.PIC);
-                await Dejavu.ƒS.update(2);
-                Dejavu.ƒS.Speech.hide();
+                await Dejavu.ƒS.Character.hideAll();
+                await Dejavu.ƒS.update(1);
                 break;
             case choicesDiary.tell:
                 Dejavu.dataForSave.lifepoints += 10;
@@ -905,11 +910,11 @@ var Dejavu;
                 await Dejavu.ƒS.Speech.tell(undefined, text.Narrator.A2_S7_01_A);
                 await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A2_S7_02_A);
                 await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A2_S7_03_A);
-                await Dejavu.ƒS.Character.hide(Dejavu.characters.PIC);
-                await Dejavu.ƒS.update(2);
-                Dejavu.ƒS.Speech.hide();
+                await Dejavu.ƒS.Character.hideAll();
+                await Dejavu.ƒS.update(1);
                 break;
         }
+        await Dejavu.ƒS.Speech.tell(undefined, "Du überlegst was du als nächstes machst");
         let ChoiceDoingNext = await Dejavu.ƒS.Menu.getInput(ChoicesDoingNext, "choices");
         switch (ChoiceDoingNext) {
             case ChoicesDoingNext.goHome:
@@ -1012,7 +1017,7 @@ var Dejavu;
         Dejavu.ƒS.Sound.play(Dejavu.sounds.dejavu, 0.5, true);
         await Dejavu.ƒS.Location.show(Dejavu.locations.CircusDreaming);
         await Dejavu.ƒS.update(2);
-        await Dejavu.ƒS.Character.show(Dejavu.characters.Rosalia, Dejavu.characters.Rosalia.pose.training_confident, Dejavu.ƒS.positionPercent(20, 90));
+        await Dejavu.ƒS.Character.show(Dejavu.characters.Rosalia, Dejavu.characters.Rosalia.pose.training_confident, Dejavu.ƒS.positionPercent(50, 90));
         await Dejavu.ƒS.update(1);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Rosalia, text.Rosalia.A3_S10_01);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Rosalia, text.Rosalia.A3_S10_02);
@@ -1118,7 +1123,7 @@ var Dejavu;
         Dejavu.ƒS.Speech.hide();
         await Dejavu.ƒS.Location.show(Dejavu.locations.Psychiatry);
         await Dejavu.ƒS.update(2);
-        await Dejavu.ƒS.Text.print("<div class='novelpage'><h1>VERSCHWUNDEN</h1>Es werden zwei Jugendliche vermisst. Zuletzt wurden sie im Zirkus gesichtet, der kurz nach ihrem verschwinden die Stadt verlassen hat. Rufen Sie die Polizei an, wenn sie etwas wissen!</div>");
+        await Dejavu.ƒS.Text.print("<div class='novelpage'>Nach einer Weile ist es Rosalia immer schwerer geworden ihre Träume zu ignorieren und sie wurden immer intensiver. <br> Irgendwann ist Rosalia schweißnass in die Küche gekommen und ihre Mutter hat entschieden, dass das so nicht weiter gehen kann. <br> Nach ein paar Sitzungen wurde Rosi als schizophren diagnostiziert und in eine Psychatrie eingewiesen</div>");
     }
     Dejavu.neutralEnding = neutralEnding;
 })(Dejavu || (Dejavu = {}));
@@ -1667,9 +1672,9 @@ var Dejavu;
         console.log("BadEnding scene: starting");
         Dejavu.ƒS.Character.hideAll();
         Dejavu.ƒS.Speech.hide();
-        await Dejavu.ƒS.Location.show(Dejavu.locations.livingroom);
+        await Dejavu.ƒS.Location.show(Dejavu.locations.Newspaper);
         await Dejavu.ƒS.update(2);
-        await Dejavu.ƒS.Text.print("<div class='newspaper'><h1>THEFT AT IRIS HILL MANOR</h1>At yesterday's auction, a very expensive and luxurious red diamond necklace disappeared!<br><br>It all happened during a blackout. Although the doors automatically closed with the electricity shortage and the thief technically still had to be in the building, the police were not able to find the criminal.</div>");
+        await Dejavu.ƒS.Text.print("<div class='novelpage'><h1>VERMISST</h1>Seit Samstag 25.06.2022 werden zwei Jugendliche vermisst. <br> Sie wurden zuletzt in dem Zikrus in der Stadt gesehen. <br> Wenn Sie etwas wissen, rufen sie bitte 02934/290342 an!</div>");
     }
     Dejavu.badEnding = badEnding;
 })(Dejavu || (Dejavu = {}));
@@ -1679,8 +1684,10 @@ var Dejavu;
         console.log("GoodEnding scene: starting");
         Dejavu.ƒS.Character.hideAll();
         Dejavu.ƒS.Speech.hide();
-        await Dejavu.ƒS.Location.show(Dejavu.locations.livingroom);
+        await Dejavu.ƒS.Location.show(Dejavu.locations.Graveyard);
         await Dejavu.ƒS.update(2);
+        Dejavu.ƒS.Text.addClass("novelpageDiary");
+        await Dejavu.ƒS.Text.print("<div class='novelpage'>Hallo Opa <br> Ich habe herausgefunden, was mit deiner Mutter passiert ist. Es war Julius ihr Ex-Verlobter. Ich denke, dass er eifersüchtig war, weil Rosalia in für deinen Vater verlassen hat. <br> Ich vermisse dich <br> Deine Rosi</div>");
     }
     Dejavu.goodEnding = goodEnding;
 })(Dejavu || (Dejavu = {}));

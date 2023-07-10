@@ -28,7 +28,7 @@ namespace Dejavu {
     await ƒS.Character.show(
       characters.Rosalia,
       characters.Rosalia.pose.training_confident,
-      ƒS.positionPercent(20, 90)
+      ƒS.positionPercent(50, 90)
     );
     await ƒS.update(1);
     await ƒS.Speech.tell(characters.Rosalia, text.Rosalia.A3_S10_01);

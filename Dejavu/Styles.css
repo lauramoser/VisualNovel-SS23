@@ -140,17 +140,22 @@ speech input {
 /* Novel Pages */
 
 dialog[type="text"] {
-  width: 100%;
-  height: 100%;
-  background-image: url("Images/Backgrounds/Newspaper.png");
-  background-size: 100% 100%; 
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
 }
-
-.newspaper {
-  width: 70%;
+.novelpage {
+  width: 50%;
   position: fixed;
-  left: 20%;
-  top: 35%
+  left: 25%;
+  top: 35%;
+  color: white;
+}
+.novelpageDiary{
+  background-image: url("/Dejavu/Images/Backgrounds/LetterRosiEnding.png");
+  width: 50%;
+  border: none;
 }
 
 /* Metar-Bar */
@@ -185,4 +190,10 @@ input[id="scoreForPIC"] {
   top: 10%;
   width: 6.5%;
   text-align: center;
+}
+
+#flower{
+  position: absolute;
+  right: 20px;
+  bottom: 0;
 }
