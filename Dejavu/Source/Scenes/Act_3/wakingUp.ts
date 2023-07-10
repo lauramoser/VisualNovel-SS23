@@ -26,17 +26,15 @@ namespace Dejavu {
     // CHOICES
     let ChoicesDoingNext = {
       withPIC:
-        "...aber das schaffe ich nicht alleine, am besten rufe ich" +
+        "...aber das schaffe ich nicht alleine, am besten rufe ich " +
         dataForSave.partnerInCrimeName +
-        "an",
+        " an",
       alone: "...am besten alleine, das glaubt mir ja niemand!",
       tooLong: "...oder nein, das ist alles schon viel zu lange her",
     };
     let ChoicesMeeting = {
         no:
-          "Ich muss mich erstmal von diesem Schreck erholen. " +
-          dataForSave.partnerInCrimeName +
-          "an",
+          "Ich muss mich erstmal von diesem Schreck erholen. ",
         yes: "Ja auf jeden Fall, der Blumengarten?",
       };
 

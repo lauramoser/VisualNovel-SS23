@@ -13,6 +13,9 @@ namespace Dejavu {
         P10_B:
           "Oh mein Gott du hast recht... irgendwie kam das einfach so aus mir raus",
         P14_B: "Oh.. hihihi... danke",
+
+        R3_C: "Ja gerne",
+        R9_C: "Vielen Dank, das hilft uns schon sehr viel weiter!",
       },
       PIC: {
         P6: "Nein nein, ihr Name ist Rosalia... sie haben Recht... aber woher wissen sie das?",
@@ -38,13 +41,23 @@ namespace Dejavu {
         D13_A:
           "HÖRT AUF IN DER VERGANGENHEIT HERUM ZU WÜHLEN! SONST SEIT IHR DIE NÄCHSTEN..... ODER SOLLTE ICH EHER SAGEN IHR SEIT DIE NÄCHSTEN",
 
-        P11_B: "man wählt immer das zuerst was einem am wichtigsten ist",
-        P12_B: "Lass uns mal schauen, was die Kugel sagt",
-        P13_B:
+        D11_B: "man wählt immer das zuerst was einem am wichtigsten ist",
+        D12_B: "Lass uns mal schauen, was die Kugel sagt",
+        D13_B:
           "Oh, wie es scheint hast du deine große Liebe schon kennen gelernt... und ich glaube ihr seit bereits dabei ein großes Abenteuer zu erleben.... Du scheinst deiner Urgroßmutter doch ähnlicher zu sein als du glaubst",
-        P16_B:
+        D16_B:
           "So ihr habt eure Frage gewählt. Viel Spaß noch bei eurem Besuch unseres Zirkus.",
-      },
+        
+        D1_C: "hmm wenn du möchtest kann ich dir die Karten lesen lassen.",
+        D2_C: "Ich habe das Gefühl, dass du und Rosalia eine enge Verbindung zueinander habt.",
+        D4_C: ".....",
+        D5_C: "hmm lass uns mal gemeinsam schauen... die erste Karte zeigt, dass du nicht alleine bist und jemand über dich wacht.",
+        D6_C: "Das können viele sein, aber ich spüre eine starke Kraft und Energie die von Rosalia kommt.",
+        D7_C: "Die zweite Karte ist die Liebes Karte... aber mit dem Narr verbunden bedeutet das, dass es eine Unerwiderte Liebe war. ",
+        D8_C: "Eine unerwiderte Liebe ist kann zu viel Schmerz und Bösem führen... auch ein Mord wäre hier in Betracht zu ziehen.",
+        D10_C:  "Gerne! und jetzt raus ihr zwei Abenteurer!",
+      
+        },
     };
 
     // CHOICES
@@ -55,7 +68,7 @@ namespace Dejavu {
     };
     let choicesAskingSeconde = {
       Clown: "Clown",
-      Director: "Director",
+      Director: "Direktor",
     };
 
     //ClueOne
@@ -113,17 +126,33 @@ namespace Dejavu {
         return "BadEnding";
 
       case choicesAskingDivine.reasonOfDeath:
+        await ƒS.Speech.tell(characters.Diviner, text.Divine.D1_C);
+        await ƒS.Speech.tell(characters.Diviner, text.Divine.D2_C);
+        await ƒS.Speech.tell("Rosi", text.Rosi.R3_C);
+        await ƒS.Location.show(locations.DivineroomTarot);
+        await ƒS.update(0);
+        await ƒS.Speech.tell(characters.Diviner, text.Divine.D4_C);
+        await ƒS.Speech.tell(characters.Diviner, text.Divine.D5_C);
+        await ƒS.Speech.tell(characters.Diviner, text.Divine.D6_C);
+        await ƒS.Speech.tell(characters.Diviner, text.Divine.D7_C);
+        await ƒS.Speech.tell(characters.Diviner, text.Divine.D8_C);
+        await ƒS.Location.show(locations.Divineroom);
+        await ƒS.update(0);
+        await ƒS.Speech.tell("Rosi", text.Rosi.R9_C);
+        await ƒS.Speech.tell(characters.Diviner, text.Divine.D10_C);
+        ƒS.Sound.fade(sounds.divineroom, 0, 1);
         break;
 
       case choicesAskingDivine.trueLove:
         await ƒS.Speech.tell(characters.PIC, text.PIC.P9_B);
         await ƒS.Speech.tell("Rosi", text.Rosi.P10_B);
-        await ƒS.Speech.tell(characters.Diviner, text.Divine.P11_B);
-        await ƒS.Speech.tell(characters.Diviner, text.Divine.P12_B);
-        await ƒS.Speech.tell(characters.Diviner, text.Divine.P13_B);
+        await ƒS.Speech.tell(characters.Diviner, text.Divine.D11_B);
+        await ƒS.Speech.tell(characters.Diviner, text.Divine.D12_B);
+        await ƒS.Speech.tell(characters.Diviner, text.Divine.D13_B);
         await ƒS.Speech.tell("Rosi", text.Rosi.P14_B);
         await ƒS.Speech.tell(characters.PIC, text.PIC.P15_B);
-        await ƒS.Speech.tell(characters.Diviner, text.Divine.P16_B);
+        await ƒS.Speech.tell(characters.Diviner, text.Divine.D16_B);
+        ƒS.Sound.fade(sounds.divineroom, 0, 1);
         break;
     }
     await ƒS.Character.hide(characters.Diviner);

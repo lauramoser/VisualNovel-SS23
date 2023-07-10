@@ -27,6 +27,11 @@ declare namespace Dejavu {
             alpha: string;
             edge: number;
         };
+        pzzle: {
+            duration: number;
+            alpha: string;
+            edge: number;
+        };
     };
     function slideToSide(_startPos: number, _endPos: number): ƒS.AnimationDefinition;
     function rightFade(): ƒS.AnimationDefinition;
@@ -37,6 +42,8 @@ declare namespace Dejavu {
         crowdTalking: string;
         divineroom: string;
         badEnding: string;
+        decision: string;
+        goodEnding: string;
         cafePouring: string;
         fallingDown: string;
         phoneRinging: string;
@@ -100,7 +107,15 @@ declare namespace Dejavu {
             name: string;
             background: string;
         };
+        KitchenClue3: {
+            name: string;
+            background: string;
+        };
         Clownroom: {
+            name: string;
+            background: string;
+        };
+        ClownroomCard: {
             name: string;
             background: string;
         };
@@ -112,11 +127,23 @@ declare namespace Dejavu {
             name: string;
             background: string;
         };
+        DivineroomTarot: {
+            name: string;
+            background: string;
+        };
         Graveyard: {
             name: string;
             background: string;
         };
         Psychiatry: {
+            name: string;
+            background: string;
+        };
+        FinalDecision: {
+            name: string;
+            background: string;
+        };
+        Newspaper: {
             name: string;
             background: string;
         };
@@ -226,9 +253,6 @@ declare namespace Dejavu {
 }
 declare namespace Dejavu {
     function wakingUp(): ƒS.SceneReturn;
-}
-declare namespace Dejavu {
-    function specialScene(): ƒS.SceneReturn;
 }
 declare namespace Dejavu {
     function arrivingCircus(): ƒS.SceneReturn;

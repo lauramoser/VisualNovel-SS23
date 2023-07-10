@@ -142,7 +142,7 @@ speech input {
 dialog[type="text"] {
   width: 100%;
   height: 100%;
-  background-image: url("Images/Backgrounds/black.png");
+  background-image: url("Images/Backgrounds/Newspaper.png");
   background-size: 100% 100%; 
 }
 
@@ -152,7 +152,6 @@ dialog[type="text"] {
   left: 20%;
   top: 35%
 }
-
 
 /* Metar-Bar */
 meter::-webkit-meter-bar {

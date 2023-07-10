@@ -18,9 +18,9 @@ namespace Dejavu {
       edge: 0.5,
     },
     blinkClose: {
-      duration: 1,
+      duration: 2,
       alpha: "/Dejavu/Images/Transitions/blinkReverse.jpg",
-      edge: 1,
+      edge: 0.5,
     },
     hearts: {
       duration: 1.5,
@@ -30,6 +30,11 @@ namespace Dejavu {
     swirl: {
       duration: 2,
       alpha: "/Dejavu/Images/Transitions/009.jpg",
+      edge: 1,
+    },
+    pzzle: {
+      duration: 3,
+      alpha: "/Dejavu/Images/Transitions/puzz.png",
       edge: 1,
     },
   };
@@ -65,13 +70,14 @@ namespace Dejavu {
   //Sounds
   export let sounds = {
     //background Music
-
     packing: "/Dejavu/Audio/boxes.mp3",
     circus: "/Dejavu/Audio/circus-11794.mp3",
     dejavu: "/Dejavu/Audio/ambient-dream-16671.mp3",
     crowdTalking:"/Dejavu/Audio/crowd-talking-138493.mp3",
     divineroom: "/Dejavu/Audio/magical-background-6892.mp3",
     badEnding: "/Dejavu/Audio/evil-cue-111895.mp3",
+    decision: "/Dejavu/Audio/quiz-game-music-loop-bpm-90-61070.mp3",
+    goodEnding:"/Dejavu/Audio/motivational-corporate-medium1-110677.mp3",
 
     //sounds
     cafePouring: "/Dejavu/Audio/pouring-coffee-6743.mp3",
@@ -141,9 +147,17 @@ namespace Dejavu {
       name: "Kitchen",
       background: "/Dejavu/Images/Backgrounds/Kitchen.png",
     },
+    KitchenClue3: {
+      name: "KitchenClue3",
+      background: "/Dejavu/Images/Backgrounds/Kitchen_Clue3.png",
+    },
     Clownroom: {
       name: "Clown Room",
       background: "/Dejavu/Images/Backgrounds/Clownroom.png",
+    },
+    ClownroomCard: {
+      name: "Clown Room with Card",
+      background: "/Dejavu/Images/Backgrounds/Clownroom_Card.png",
     },
     MansionDreaming: {
       name: "MansionDreaming",
@@ -153,6 +167,10 @@ namespace Dejavu {
       name: "Divine Room",
       background: "/Dejavu/Images/Backgrounds/Divineroom.png",
     },
+    DivineroomTarot: {
+      name: "Divineroom Tarot",
+      background: "/Dejavu/Images/Backgrounds/DivineroomTarot.png",
+    },
     Graveyard: {
       name: "Graveyard",
       background: "/Dejavu/Images/Backgrounds/Graveyard.png",
@@ -160,6 +178,14 @@ namespace Dejavu {
     Psychiatry: {
       name: "Psychiatry",
       background: "/Dejavu/Images/Backgrounds/Psychatrie.png",
+    },
+    FinalDecision: {
+      name: "Night",
+      background: "/Dejavu/Images/Backgrounds/FinalDecision.png",
+    },
+    Newspaper: {
+      name: "Newspaper Bad Ending",
+      background: "/Dejavu/Images/Backgrounds/Newspaper.png",
     },
   };
 
