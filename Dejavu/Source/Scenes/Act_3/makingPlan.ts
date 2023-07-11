@@ -53,6 +53,7 @@ namespace Dejavu {
       await ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_07);
       await ƒS.Speech.tell(characters.PIC, text.PIC.A3_S13_09);
       ƒS.Sound.play(sounds.phoneCalling, 0.5,);
+      ƒS.Sound.fade(sounds.phoneCalling, 0, 1);
       await ƒS.Speech.tell(characters.Mom, text.Mom.A3_S13_10);
       await ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_11);
       await ƒS.Speech.tell(characters.Mom, text.Mom.A3_S13_12);
@@ -60,6 +61,11 @@ namespace Dejavu {
       await ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_14);
       ƒS.Sound.play(sounds.phoneMessage, 0.5,);
       await ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_15);
+      await ƒS.Character.animate(
+        characters.PIC,
+        characters.PIC.pose.normal,
+        slideToSide(50, 70)
+      );
       await ƒS.Location.show(locations.FlowergardenHandy);
       await ƒS.update(0);
       await ƒS.Speech.tell(characters.PIC, text.PIC.A3_S13_16);
@@ -68,7 +74,7 @@ namespace Dejavu {
       await ƒS.Character.show(
         characters.PIC,
         characters.PIC.pose.unsure,
-        ƒS.positionPercent(50, 90)
+        ƒS.positionPercent(70, 90)
       );
       await ƒS.update(0);
       await ƒS.Speech.tell(characters.PIC, text.PIC.A3_S13_17);
@@ -77,7 +83,7 @@ namespace Dejavu {
       await ƒS.Character.show(
         characters.PIC,
         characters.PIC.pose.havingAnIdea,
-        ƒS.positionPercent(50, 90)
+        ƒS.positionPercent(80, 80)
       );
       await ƒS.update(0);
       await ƒS.Speech.tell(characters.PIC, text.PIC.A3_S13_18);

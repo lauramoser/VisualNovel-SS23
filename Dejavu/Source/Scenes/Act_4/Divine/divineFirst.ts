@@ -54,7 +54,7 @@ namespace Dejavu {
         D5_C: "hmm lass uns mal gemeinsam schauen... die erste Karte zeigt, dass du nicht alleine bist und jemand über dich wacht.",
         D6_C: "Das können viele sein, aber ich spüre eine starke Kraft und Energie die von Rosalia kommt.",
         D7_C: "Die zweite Karte ist die Liebes Karte... aber mit dem Narr verbunden bedeutet das, dass es eine Unerwiderte Liebe war. ",
-        D8_C: "Eine unerwiderte Liebe ist kann zu viel Schmerz und Bösem führen... auch ein Mord wäre hier in Betracht zu ziehen.",
+        D8_C: "Eine unerwiderte Liebe kann zu viel Schmerz und Bösem führen... auch ein Mord wäre hier in Betracht zu ziehen.",
         D10_C:  "Gerne! und jetzt raus ihr zwei Abenteurer!",
       
         },
@@ -102,6 +102,8 @@ namespace Dejavu {
     );
     switch (choiceAskingDivine) {
       case choicesAskingDivine.lookingInPast:
+        dataForSave.lifepoints -= 10;
+        handleFlower();
         ƒS.Sound.fade(sounds.divineroom, 0, 1);
         ƒS.Sound.play(sounds.badEnding, 0.5, true);
         await ƒS.Character.hide(characters.Diviner);
@@ -123,12 +125,16 @@ namespace Dejavu {
           transitions.swirl.edge
         );
         ƒS.Speech.hide();
+        ƒS.Sound.fade(sounds.badEnding,0,1);
         return "BadEnding";
 
       case choicesAskingDivine.reasonOfDeath:
+        dataForSave.lifepoints += 10;
+        handleFlower();
         await ƒS.Speech.tell(characters.Diviner, text.Divine.D1_C);
         await ƒS.Speech.tell(characters.Diviner, text.Divine.D2_C);
         await ƒS.Speech.tell("Rosi", text.Rosi.R3_C);
+        await ƒS.Character.hideAll();
         await ƒS.Location.show(locations.DivineroomTarot);
         await ƒS.update(0);
         await ƒS.Speech.tell(characters.Diviner, text.Divine.D4_C);
@@ -138,12 +144,24 @@ namespace Dejavu {
         await ƒS.Speech.tell(characters.Diviner, text.Divine.D8_C);
         await ƒS.Location.show(locations.Divineroom);
         await ƒS.update(0);
+        await ƒS.Character.show(
+          characters.Diviner,
+          characters.Diviner.pose.trance,
+          ƒS.positionPercent(30, 90)
+        );
+        await ƒS.Character.show(
+          characters.PIC,
+          characters.PIC.pose.unsure,
+          ƒS.positionPercent(70, 90)
+        );
         await ƒS.Speech.tell("Rosi", text.Rosi.R9_C);
         await ƒS.Speech.tell(characters.Diviner, text.Divine.D10_C);
         ƒS.Sound.fade(sounds.divineroom, 0, 1);
         break;
 
       case choicesAskingDivine.trueLove:
+        dataForSave.lifepoints -= 10;
+        handleFlower();
         await ƒS.Speech.tell(characters.PIC, text.PIC.P9_B);
         await ƒS.Speech.tell("Rosi", text.Rosi.P10_B);
         await ƒS.Speech.tell(characters.Diviner, text.Divine.D11_B);

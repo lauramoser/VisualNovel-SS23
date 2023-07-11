@@ -10,6 +10,46 @@ namespace Dejavu {
     lovepoints: 0,
   };
 
+  //Flower Image
+  export function handleFlower() {
+    let flower: HTMLImageElement = <HTMLImageElement>(
+      document.getElementById("flowerImg")
+    );
+    if (dataForSave.lifepoints <= 0) {
+      flower.src = "/Dejavu/Images/Flower/Knospe.png";
+    }
+    if (dataForSave.lifepoints == 10) {
+      flower.src = "/Dejavu/Images/Flower/Blume_1.png";
+    }
+    if (dataForSave.lifepoints == 20) {
+      flower.src = "/Dejavu/Images/Flower/Blume_2.png";
+    }
+    if (dataForSave.lifepoints == 30) {
+      flower.src = "/Dejavu/Images/Flower/Blume_3.png";
+    }
+    if (dataForSave.lifepoints == 40) {
+      flower.src = "/Dejavu/Images/Flower/Blume_4.png";
+    }
+    if (dataForSave.lifepoints == 50) {
+      flower.src = "/Dejavu/Images/Flower/Blume_5.png";
+    }
+    if (dataForSave.lifepoints == 60) {
+      flower.src = "/Dejavu/Images/Flower/Blume_6.png";
+    }
+    if (dataForSave.lifepoints == 70) {
+      flower.src = "/Dejavu/Images/Flower/Blume_7.png";
+    }
+    if (dataForSave.lifepoints == 80) {
+      flower.src = "/Dejavu/Images/Flower/Blume_8.png";
+    }
+    if (dataForSave.lifepoints == 90) {
+      flower.src = "/Dejavu/Images/Flower/Blume_9.png";
+    }
+    if (dataForSave.lifepoints == 100) {
+      flower.src = "/Dejavu/Images/Flower/Blume_10.png";
+    }
+  }
+
   //Transitions
   export let transitions = {
     blinkOpen: {
@@ -46,11 +86,11 @@ namespace Dejavu {
   ): ƒS.AnimationDefinition {
     return {
       start: {
-        translation: ƒS.positionPercent(_startPos, 100),
+        translation: ƒS.positionPercent(_startPos, 90),
         color: ƒS.Color.CSS("white", 1),
       },
       end: {
-        translation: ƒS.positionPercent(_endPos, 100),
+        translation: ƒS.positionPercent(_endPos, 90),
         color: ƒS.Color.CSS("white", 1),
       },
       duration: 2,
@@ -58,12 +98,18 @@ namespace Dejavu {
     };
   }
 
-  export function rightFade(): ƒS.AnimationDefinition {
+  export function slideIn(): ƒS.AnimationDefinition {
     return {
-      start: { translation: ƒS.positions.bottomleft, color: ƒS.Color.CSS("", 1) },
-      end: { translation: ƒS.positions.bottomright, color: ƒS.Color.CSS("", 0) },
+      start: {
+        translation: ƒS.positionPercent(0, 90),
+        color: ƒS.Color.CSS("white", 1),
+      },
+      end: {
+        translation: ƒS.positionPercent(50, 90),
+        color: ƒS.Color.CSS("white", 1),
+      },
       duration: 2,
-      playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
+      playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE,
     };
   }
 
@@ -73,11 +119,11 @@ namespace Dejavu {
     packing: "/Dejavu/Audio/boxes.mp3",
     circus: "/Dejavu/Audio/circus-11794.mp3",
     dejavu: "/Dejavu/Audio/ambient-dream-16671.mp3",
-    crowdTalking:"/Dejavu/Audio/crowd-talking-138493.mp3",
+    crowdTalking: "/Dejavu/Audio/crowd-talking-138493.mp3",
     divineroom: "/Dejavu/Audio/magical-background-6892.mp3",
     badEnding: "/Dejavu/Audio/evil-cue-111895.mp3",
     decision: "/Dejavu/Audio/quiz-game-music-loop-bpm-90-61070.mp3",
-    goodEnding:"/Dejavu/Audio/motivational-corporate-medium1-110677.mp3",
+    goodEnding: "/Dejavu/Audio/motivational-corporate-medium1-110677.mp3",
 
     //sounds
     cafePouring: "/Dejavu/Audio/pouring-coffee-6743.mp3",
@@ -272,7 +318,8 @@ namespace Dejavu {
       name: "Rosalias Mother",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
-        angry: "/Dejavu/Images/Characters/RosaliasMother/RosaliasMother_angry.png",
+        angry:
+          "/Dejavu/Images/Characters/RosaliasMother/RosaliasMother_angry.png",
       },
     },
   };
@@ -355,29 +402,71 @@ namespace Dejavu {
       // Act one
       { scene: home, name: "Arriving and Finding Diary" },
       //Act two
-      { scene: firstMorning, id: "FirstMorning", name: "Arriving and Finding Diary" },
-      { scene: arrivingAtHome, id: "ArrivingAtHome", name: "Back from the Flowergarden" },
+      {
+        scene: firstMorning,
+        id: "FirstMorning",
+        name: "Arriving and Finding Diary",
+      },
+      {
+        scene: arrivingAtHome,
+        id: "ArrivingAtHome",
+        name: "Back from the Flowergarden",
+      },
       { scene: meetingPIC, id: "MeetingPIC", name: "Meeting your PIC" },
       //Act three
       { scene: decisiveDream, id: "DecisiveDream", name: "The Crucial Dream" },
       { scene: wakingUp, id: "WakingUp", name: "Deciding what to do" },
-      { scene: makingPlan, id: "MakingPlan", name: "How to find out what happened?" },
+      {
+        scene: makingPlan,
+        id: "MakingPlan",
+        name: "How to find out what happened?",
+      },
       //Act four
-      { scene: arrivingCircus, id: "ArrivingCircus", name: "Deciding who to ask first" },
-      { scene: directorFirst, id: "DirectorFirst", name: "Asking Director first" },
+      {
+        scene: arrivingCircus,
+        id: "ArrivingCircus",
+        name: "Deciding who to ask first",
+      },
+      {
+        scene: directorFirst,
+        id: "DirectorFirst",
+        name: "Asking Director first",
+      },
       { scene: clownFirst, id: "ClownFirst", name: "Asking Divine first" },
       { scene: divineFirst, id: "DivineFirst", name: "Asking Clown first" },
-      { scene: directorSeconde, id: "DirectorSeconde", name: "Asking Director seconde" },
-      { scene: clownSeconde, id: "ClownSeconde", name: "Asking Divine seconde" },
-      { scene: divineSeconde, id: "DivineSeconde", name: "Asking Clown seconde" },
-      { scene: finalDecision, id: "FinalDecision", name: "Deciding what happened" },
+      {
+        scene: directorSeconde,
+        id: "DirectorSeconde",
+        name: "Asking Director seconde",
+      },
+      {
+        scene: clownSeconde,
+        id: "ClownSeconde",
+        name: "Asking Divine seconde",
+      },
+      {
+        scene: divineSeconde,
+        id: "DivineSeconde",
+        name: "Asking Clown seconde",
+      },
+      {
+        scene: finalDecision,
+        id: "FinalDecision",
+        name: "Deciding what happened",
+      },
+      //Clues
+      {
+        scene: clueOne,
+        id: "ClueOne",
+        name: "big fight with Rosalia and her Mother",
+      },
+      { scene: clueThree, id: "ClueThree", name: "threatening letter" },
       //Endings
       { scene: badEnding, id: "BadEnding", name: "bad Ending" },
       { scene: neutralEnding, id: "NeutralEnding", name: "neutral Ending" },
       { scene: goodEnding, id: "GoodEnding", name: "good Ending" },
-      //Clues
-      { scene: clueOne, id: "ClueOne", name: "big fight with Rosalia and her Mother"},
-      { scene: clueThree, id: "ClueThree", name: "threatening letter"},
+
+      { scene: end, id: "End", name: "the end" },
     ];
 
     let uiElement: HTMLElement = document.querySelector("[type=interface]");

@@ -28,14 +28,14 @@ namespace Dejavu {
     await ƒS.Character.show(
       characters.PIC,
       characters.PIC.pose.unsure,
-      ƒS.positionPercent(30, 90)
+      ƒS.positionPercent(70, 90)
     );
     await ƒS.update(2);
     await ƒS.Speech.tell("Rosi", text.Rosi.R1);
     await ƒS.Character.show(
       characters.Director,
       characters.Director.pose.smiling,
-      ƒS.positionPercent(70, 90)
+      ƒS.positionPercent(30, 90)
     );
     await ƒS.Speech.tell(characters.Director, text.Director.D2);
     await ƒS.Speech.tell("Rosi", text.Rosi.R3);
@@ -45,7 +45,8 @@ namespace Dejavu {
     await ƒS.Speech.tell(characters.PIC, text.PIC.P7);
     await ƒS.Speech.tell(characters.Director, text.Director.D8);
     await ƒS.Speech.tell(characters.Director, text.Director.D9);
-    if (dataForSave.lifepoints >= 10) {
+    if (dataForSave.lifepoints = 100) {
+      await ƒS.Character.hideAll();
       return "ArrivingCircus";
     } else {
       return "BadEnding";

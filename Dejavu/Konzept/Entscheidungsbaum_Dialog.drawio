@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-07-10T19:30:15.646Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="xbELmKcDE3WxJ-JmIWIS" version="21.6.1" type="device">
+<mxfile host="app.diagrams.net" modified="2023-07-11T14:16:39.373Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="EWW71h9hhq8oG_Oxr9Mb" version="21.6.1" type="device">
   <diagram name="Seite-1" id="UkwXG7Ko2avV4vK8nV22">
-    <mxGraphModel dx="2960" dy="782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4261" dy="1349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -867,6 +867,17 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="irJQdieEGFat-eJ0aWGL-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.866;exitY=-0.02;exitDx=0;exitDy=0;exitPerimeter=0;startArrow=blockThin;startFill=1;" edge="1" parent="1" source="m0jVCM9L-4Xvr7T7UgM1-17" target="Ay3apNEdG9EY7qlDHxBp-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2160" y="8400" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="2111" y="8400" />
+              <mxPoint x="2110" y="7560" />
+              <mxPoint x="1255" y="7560" />
+              <mxPoint x="1255" y="7734" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="m0jVCM9L-4Xvr7T7UgM1-17" value="Wahrsagerin&amp;nbsp;Seconde&lt;br&gt;Ort: Wahrsagerraum" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1716.9999999999998" y="8680" width="455" height="269" as="geometry" />
         </mxCell>
@@ -892,6 +903,9 @@
         </mxCell>
         <mxCell id="JG6QZ4ECd0AovTRmUkIl-5" value="" style="shape=mxgraph.signs.healthcare.heart_1;html=1;pointerEvents=1;fillColor=#000000;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;" parent="1" vertex="1">
           <mxGeometry x="1527.88" y="8055" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="irJQdieEGFat-eJ0aWGL-3" value="" style="shape=mxgraph.signs.healthcare.heart_1;html=1;pointerEvents=1;fillColor=#000000;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1894.5" y="8550" width="20" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -6,6 +6,7 @@ declare namespace Dejavu {
         lifepoints: number;
         lovepoints: number;
     };
+    function handleFlower(): void;
     let transitions: {
         blinkOpen: {
             duration: number;
@@ -34,7 +35,7 @@ declare namespace Dejavu {
         };
     };
     function slideToSide(_startPos: number, _endPos: number): ƒS.AnimationDefinition;
-    function rightFade(): ƒS.AnimationDefinition;
+    function slideIn(): ƒS.AnimationDefinition;
     let sounds: {
         packing: string;
         circus: string;
@@ -287,4 +288,7 @@ declare namespace Dejavu {
 }
 declare namespace Dejavu {
     function goodEnding(): ƒS.SceneReturn;
+}
+declare namespace Dejavu {
+    function end(): ƒS.SceneReturn;
 }

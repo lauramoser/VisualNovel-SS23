@@ -147,11 +147,11 @@ namespace Dejavu {
     await ƒS.Speech.tell(characters.Narrator, text.Narrator.A1_S4_05);
     await ƒS.Speech.tell("Rosi", text.Rosi.A1_S4_06);
     await ƒS.Speech.tell("Rosi", text.Rosi.A1_S4_07);
-
     let choiceTakeDiary = await ƒS.Menu.getInput(choicesTakeDiary, "choices");
     switch (choiceTakeDiary) {
       case choicesTakeDiary.takeDiary:
         dataForSave.lifepoints += 10;
+        handleFlower();
         await ƒS.Character.show(
           characters.Mom,
           characters.Mom.pose.smiling,

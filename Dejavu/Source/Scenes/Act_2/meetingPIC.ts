@@ -34,7 +34,7 @@ namespace Dejavu {
         A2_S6_03_A:
           "Ja schon, da ich seiner Mutter sehr ähnliche sehe hat er mich immer etwas bevorzugt.",
         A2_S6_01_B:
-          "ganz ok eigentlich, nichts besonderes... und wie geht es dir?",
+          "ganz ok eigentlich, nichts besonderes... und wie geht es dir? ",
 
         A2_S7_02_B: "Gleichfalls, machs gut",
         A2_S8_01:
@@ -90,9 +90,7 @@ namespace Dejavu {
       goHome: "nach Hause gehen",
     };
 
-    document
-      .getElementsByName("lovepoints")
-      .forEach((meterStuff) => (meterStuff.hidden = false));
+    document.getElementsByName("lovepoints").forEach((meterStuff) => (meterStuff.hidden = false));
 
     //Seconde Act
     ƒS.Speech.hide();
@@ -110,9 +108,11 @@ namespace Dejavu {
     switch (choiceDraw) {
       case choicesDraw.portrait:
         dataForSave.lifepoints -= 10;
+        handleFlower();
         break;
       case choicesDraw.bee:
         dataForSave.lifepoints += 10;
+        handleFlower();
         break;
     }
     await ƒS.Speech.tell(characters.Narrator, text.Narrator.A2_S5_01);
@@ -143,7 +143,7 @@ namespace Dejavu {
           case choicesCompliment.ignore:
             break;
           case choicesCompliment.takeCompliment:
-            dataForSave.lovepoints += 12.5;
+            dataForSave.lovepoints += 20;
             break;
         }
         break;
@@ -158,12 +158,14 @@ namespace Dejavu {
     switch (choiceFeeling) {
       case choicesFeeling.ok:
         dataForSave.lifepoints -= 10;
+        handleFlower();
         await ƒS.Speech.tell("Rosi", text.Rosi.A2_S6_01_B);
         await ƒS.Speech.tell(characters.PIC, text.PIC.A2_S6_02_B);
         break;
       case choicesFeeling.grandpaDead:
         dataForSave.lifepoints += 10;
-        dataForSave.lovepoints += 12.5;
+        handleFlower();
+        dataForSave.lovepoints += 20;
         await ƒS.Speech.tell("Rosi", text.Rosi.A2_S6_01_A);
         await ƒS.Speech.tell(characters.PIC, text.PIC.A2_S6_02_A);
         await ƒS.Speech.tell("Rosi", text.Rosi.A2_S6_03_A);
@@ -173,14 +175,16 @@ namespace Dejavu {
     switch (choiceDiary) {
       case choicesDiary.dontTell:
         dataForSave.lifepoints -= 10;
-        await ƒS.Speech.tell(characters.PIC, text.PIC.A2_S6_02_B);
-        await ƒS.Speech.tell("Rosi",text.Rosi.A2_S6_01_B + dataForSave.partnerInCrimeName + ".");
+        handleFlower();
+        await ƒS.Speech.tell(characters.PIC, text.PIC.A2_S7_03_A);
+        await ƒS.Speech.tell("Rosi",text.Rosi.A2_S7_02_B + dataForSave.partnerInCrimeName + ".");
         await ƒS.Character.hideAll();
         await ƒS.update(1);
         break;
       case choicesDiary.tell:
         dataForSave.lifepoints += 10;
-        dataForSave.lovepoints += 12.5;
+        handleFlower();
+        dataForSave.lovepoints += 20;
         await ƒS.Speech.tell(undefined, text.Narrator.A2_S7_01_A);
         await ƒS.Speech.tell(characters.PIC, text.PIC.A2_S7_02_A);
         await ƒS.Speech.tell(characters.PIC, text.PIC.A2_S7_03_A);
@@ -193,15 +197,17 @@ namespace Dejavu {
     switch (ChoiceDoingNext) {
       case ChoicesDoingNext.goHome:
         dataForSave.lifepoints -= 10;
+        handleFlower();
         return "ArrivingAtHome";
       case ChoicesDoingNext.readingDiary:
         dataForSave.lifepoints += 10;
+        handleFlower();
         await ƒS.Location.show(locations.FlowergardenDiary);
         await ƒS.update(0);
         await ƒS.Speech.tell("Rosi lesend", text.Rosi.A2_S8_01);
         await ƒS.Speech.tell("Rosi lesend", text.Rosi.A2_S8_02);
         ƒS.Speech.hide();
-        await ƒS.update(2);
+        await ƒS.update(1);
         return "ArrivingAtHome";
     }
   }

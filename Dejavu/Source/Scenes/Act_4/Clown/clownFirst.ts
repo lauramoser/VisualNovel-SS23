@@ -65,7 +65,7 @@ namespace Dejavu {
       Director: "Direktor",
     };
 
-    //ClueOne
+    //FOURTH ACT
     ƒS.Speech.hide();
     ƒS.Sound.play(sounds.circus, 0.5, true);
     await ƒS.Location.show(locations.Clownroom);
@@ -93,6 +93,8 @@ namespace Dejavu {
     let choiceAskingClown = await ƒS.Menu.getInput(choicesAskingClown,"choices");
     switch (choiceAskingClown) {
       case choicesAskingClown.family:
+        dataForSave.lifepoints += 10;
+        handleFlower();
         await ƒS.Speech.tell(characters.Clown, text.Clown.C1_A);
         await ƒS.Speech.tell(characters.Clown, text.Clown.C2_A);
         await ƒS.Speech.tell(characters.Clown, text.Clown.C3_A);
@@ -104,6 +106,8 @@ namespace Dejavu {
       break;
 
       case choicesAskingClown.job:
+        dataForSave.lifepoints += 10;
+        handleFlower();
         await ƒS.Speech.tell(characters.Clown, text.Clown.C1_B);
         await ƒS.Speech.tell(characters.Clown, text.Clown.C2_B);
         await ƒS.Location.show(locations.ClownroomCard);
@@ -117,6 +121,8 @@ namespace Dejavu {
         break;
 
       case choicesAskingClown.murder:
+        dataForSave.lifepoints -= 10;
+        handleFlower();
         await ƒS.Speech.tell(characters.Clown, text.Clown.C1_C);
         await ƒS.Speech.tell("Rosi", text.Rosi.R2_C);
         await ƒS.Speech.tell(characters.Clown, text.Clown.C3_C);
@@ -140,8 +146,10 @@ namespace Dejavu {
     );
     switch (choiceAskingSeconde) {
       case choicesAskingSeconde.Divine:
+        await ƒS.Character.hideAll();
         return "DivineSeconde";
       case choicesAskingSeconde.Director:
+        await ƒS.Character.hideAll();
         return "DirectorSeconde";
     }
   }

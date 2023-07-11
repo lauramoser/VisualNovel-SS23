@@ -46,16 +46,20 @@ namespace Dejavu {
     switch (choiceAskingFirst) {
       case choicesAskingFirst.Clown:
         dataForSave.lifepoints += 10;
+        handleFlower();
         ƒS.Sound.fade(sounds.circus, 0, 1);
         await ƒS.Character.hide(characters.PIC);
         return "ClownFirst";
       case choicesAskingFirst.Director:
+        dataForSave.lifepoints += 10;
+            handleFlower();
         ƒS.Sound.fade(sounds.circus, 0, 1);
         await ƒS.Character.hide(characters.PIC);
         return "DirectorFirst";
       case choicesAskingFirst.Divine:
         dataForSave.lifepoints -= 10;
-        dataForSave.lovepoints += 12.5;
+        handleFlower();
+        dataForSave.lovepoints += 20;
         ƒS.Sound.fade(sounds.circus, 0, 1);
         await ƒS.Character.hide(characters.PIC);
         return "DivineFirst";

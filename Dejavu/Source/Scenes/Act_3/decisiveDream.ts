@@ -25,10 +25,10 @@ namespace Dejavu {
     ƒS.Sound.play(sounds.dejavu, 0.5, true);
     await ƒS.Location.show(locations.CircusDreaming);
     await ƒS.update(2);
-    await ƒS.Character.show(
+    await ƒS.Character.animate(
       characters.Rosalia,
       characters.Rosalia.pose.training_confident,
-      ƒS.positionPercent(50, 90)
+      slideIn()
     );
     await ƒS.update(1);
     await ƒS.Speech.tell(characters.Rosalia, text.Rosalia.A3_S10_01);
@@ -40,7 +40,7 @@ namespace Dejavu {
     ƒS.Sound.play(sounds.RosaliaScreaming, 0.5);
     ƒS.Sound.play(sounds.fallingDown, 0.5);
     ƒS.Sound.play(sounds.dejavu, 0.5, true);
-    await ƒS.Character.show(characters.Rosalia,characters.Rosalia.pose.traning_sad,ƒS.positionPercent(50, 90));
+    await ƒS.Character.animate(characters.Rosalia,characters.Rosalia.pose.traning_sad,slideIn());
     await ƒS.update(0);
     await ƒS.Speech.tell("Rosalia flüsternd", text.Rosalia.A3_S10_04);
     await ƒS.Speech.tell("???", text.Unknown.A3_S10_05);

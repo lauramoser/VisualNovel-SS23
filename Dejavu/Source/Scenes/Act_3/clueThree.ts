@@ -51,12 +51,17 @@ namespace Dejavu {
       await ƒS.Speech.tell(characters.Mom, text.Mom.A3_S13_09);
       await ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_10)
       await ƒS.Speech.tell(characters.Mom, text.Mom.A3_S13_11);
+      await ƒS.Speech.tell(characters.Mom, text.Mom.A3_S13_15);
+      await ƒS.Character.animate(
+        characters.Mom,
+        characters.Mom.pose.smiling,
+        slideToSide(50, 70)
+      );
       await ƒS.Location.show(locations.KitchenClue3);
       await ƒS.update(0);
-      await ƒS.Speech.tell(characters.Mom, text.Mom.A3_S13_12);
-      await ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_13)
+      await ƒS.Speech.tell("Rosi lesend", text.Rosi.A3_S13_13)
       await ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_14)
-      await ƒS.Speech.tell(characters.Mom, text.Mom.A3_S13_15);
+      await ƒS.Speech.tell(characters.Mom, text.Mom.A3_S13_12);
       await ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_16)
       await ƒS.Character.hide(characters.Mom);
       await ƒS.update(2);

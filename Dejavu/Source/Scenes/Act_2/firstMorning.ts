@@ -74,6 +74,7 @@ namespace Dejavu {
     switch (choiceBreakfast) {
       case choicesBreakfast.egg:
         dataForSave.lifepoints -= 10;
+        handleFlower();
         await ƒS.Speech.tell("Rosi", text.Rosi.A2_S3_05_A);
         await ƒS.Speech.tell("Rosi", text.Rosi.A2_S3_06);
         await ƒS.Speech.tell(characters.Mom, text.Mom.A2_S3_07);
@@ -93,9 +94,13 @@ namespace Dejavu {
         switch (choiceDraw) {
           case choicesDraw.portrait:
             dataForSave.lifepoints -= 10;
+            handleFlower();
             break;
           case choicesDraw.bee:
+            let flower1 :HTMLImageElement = <HTMLImageElement> document.getElementById("flowerImg")
+            flower1.src="/Dejavu/Images/Flower/Blume_1.png"
             dataForSave.lifepoints += 10;
+            
             break;
         }
         await ƒS.Speech.tell(characters.Narrator, text.Narrator.A2_S5_13);
@@ -112,6 +117,7 @@ namespace Dejavu {
 
       case choicesBreakfast.apple:  
         dataForSave.lifepoints += 10;
+        handleFlower();
         await ƒS.Speech.tell("Rosi", text.Rosi.A2_S3_06);
         await ƒS.Speech.tell(characters.Mom, text.Mom.A2_S3_07);
         await ƒS.Speech.tell("Rosi", text.Rosi.A2_S3_08);
@@ -122,6 +128,7 @@ namespace Dejavu {
 
       case choicesBreakfast.nobreakfast:
         dataForSave.lifepoints += 10;
+        handleFlower();
         await ƒS.Speech.tell("Rosi", text.Rosi.A2_S3_06);
         await ƒS.Speech.tell(characters.Mom, text.Mom.A2_S3_07);
         await ƒS.Speech.tell("Rosi", text.Rosi.A2_S3_08);

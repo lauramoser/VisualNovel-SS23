@@ -58,21 +58,25 @@ namespace Dejavu {
     switch (ChoiceDoingNext) {
       case ChoicesDoingNext.withPIC:
         dataForSave.lifepoints += 10;
-        dataForSave.lovepoints += 12.5;
+        handleFlower();
+        dataForSave.lovepoints += 20;
         await ƒS.Speech.tell(characters.Narrator, text.Narrator.A3_S12_01);
         await ƒS.Speech.tell(characters.PIC, text.PIC.A3_S12_01);
         let ChoiceMeeting = await ƒS.Menu.getInput(ChoicesMeeting, "choices");
         switch (ChoiceMeeting) {
           case ChoicesMeeting.no:
             dataForSave.lifepoints += 10;
+            handleFlower();
             return "ClueThree";
           case ChoicesMeeting.yes:
             dataForSave.lifepoints -= 10;
-            dataForSave.lovepoints += 12.5;
+            handleFlower();
+            dataForSave.lovepoints += 20;
             return "MakingPlan";
         }
       case ChoicesDoingNext.alone:
         dataForSave.lifepoints -= 10;
+        handleFlower();
         return "ClueThree";
       case ChoicesDoingNext.tooLong:
         return "NeutralEnding";

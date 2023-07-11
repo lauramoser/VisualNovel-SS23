@@ -26,7 +26,7 @@ namespace Dejavu {
         M4: "Ach quatsch, das ist das Tagebuch deines Großvaters, da sind wahre Gefühle und Begebenheiten drin.",
         M5: "Dein Opa hatte nur wilde Geschichten, die wenig mit der Wahrheit zu tun hatten.",
         M7: "ja das stimmt natürlich mein Schatz, aber weißt du was wirklich echt war?",
-        M8: "Ich glaube mein Opa, also dein Urgroßvater, hat oft nicht gedacht, dass ich vieles nicht verstehe als ich noch klein war.",
+        M8: "Ich glaube mein Opa, also dein Urgroßvater, hat oft gedacht, dass ich vieles nicht verstehe als ich noch klein war.",
         M9: "Aber ich habe schon schnell verstanden, dass mein Opa und Rosalia sich für die Liebe und gegen die Familie entschieden haben.",
         M10: "Soweit ich das weiß kam Rosalia aus gutem Hause und Opa war nur ein normaler Arbeiter, das hat zu der Zeit nicht wirklich zusammen gepasst.",
         M11: "Ihre Mutter hat nach der Hochzeit nie wieder mehr ein Wort mit ihr gesprochen und wenn dann nur um sie zu überzeugen doch noch so einen komischen Kerl zu heiraten den die Familie irgendwie kannte.",
@@ -59,6 +59,7 @@ namespace Dejavu {
     switch (choiceTellDiary) {
       case choicesTellDiary.tellMom:
         dataForSave.lifepoints += 10;
+        handleFlower();
         await ƒS.Speech.tell(characters.Mom, text.Mom.M1);
         await ƒS.Speech.tell(characters.Mom, text.Mom.M2);
         await ƒS.Speech.tell("Rosi", text.Rosi.R3);
@@ -78,6 +79,7 @@ namespace Dejavu {
         break;
       case choicesTellDiary.dontTellMom:
         dataForSave.lifepoints -= 10;
+        handleFlower();
         break;
     }
     await ƒS.Speech.tell(characters.Narrator, text.Narrator.A2_S9_04);

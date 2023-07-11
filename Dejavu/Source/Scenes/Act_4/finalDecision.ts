@@ -4,7 +4,7 @@ namespace Dejavu {
     // SPEECH
     let text = {
       Narrator: {
-        N1: " Ihr zwie überlegt wes passiert sein könnte?",
+        N1: " Ihr zwei überlegt was passiert sein könnte?",
         N2: "Wer hat Rosalia umgebracht?",
       },
       Julius: {
@@ -36,7 +36,7 @@ namespace Dejavu {
     ƒS.Sound.play(sounds.decision, 0.5, true);
     await ƒS.Speech.tell(characters.Narrator, text.Narrator.N1);
     await ƒS.Speech.tell(characters.Narrator, text.Narrator.N2);
-    if ((dataForSave.lovepoints = 100)) {
+    if ((dataForSave.lovepoints == 100)) {
       ƒS.Sound.fade(sounds.decision, 0, 1);
       ƒS.Speech.hide();
       await ƒS.Location.show(locations.CircusDreaming);
@@ -54,6 +54,7 @@ namespace Dejavu {
       await ƒS.Speech.tell(characters.Julius, text.Julius.J3);
       await ƒS.Speech.tell(characters.Rosalia, text.Rosalia.R4);
       ƒS.Speech.hide();
+      await ƒS.Character.hideAll();
       await ƒS.Location.show(locations.FinalDecision);
       await ƒS.update(
         transitions.swirl.duration,
