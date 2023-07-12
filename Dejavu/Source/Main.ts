@@ -16,37 +16,37 @@ namespace Dejavu {
       document.getElementById("flowerImg")
     );
     if (dataForSave.lifepoints <= 0) {
-      flower.src = "/Dejavu/Images/Flower/Knospe.png";
+      flower.src = "./Images/Flower/Knospe.png";
     }
     if (dataForSave.lifepoints == 10) {
-      flower.src = "/Dejavu/Images/Flower/Blume_1.png";
+      flower.src = "./Images/Flower/Blume_1.png";
     }
     if (dataForSave.lifepoints == 20) {
-      flower.src = "/Dejavu/Images/Flower/Blume_2.png";
+      flower.src = "./Images/Flower/Blume_2.png";
     }
     if (dataForSave.lifepoints == 30) {
-      flower.src = "/Dejavu/Images/Flower/Blume_3.png";
+      flower.src = "./Images/Flower/Blume_3.png";
     }
     if (dataForSave.lifepoints == 40) {
-      flower.src = "/Dejavu/Images/Flower/Blume_4.png";
+      flower.src = "./Images/Flower/Blume_4.png";
     }
     if (dataForSave.lifepoints == 50) {
-      flower.src = "/Dejavu/Images/Flower/Blume_5.png";
+      flower.src = "./Images/Flower/Blume_5.png";
     }
     if (dataForSave.lifepoints == 60) {
-      flower.src = "/Dejavu/Images/Flower/Blume_6.png";
+      flower.src = "./Images/Flower/Blume_6.png";
     }
     if (dataForSave.lifepoints == 70) {
-      flower.src = "/Dejavu/Images/Flower/Blume_7.png";
+      flower.src = "./Images/Flower/Blume_7.png";
     }
     if (dataForSave.lifepoints == 80) {
-      flower.src = "/Dejavu/Images/Flower/Blume_8.png";
+      flower.src = "./Images/Flower/Blume_8.png";
     }
     if (dataForSave.lifepoints == 90) {
-      flower.src = "/Dejavu/Images/Flower/Blume_9.png";
+      flower.src = "./Images/Flower/Blume_9.png";
     }
     if (dataForSave.lifepoints == 100) {
-      flower.src = "/Dejavu/Images/Flower/Blume_10.png";
+      flower.src = "./Images/Flower/Blume_10.png";
     }
   }
 
@@ -54,27 +54,27 @@ namespace Dejavu {
   export let transitions = {
     blinkOpen: {
       duration: 2,
-      alpha: "/Dejavu/Images/Transitions/blink.jpg",
+      alpha: "./Images/Transitions/blink.jpg",
       edge: 0.5,
     },
     blinkClose: {
       duration: 2,
-      alpha: "/Dejavu/Images/Transitions/blinkReverse.jpg",
+      alpha: "./Images/Transitions/blinkReverse.jpg",
       edge: 0.5,
     },
     hearts: {
       duration: 1.5,
-      alpha: "/Dejavu/Images/Transitions/hearts.jpg",
+      alpha: "./Images/Transitions/hearts.jpg",
       edge: 0.5,
     },
     swirl: {
       duration: 2,
-      alpha: "/Dejavu/Images/Transitions/009.jpg",
+      alpha: "./Images/Transitions/009.jpg",
       edge: 1,
     },
     pzzle: {
       duration: 2,
-      alpha: "/Dejavu/Images/Transitions/puzz.png",
+      alpha: "./Images/Transitions/puzz.png",
       edge: 1,
     },
   };
@@ -116,126 +116,126 @@ namespace Dejavu {
   //Sounds
   export let sounds = {
     //background Music
-    packing: "/Dejavu/Audio/boxes.mp3",
-    circus: "/Dejavu/Audio/circus-11794.mp3",
-    dejavu: "/Dejavu/Audio/ambient-dream-16671.mp3",
-    crowdTalking: "/Dejavu/Audio/crowd-talking-138493.mp3",
-    divineroom: "/Dejavu/Audio/magical-background-6892.mp3",
-    badEnding: "/Dejavu/Audio/evil-cue-111895.mp3",
-    decision: "/Dejavu/Audio/quiz-game-music-loop-bpm-90-61070.mp3",
-    goodEnding: "/Dejavu/Audio/motivational-corporate-medium1-110677.mp3",
+    packing: "./Audio/boxes.mp3",
+    circus: "./Audio/circus-11794.mp3",
+    dejavu: "./Audio/ambient-dream-16671.mp3",
+    crowdTalking: "./Audio/crowd-talking-138493.mp3",
+    divineroom: "./Audio/magical-background-6892.mp3",
+    badEnding: "./Audio/evil-cue-111895.mp3",
+    decision: "./Audio/quiz-game-music-loop-bpm-90-61070.mp3",
+    goodEnding: "./Audio/motivational-corporate-medium1-110677.mp3",
 
     //sounds
-    cafePouring: "/Dejavu/Audio/pouring-coffee-6743.mp3",
-    fallingDown: "/Dejavu/Audio/person-knocked-down-14798.mp3",
-    phoneRinging: "/Dejavu/Audio/smartphone_vibrating_alarm_silent-7040.mp3",
-    phoneCalling: "/Dejavu/Audio/phone-calling-153844.mp3",
-    phoneMessage: "/Dejavu/Audio/notifications-sound-127856.mp3",
+    cafePouring: "./Audio/pouring-coffee-6743.mp3",
+    fallingDown: "./Audio/person-knocked-down-14798.mp3",
+    phoneRinging: "./Audio/smartphone_vibrating_alarm_silent-7040.mp3",
+    phoneCalling: "./Audio/phone-calling-153844.mp3",
+    phoneMessage: "./Audio/notifications-sound-127856.mp3",
 
     //voices
-    rosiLaughing: "/Dejavu/Audio/womenLaughing.mp3",
-    divineLaughing: "/Dejavu/Audio/wichtlaughing.mp3",
-    RosaliaScreaming: "/Dejavu/Audio/loud-female-scream-41894.mp3",
-    wheeze: "/Dejavu/Audio/huff-and-puff-63816.mp3",
+    rosiLaughing: "./Audio/womenLaughing.mp3",
+    divineLaughing: "./Audio/wichtlaughing.mp3",
+    RosaliaScreaming: "./Audio/loud-female-scream-41894.mp3",
+    wheeze: "./Audio/huff-and-puff-63816.mp3",
   };
 
   //Location
   export let locations = {
     Black: {
       name: "Black",
-      background: "/Dejavu/Images/Backgrounds/black.png",
+      background: "./Images/Backgrounds/black.png",
     },
     Uni: {
       name: "Uni",
-      background: "../Images/Backgrounds/Uni.png",
+      background: "./Images/Backgrounds/Uni.png",
     },
     Hallway: {
       name: "Hallway",
-      background: "/Dejavu/Images/Backgrounds/Hallway.png",
+      background: "./Images/Backgrounds/Hallway.png",
     },
     livingroom: {
       name: "Livingroom",
-      background: "/Dejavu/Images/Backgrounds/Livingroom.png",
+      background: "./Images/Backgrounds/Livingroom.png",
     },
     Bedroom: {
       name: "Bedroom",
-      background: "/Dejavu/Images/Backgrounds/Bedroom.png",
+      background: "./Images/Backgrounds/Bedroom.png",
     },
     BedroomDiary: {
       name: "Bedroom with Diary",
-      background: "/Dejavu/Images/Backgrounds/Bedroom_Diary.png",
+      background: "./Images/Backgrounds/Bedroom_Diary.png",
     },
     BedroomDiaryIntro: {
       name: "Bedroom with Diary Introduction",
-      background: "/Dejavu/Images/Backgrounds/Bedroom_Intro.png",
+      background: "./Images/Backgrounds/Bedroom_Intro.png",
     },
     Flowergarden: {
       name: "Flowergarden",
-      background: "/Dejavu/Images/Backgrounds/Flowergarden.png",
+      background: "./Images/Backgrounds/Flowergarden.png",
     },
     FlowergardenDiary: {
       name: "Flowergarden with Diary Vanishing",
-      background: "/Dejavu/Images/Backgrounds/Flowergarden_Diary.png",
+      background: "./Images/Backgrounds/Flowergarden_Diary.png",
     },
     FlowergardenHandy: {
       name: "Flowergarden with Handy",
-      background: "/Dejavu/Images/Backgrounds/Flowergarden_Handy.png",
+      background: "./Images/Backgrounds/Flowergarden_Handy.png",
     },
     CircusNow: {
       name: "CircusToday",
-      background: "/Dejavu/Images/Backgrounds/CircusToday.png",
+      background: "./Images/Backgrounds/CircusToday.png",
     },
     CircusDreaming: {
       name: "CircusDreaming",
-      background: "/Dejavu/Images/Backgrounds/CircusDreaming.png",
+      background: "./Images/Backgrounds/CircusDreaming.png",
     },
     Kitchen: {
       name: "Kitchen",
-      background: "/Dejavu/Images/Backgrounds/Kitchen.png",
+      background: "./Images/Backgrounds/Kitchen.png",
     },
     KitchenClue3: {
       name: "KitchenClue3",
-      background: "/Dejavu/Images/Backgrounds/Kitchen_Clue3.png",
+      background: "./Images/Backgrounds/Kitchen_Clue3.png",
     },
     Clownroom: {
       name: "Clown Room",
-      background: "/Dejavu/Images/Backgrounds/Clownroom.png",
+      background: "./Images/Backgrounds/Clownroom.png",
     },
     ClownroomCard: {
       name: "Clown Room with Card",
-      background: "/Dejavu/Images/Backgrounds/Clownroom_Card.png",
+      background: "./Images/Backgrounds/Clownroom_Card.png",
     },
     MansionDreaming: {
       name: "MansionDreaming",
-      background: "/Dejavu/Images/Backgrounds/MansionDreaming.png",
+      background: "./Images/Backgrounds/MansionDreaming.png",
     },
     Divineroom: {
       name: "Divine Room",
-      background: "/Dejavu/Images/Backgrounds/Divineroom.png",
+      background: "./Images/Backgrounds/Divineroom.png",
     },
     DivineroomTarot: {
       name: "Divineroom Tarot",
-      background: "/Dejavu/Images/Backgrounds/DivineroomTarot.png",
+      background: "./Images/Backgrounds/DivineroomTarot.png",
     },
     Graveyard: {
       name: "Graveyard",
-      background: "/Dejavu/Images/Backgrounds/Graveyard.png",
+      background: "./Images/Backgrounds/Graveyard.png",
     },
     Psychiatry: {
       name: "Psychiatry",
-      background: "/Dejavu/Images/Backgrounds/Psychatrie.png",
+      background: "./Images/Backgrounds/Psychatrie.png",
     },
     FinalDecision: {
       name: "Night",
-      background: "/Dejavu/Images/Backgrounds/FinalDecision.png",
+      background: "./Images/Backgrounds/FinalDecision.png",
     },
     Newspaper: {
       name: "Newspaper Bad Ending",
-      background: "/Dejavu/Images/Backgrounds/Newspaper.png",
+      background: "./Images/Backgrounds/Newspaper.png",
     },
     LetterRosi: {
       name: "Diary Rosi",
-      background: "/Dejavu/Images/Backgrounds/LetterRosiEnding.png",
+      background: "./Images/Backgrounds/LetterRosiEnding.png",
     },
   };
 
@@ -258,60 +258,60 @@ namespace Dejavu {
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
         havingAnIdea:
-          "/Dejavu/Images/Characters/PartnerInCrime/PartnerInCrime_idea.png",
+          "./Images/Characters/PartnerInCrime/PartnerInCrime_idea.png",
         normal:
-          "/Dejavu/Images/Characters/PartnerInCrime/PartnerInCrime_normal.png",
-        sad: "/Dejavu/Images/Characters/PartnerInCrime/PartnerInCrime_sad.png",
+          "./Images/Characters/PartnerInCrime/PartnerInCrime_normal.png",
+        sad: "./Images/Characters/PartnerInCrime/PartnerInCrime_sad.png",
         unsure:
-          "/Dejavu/Images/Characters/PartnerInCrime/PartnerInCrime_unischer.png",
+          "./Images/Characters/PartnerInCrime/PartnerInCrime_unischer.png",
       },
     },
     Rosalia: {
       name: "Rosalia",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
-        normal: "/Dejavu/Images/Characters/Rosalia/Rosalia_normal.png",
-        angry: "/Dejavu/Images/Characters/Rosalia/Rosalia_angry.png",
-        dancing: "/Dejavu/Images/Characters/Rosalia/Rosalia_dancing.png",
-        thinking: "/Dejavu/Images/Characters/Rosalia/Rosalia_thinking.png",
+        normal: "./Images/Characters/Rosalia/Rosalia_normal.png",
+        angry: "./Images/Characters/Rosalia/Rosalia_angry.png",
+        dancing: "./Images/Characters/Rosalia/Rosalia_dancing.png",
+        thinking: "./Images/Characters/Rosalia/Rosalia_thinking.png",
         training_confident:
-          "/Dejavu/Images/Characters/Rosalia/Rosalia_Training_confident.png",
+          "./Images/Characters/Rosalia/Rosalia_Training_confident.png",
         traning_sad:
-          "/Dejavu/Images/Characters/Rosalia/Rosalia_Training_sad.png",
+          "./Images/Characters/Rosalia/Rosalia_Training_sad.png",
       },
     },
     Clown: {
       name: "Clown",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
-        knwowing: "/Dejavu/Images/Characters/Clown/Clown_knowing.png",
-        schelmisch: "/Dejavu/Images/Characters/Clown/Clown_schelmisch.png",
-        thinking: "/Dejavu/Images/Characters/Clown/Clown_thinking.png",
+        knwowing: "./Images/Characters/Clown/Clown_knowing.png",
+        schelmisch: "./Images/Characters/Clown/Clown_schelmisch.png",
+        thinking: "./Images/Characters/Clown/Clown_thinking.png",
       },
     },
     Diviner: {
       name: "Wahrsagerin",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
-        crazy: "/Dejavu/Images/Characters/Diviner/Wahrsagerin_crazy.png",
-        normal: "/Dejavu/Images/Characters/Diviner/Wahrsagerin_normal.png",
-        trance: "/Dejavu/Images/Characters/Diviner/Wahrsagerin_trance.png",
+        crazy: "./Images/Characters/Diviner/Wahrsagerin_crazy.png",
+        normal: "./Images/Characters/Diviner/Wahrsagerin_normal.png",
+        trance: "./Images/Characters/Diviner/Wahrsagerin_trance.png",
       },
     },
     Director: {
       name: "Zirkus Direktor",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
-        angry: "/Dejavu/Images/Characters/Director/Direktor_angry.png",
-        smiling: "/Dejavu/Images/Characters/Director/Direktor_smiling.png",
-        unknown: "/Dejavu/Images/Characters/Director/Direktor_unwissend.png",
+        angry: "./Images/Characters/Director/Direktor_angry.png",
+        smiling: "./Images/Characters/Director/Direktor_smiling.png",
+        unknown: "./Images/Characters/Director/Direktor_unwissend.png",
       },
     },
     Julius: {
       name: "Julius",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
-        angry: "/Dejavu/Images/Characters/Julius/Julius_angry.png",
+        angry: "./Images/Characters/Julius/Julius_angry.png",
       },
     },
     RosaliasMother: {
@@ -319,7 +319,7 @@ namespace Dejavu {
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
         angry:
-          "/Dejavu/Images/Characters/RosaliasMother/RosaliasMother_angry.png",
+          "./Images/Characters/RosaliasMother/RosaliasMother_angry.png",
       },
     },
   };
