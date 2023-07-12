@@ -70,7 +70,7 @@ var Dejavu;
             edge: 1,
         },
         pzzle: {
-            duration: 3,
+            duration: 2,
             alpha: "/Dejavu/Images/Transitions/puzz.png",
             edge: 1,
         },
@@ -516,9 +516,9 @@ var Dejavu;
                 A1_S1_08: "<i>Er hatte nicht mehr als Geschichten über sie, denn seine Mutter Rosalia ist verschwunden, als er zwei Jahre alt war... und Opa hing sehr an den Geschichten die sein Vater ihm erzählt hat.</i>",
                 A1_S1_09: "<i>Wir haben uns immer zusammen vorgestellt wie sie war... und bei einem waren wir uns einig... Ich hab nur ihr Aussehen geerbt und ihren Namen! </i>",
                 A1_S1_10: "<i>Rosalia schien sehr wild und abenteuerlustig zu sein... Ich bin eher das Gegenteil davon.</i>",
-                A1_S2_01: "<i>Aber wir haben nie darüber gesprochen, was mit ihr passiert ist und warum die verschwunden ist.</i>",
+                A1_S2_01: "<i>Aber wir haben nie darüber gesprochen, was mit ihr passiert ist und warum sie verschwunden ist.</i>",
                 A1_S2_02: "<i>Wahrscheinlich ist es zu schmerzhaft, darüber nachzudenken, geschweige denn darüber zu sprechen.</i>",
-                A1_S2_03: "<i>Es ist schon verrückt, wie ein Mensch, der in der einen Sekunde noch da war und in der nächsten verschwunden ist. </i>",
+                A1_S2_03: "<i>Es ist schon verrückt, wie ein Mensch, der in der einen Sekunde noch da war und in der nächsten dann verschwunden ist. </i>",
                 A1_S3_03: "Hallo Mama, den Umständen entsprechend... aber ich glaube Großvater wollte nicht mehr weiterkämpfen.",
                 A1_S3_04: "Und wer weiß, vielleicht trifft er jetzt seine Mutter Rosalia.",
                 A1_S4_03: "<i> Huch... was ist den das? </i>",
@@ -1081,7 +1081,7 @@ var Dejavu;
         await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_10);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A3_S13_11);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A3_S13_15);
-        await Dejavu.ƒS.Character.animate(Dejavu.characters.Mom, Dejavu.characters.Mom.pose.smiling, Dejavu.slideToSide(50, 70));
+        await Dejavu.ƒS.Character.animate(Dejavu.characters.Mom, Dejavu.characters.Mom.pose.smiling, Dejavu.slideToSide(50, 90));
         await Dejavu.ƒS.Location.show(Dejavu.locations.KitchenClue3);
         await Dejavu.ƒS.update(0);
         await Dejavu.ƒS.Speech.tell("Rosi lesend", text.Rosi.A3_S13_13);
@@ -1158,7 +1158,7 @@ var Dejavu;
                 A3_S13_18: "AHHH ich weiß, die sind noch bis heute in der Stadt",
             },
             Rosi: {
-                A3_S13_02: "Hallo",
+                A3_S13_02: "Hallo ",
                 A3_S13_04: "In meinem Traum ist sie von etwas runtergestürzt...",
                 A3_S13_05: "Und sie meinte sie übt die letzte Drehung nochmal",
                 A3_S13_07: "Opa hat mir mal was erzählt, dass sich Rosalia oben in der Luft am wohlsten gefühlt hat",
@@ -1587,6 +1587,38 @@ var Dejavu;
 (function (Dejavu) {
     async function clownSeconde() {
         console.log("clownSeconde: starting");
+        let text = {
+            Rosi: {
+                R3: "Wir haben gerade die Wahrsagerin gefragt und jetzt wollten wir sie fragen, ob sie etwas über einen Mord eine Seiltänzerin wissen?",
+            },
+            Clown: {
+                C2: "Ahh Hallo liebe Gäste",
+                C4: "Aha ihr habt also die Wahrsagerin als erstes gefragt... weil die auch bestimmt mehr weiß als so ein blöder Clown...nicht war?",
+                C6: "Jajaj das kannst du der Wahrsagerin erzählen aber nicht mir.... also.... ich weiß nichts von irgend einem Mord oder so etwas..... Und jetzt verschwindet von hier bevor ich den Direktor hole.",
+            },
+            PIC: {
+                P1: "Hallo Herr Clown",
+                P5: "Nein nein, wir dachten nur wir können als erstes etwas über die Vergangenheit herausfinden und dann mit ihnen über die Gegenwart."
+            }
+        };
+        Dejavu.ƒS.Speech.hide();
+        Dejavu.ƒS.Sound.play(Dejavu.sounds.circus, 0.5, true);
+        await Dejavu.ƒS.Location.show(Dejavu.locations.Clownroom);
+        await Dejavu.ƒS.update(2);
+        await Dejavu.ƒS.Character.show(Dejavu.characters.PIC, Dejavu.characters.PIC.pose.normal, Dejavu.ƒS.positionPercent(70, 90));
+        await Dejavu.ƒS.update(2);
+        await Dejavu.ƒS.Character.show(Dejavu.characters.Clown, Dejavu.characters.Clown.pose.schelmisch, Dejavu.ƒS.positionPercent(30, 90));
+        await Dejavu.ƒS.update(2);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.P1);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Clown, text.Clown.C2);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.R3);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Clown, text.Clown.C4);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.P5);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Clown, text.Clown.C6);
+        Dejavu.ƒS.Sound.fade(Dejavu.sounds.circus, 0, 1);
+        Dejavu.ƒS.Speech.hide();
+        Dejavu.ƒS.Character.hideAll();
+        return "BadEnding";
     }
     Dejavu.clownSeconde = clownSeconde;
 })(Dejavu || (Dejavu = {}));
@@ -1643,6 +1675,46 @@ var Dejavu;
 (function (Dejavu) {
     async function directorSeconde() {
         console.log("directorSeconde: starting");
+        let text = {
+            Rosi: {
+                R1: "Entschuldigung Herr Direktor?",
+                R3: "Ihre Familie ist bestimmt schon lange Inhaber dieses Zirkus oder?",
+                R5: "Wow das klingt nach einer sehr großen Verantwortung",
+                R7: "Bei so einer großen Verantwortung müssen sie bestimmt viel erledigen um den Zirkus zusammenzuhalten oder?",
+            },
+            Director: {
+                D2: "Oh Hallo ihr zwei",
+                D4: "Aber ja, viele Generationen vor mir haben alles für diesen Zirkus aufgegeben.",
+                D6: "Oh ja das ist es auch junge Dame",
+                D8: "Aber ja, sehr viel sogar..:",
+                D9: "Einmal mussten mein Opa sogar eine Leiche wegbringen.. das war wohl irgend eine verwöhnte Göre, die sich selbst in Schwierigkeiten gebracht hat.",
+                D10: "Und die Drecksarbeit hing natürlich am Zirkus Direktor... so wie immer... wahrscheinlich hat sie ihre Seile nicht richtig überprüft und ist dann herunter gefallen... Tja... Außenstehenden sollte man auch keine Bühne geben... was sich mein Opa da nur gedacht hat.",
+                D11: "Oh was rede ich denn da nur... ich ... ich muss dann mal weiter",
+            },
+        };
+        // ACT FOURTH
+        Dejavu.ƒS.Speech.hide();
+        Dejavu.ƒS.Sound.play(Dejavu.sounds.circus, 0.5, true);
+        await Dejavu.ƒS.Location.show(Dejavu.locations.CircusNow);
+        await Dejavu.ƒS.update(2);
+        await Dejavu.ƒS.Character.show(Dejavu.characters.PIC, Dejavu.characters.PIC.pose.normal, Dejavu.ƒS.positionPercent(70, 90));
+        await Dejavu.ƒS.update(2);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.R1);
+        await Dejavu.ƒS.Character.show(Dejavu.characters.Director, Dejavu.characters.Director.pose.smiling, Dejavu.ƒS.positionPercent(30, 90));
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Director, text.Director.D2);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.R3);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Director, text.Director.D4);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.R5);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Director, text.Director.D6);
+        await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.R7);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Director, text.Director.D8);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Director, text.Director.D9);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Director, text.Director.D10);
+        await Dejavu.ƒS.Speech.tell(Dejavu.characters.Director, text.Director.D11);
+        Dejavu.ƒS.Sound.fade(Dejavu.sounds.circus, 0, 1);
+        Dejavu.ƒS.Speech.hide();
+        Dejavu.ƒS.Character.hideAll();
+        return "FinalDecision";
     }
     Dejavu.directorSeconde = directorSeconde;
 })(Dejavu || (Dejavu = {}));
@@ -1762,6 +1834,7 @@ var Dejavu;
                 Dejavu.ƒS.Sound.fade(Dejavu.sounds.divineroom, 0, 1);
                 break;
             case choicesAskingDivine.trueLove:
+                Dejavu.dataForSave.lovepoints += 20;
                 Dejavu.dataForSave.lifepoints -= 10;
                 Dejavu.handleFlower();
                 await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.P9_B);

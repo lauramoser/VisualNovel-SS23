@@ -40,11 +40,11 @@ namespace Dejavu {
           "<i>Rosalia schien sehr wild und abenteuerlustig zu sein... Ich bin eher das Gegenteil davon.</i>",
 
         A1_S2_01:
-          "<i>Aber wir haben nie darüber gesprochen, was mit ihr passiert ist und warum die verschwunden ist.</i>",
+          "<i>Aber wir haben nie darüber gesprochen, was mit ihr passiert ist und warum sie verschwunden ist.</i>",
         A1_S2_02:
           "<i>Wahrscheinlich ist es zu schmerzhaft, darüber nachzudenken, geschweige denn darüber zu sprechen.</i>",
         A1_S2_03:
-          "<i>Es ist schon verrückt, wie ein Mensch, der in der einen Sekunde noch da war und in der nächsten verschwunden ist. </i>",
+          "<i>Es ist schon verrückt, wie ein Mensch, der in der einen Sekunde noch da war und in der nächsten dann verschwunden ist. </i>",
 
         A1_S3_03:
           "Hallo Mama, den Umständen entsprechend... aber ich glaube Großvater wollte nicht mehr weiterkämpfen.",

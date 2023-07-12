@@ -73,7 +73,7 @@ namespace Dejavu {
       edge: 1,
     },
     pzzle: {
-      duration: 3,
+      duration: 2,
       alpha: "/Dejavu/Images/Transitions/puzz.png",
       edge: 1,
     },

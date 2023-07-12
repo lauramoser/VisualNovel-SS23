@@ -14,7 +14,7 @@ namespace Dejavu {
             A3_S13_18: "AHHH ich weiß, die sind noch bis heute in der Stadt",
         },
         Rosi: {
-            A3_S13_02: "Hallo",
+            A3_S13_02: "Hallo ",
             A3_S13_04: "In meinem Traum ist sie von etwas runtergestürzt...",
             A3_S13_05: "Und sie meinte sie übt die letzte Drehung nochmal",
             A3_S13_07: "Opa hat mir mal was erzählt, dass sich Rosalia oben in der Luft am wohlsten gefühlt hat",

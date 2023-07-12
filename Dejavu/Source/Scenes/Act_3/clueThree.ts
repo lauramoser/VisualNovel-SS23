@@ -55,7 +55,7 @@ namespace Dejavu {
       await ƒS.Character.animate(
         characters.Mom,
         characters.Mom.pose.smiling,
-        slideToSide(50, 70)
+        slideToSide(50, 90)
       );
       await ƒS.Location.show(locations.KitchenClue3);
       await ƒS.update(0);

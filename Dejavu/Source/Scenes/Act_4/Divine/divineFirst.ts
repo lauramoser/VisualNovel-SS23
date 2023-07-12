@@ -160,6 +160,7 @@ namespace Dejavu {
         break;
 
       case choicesAskingDivine.trueLove:
+        dataForSave.lovepoints += 20;
         dataForSave.lifepoints -= 10;
         handleFlower();
         await ƒS.Speech.tell(characters.PIC, text.PIC.P9_B);
