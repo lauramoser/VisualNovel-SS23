@@ -147,7 +147,7 @@ namespace Dejavu {
     },
     Uni: {
       name: "Uni",
-      background: "/Dejavu/Images/Backgrounds/Uni.png",
+      background: "../Images/Backgrounds/Uni.png",
     },
     Hallway: {
       name: "Hallway",
