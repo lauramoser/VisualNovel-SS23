@@ -188,6 +188,7 @@ namespace Dejavu {
       case choicesAskingSeconde.Clown:
         return "ClownSeconde";
       case choicesAskingSeconde.Director:
+        dataForSave.lovepoints += 20;
         return "DirectorSeconde";
     }
   }

@@ -37,6 +37,7 @@ namespace Dejavu {
       characters.Director.pose.smiling,
       ƒS.positionPercent(30, 90)
     );
+    await ƒS.update(2);
     await ƒS.Speech.tell(characters.Director, text.Director.D2);
     await ƒS.Speech.tell("Rosi", text.Rosi.R3);
     await ƒS.Speech.tell("Rosi", text.Rosi.R4);
@@ -45,10 +46,12 @@ namespace Dejavu {
     await ƒS.Speech.tell(characters.PIC, text.PIC.P7);
     await ƒS.Speech.tell(characters.Director, text.Director.D8);
     await ƒS.Speech.tell(characters.Director, text.Director.D9);
-    if (dataForSave.lifepoints = 100) {
+    if (dataForSave.lifepoints == 100) {
       await ƒS.Character.hideAll();
       return "ArrivingCircus";
     } else {
+      await ƒS.Character.hideAll();
+      ƒS.Speech.hide();
       return "BadEnding";
     }
   }

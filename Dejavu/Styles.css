@@ -112,7 +112,7 @@ speech {
   background-color: white;
   height: 15%;
   line-height: 1.5;
-  max-width: 70%;
+  max-width: 72%;
   border-radius: 1rem;
 }
 
@@ -162,7 +162,7 @@ meter[id="metarbar"] {
   position: absolute;
   transform:rotate(-90deg);
   bottom: 50%;
-  left: -13%;
+  left: -11.5%;
   width: 35%;
   height: 10%;
 }
@@ -183,7 +183,7 @@ input[id="scoreForPIC"] {
   position: absolute;
   left: 1.2%;
   top: 10%;
-  width: 6.5%;
+  width:fit-content;
   text-align: center;
 }
 
@@ -194,8 +194,11 @@ input[id="scoreForPIC"] {
   background-color: rgb(212, 167, 167);
   border-radius: 30px;
   width: 12%;
-  height: 19%;
+  height: 20%;
   text-align: center;
   box-shadow: 6px 6px 10px hsla(300,15%,25%,0.3) inset;
+}
+#flowerImg {
+  max-width: 100%;
 }
 

@@ -1081,7 +1081,7 @@ var Dejavu;
         await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.A3_S13_10);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A3_S13_11);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Mom, text.Mom.A3_S13_15);
-        await Dejavu.ƒS.Character.animate(Dejavu.characters.Mom, Dejavu.characters.Mom.pose.smiling, Dejavu.slideToSide(50, 90));
+        await Dejavu.ƒS.Character.animate(Dejavu.characters.Mom, Dejavu.characters.Mom.pose.smiling, Dejavu.slideToSide(50, 80));
         await Dejavu.ƒS.Location.show(Dejavu.locations.KitchenClue3);
         await Dejavu.ƒS.update(0);
         await Dejavu.ƒS.Speech.tell("Rosi lesend", text.Rosi.A3_S13_13);
@@ -1653,6 +1653,7 @@ var Dejavu;
         await Dejavu.ƒS.update(2);
         await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.R1);
         await Dejavu.ƒS.Character.show(Dejavu.characters.Director, Dejavu.characters.Director.pose.smiling, Dejavu.ƒS.positionPercent(30, 90));
+        await Dejavu.ƒS.update(2);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Director, text.Director.D2);
         await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.R3);
         await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.R4);
@@ -1661,11 +1662,13 @@ var Dejavu;
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.P7);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Director, text.Director.D8);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Director, text.Director.D9);
-        if (Dejavu.dataForSave.lifepoints = 100) {
+        if (Dejavu.dataForSave.lifepoints == 100) {
             await Dejavu.ƒS.Character.hideAll();
             return "ArrivingCircus";
         }
         else {
+            await Dejavu.ƒS.Character.hideAll();
+            Dejavu.ƒS.Speech.hide();
             return "BadEnding";
         }
     }
@@ -1859,6 +1862,7 @@ var Dejavu;
             case choicesAskingSeconde.Clown:
                 return "ClownSeconde";
             case choicesAskingSeconde.Director:
+                Dejavu.dataForSave.lovepoints += 20;
                 return "DirectorSeconde";
         }
     }
