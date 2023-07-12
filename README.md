@@ -1,5 +1,5 @@
 # Déjà-Vu
-- HtmlPage: https://github.com/lauramoser/VisualNovel-SS23/blob/master/Dejavu/Dejavu.html
+- HtmlPage: https://lauramoser.github.io/VisualNovel-SS23/Dejavu/Dejavu.html
 - Code: https://github.com/lauramoser/VisualNovel-SS23/tree/master/Dejavu/Source
 - Konzept: https://github.com/lauramoser/VisualNovel-SS23/tree/master/Dejavu/Konzept
 - ZIP
