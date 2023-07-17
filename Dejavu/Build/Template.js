@@ -1575,9 +1575,11 @@ var Dejavu;
         switch (choiceAskingSeconde) {
             case choicesAskingSeconde.Divine:
                 await Dejavu.ƒS.Character.hideAll();
+                await Dejavu.ƒS.update(2);
                 return "DivineSeconde";
             case choicesAskingSeconde.Director:
                 await Dejavu.ƒS.Character.hideAll();
+                await Dejavu.ƒS.update(2);
                 return "DirectorSeconde";
         }
     }
@@ -1663,11 +1665,14 @@ var Dejavu;
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Director, text.Director.D8);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Director, text.Director.D9);
         if (Dejavu.dataForSave.lifepoints == 100) {
-            await Dejavu.ƒS.Character.hideAll();
+            await Dejavu.ƒS.Character.hide(Dejavu.characters.Director);
+            await Dejavu.ƒS.Character.hide(Dejavu.characters.PIC);
+            Dejavu.ƒS.Speech.hide();
             return "ArrivingCircus";
         }
         else {
-            await Dejavu.ƒS.Character.hideAll();
+            await Dejavu.ƒS.Character.hide(Dejavu.characters.Director);
+            await Dejavu.ƒS.Character.hide(Dejavu.characters.PIC);
             Dejavu.ƒS.Speech.hide();
             return "BadEnding";
         }
@@ -1704,6 +1709,7 @@ var Dejavu;
         await Dejavu.ƒS.update(2);
         await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.R1);
         await Dejavu.ƒS.Character.show(Dejavu.characters.Director, Dejavu.characters.Director.pose.smiling, Dejavu.ƒS.positionPercent(30, 90));
+        await Dejavu.ƒS.update(2);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Director, text.Director.D2);
         await Dejavu.ƒS.Speech.tell("Rosi", text.Rosi.R3);
         await Dejavu.ƒS.Speech.tell(Dejavu.characters.Director, text.Director.D4);
@@ -2015,7 +2021,7 @@ var Dejavu;
         Dejavu.ƒS.Speech.hide();
         await Dejavu.ƒS.Location.show(Dejavu.locations.Graveyard);
         await Dejavu.ƒS.update(2);
-        await Dejavu.ƒS.Text.print("<div class='novelpage'>Hallo Opa <br> Ich habe herausgefunden, was mit deiner Mutter passiert ist. Es war Julius ihr Ex-Verlobter. Ich denke, dass er eifersüchtig war, weil Rosalia in für deinen Vater verlassen hat. <br> Ich vermisse dich <br> Deine Rosi</div>");
+        await Dejavu.ƒS.Text.print("<div class='novelpage'>Hallo Opa <br> Ich habe herausgefunden, was mit deiner Mutter passiert ist. Es war Julius ihr Ex-Verlobter. Ich denke, dass er eifersüchtig war, weil Rosalia ihn für deinen Vater verlassen hat. <br> Ich vermisse dich <br> Deine Rosi</div>");
         return "End";
     }
     Dejavu.goodEnding = goodEnding;
