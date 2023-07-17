@@ -147,9 +147,11 @@ namespace Dejavu {
     switch (choiceAskingSeconde) {
       case choicesAskingSeconde.Divine:
         await ƒS.Character.hideAll();
+        await ƒS.update(2);
         return "DivineSeconde";
       case choicesAskingSeconde.Director:
         await ƒS.Character.hideAll();
+        await ƒS.update(2);
         return "DirectorSeconde";
     }
   }
