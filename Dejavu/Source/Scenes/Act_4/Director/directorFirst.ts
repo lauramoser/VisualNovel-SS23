@@ -47,10 +47,13 @@ namespace Dejavu {
     await ƒS.Speech.tell(characters.Director, text.Director.D8);
     await ƒS.Speech.tell(characters.Director, text.Director.D9);
     if (dataForSave.lifepoints == 100) {
-      await ƒS.Character.hideAll();
+      await ƒS.Character.hide(characters.Director);
+      await ƒS.Character.hide(characters.PIC);
+      ƒS.Speech.hide();
       return "ArrivingCircus";
     } else {
-      await ƒS.Character.hideAll();
+      await ƒS.Character.hide(characters.Director);
+      await ƒS.Character.hide(characters.PIC);
       ƒS.Speech.hide();
       return "BadEnding";
     }
