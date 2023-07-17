@@ -37,6 +37,7 @@ namespace Dejavu {
       characters.Director.pose.smiling,
       ƒS.positionPercent(30, 90)
     );
+    await ƒS.update(2);
     await ƒS.Speech.tell(characters.Director, text.Director.D2);
     await ƒS.Speech.tell("Rosi", text.Rosi.R3);
     await ƒS.Speech.tell(characters.Director, text.Director.D4);
