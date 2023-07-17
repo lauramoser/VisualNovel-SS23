@@ -23,7 +23,7 @@ namespace Dejavu {
 
         M1: "Ich hab mich schon gewundert, das hätte ja beim aufräumen auftauchen sollen",
         M2: "Hast du denn schon etwas über deine Urgroßmutter herausfinden können?",
-        M4: "Ach quatsch, das ist das Tagebuch deines Großvaters, da sind wahre Gefühle und Begebenheiten drin.",
+        M4: "Ach quatsch, das ist das Tagebuch deines Ugroßvaters, da sind wahre Gefühle und Begebenheiten drin.",
         M5: "Dein Opa hatte nur wilde Geschichten, die wenig mit der Wahrheit zu tun hatten.",
         M7: "ja das stimmt natürlich mein Schatz, aber weißt du was wirklich echt war?",
         M8: "Ich glaube mein Opa, also dein Urgroßvater, hat oft gedacht, dass ich vieles nicht verstehe als ich noch klein war.",

@@ -7,7 +7,7 @@ namespace Dejavu {
       Narrator: {
         A3_S11_01: "Nachdem du dich entschieden hast, dieses Abenteuer erst",
 
-        A3_S12_01: "Du rufst PIC an und erzählst im von deinem Traum und deinem Vorhaben, dass Geheimnis von dem Verschwinden deiner Urgroßmutter zu lüften",
+        A3_S12_01: "Du rufst ",
       },
       Rosi: {
         A3_S11_01: "W... W...Was.... war das?",
@@ -60,7 +60,7 @@ namespace Dejavu {
         dataForSave.lifepoints += 10;
         handleFlower();
         dataForSave.lovepoints += 20;
-        await ƒS.Speech.tell(characters.Narrator, text.Narrator.A3_S12_01);
+        await ƒS.Speech.tell(characters.Narrator, text.Narrator.A3_S12_01 + dataForSave.partnerInCrimeName + " an und erzählst ihm von deinem Traum und deinem Vorhaben, dass Geheimnis von dem Verschwinden deiner Urgroßmutter zu lüften");
         await ƒS.Speech.tell(characters.PIC, text.PIC.A3_S12_01);
         let ChoiceMeeting = await ƒS.Menu.getInput(ChoicesMeeting, "choices");
         switch (ChoiceMeeting) {

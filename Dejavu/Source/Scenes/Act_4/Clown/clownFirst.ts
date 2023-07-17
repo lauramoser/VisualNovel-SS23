@@ -11,7 +11,7 @@ namespace Dejavu {
         R7_A: "Ja das war sie...",
 
         R2_C: "Ja der Mord an meiner Urgroßmutter Rosalia",
-        R8_C: "Oh danke, dass sind sehr wichtige Informationen",
+        R8_C: "Oh danke, das sind sehr wichtige Informationen",
       },
       PIC: {
         P5: "Klar! Clowns sind doch die Allwissenden auf einem Zirkus",

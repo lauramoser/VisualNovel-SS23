@@ -234,7 +234,7 @@ var Dejavu;
             name: "",
         },
         Mom: {
-            name: "Mom",
+            name: "Mama",
             origin: Dejavu.ƒS.ORIGIN.BOTTOMCENTER,
             pose: {
                 smiling: "Images/Characters/Mom/Mom_smiling.png",
@@ -298,7 +298,7 @@ var Dejavu;
             },
         },
         RosaliasMother: {
-            name: "Rosalias Mother",
+            name: "Rosalias Mutter",
             origin: Dejavu.ƒS.ORIGIN.BOTTOMCENTER,
             pose: {
                 angry: "./Images/Characters/RosaliasMother/RosaliasMother_angry.png",
@@ -511,7 +511,7 @@ var Dejavu;
             },
             Rosi: {
                 A1_S1_05: "<i>Endlich Zuhause... Ich hoffe, Opa hatte ein erfülltes Leben </i>",
-                A1_S1_06: "<i>Ich habe Opa immer gerne besucht, auch als er schon senil war, hatte ich das Gefühl, dass er mich immer sofort wiedererkannt hat.</i>",
+                A1_S1_06: "<i>Ich habe Opa immer gerne besucht, auch als er schon an Alzeheimer erkrankte, hatte ich das Gefühl, dass er mich immer sofort wiedererkannt hat.</i>",
                 A1_S1_07: "<i>Da ich seiner Mutter und meiner Urgroßmutter sehr ähnlich sehe, hatten wir schon immer eine besondere Beziehung.</i>",
                 A1_S1_08: "<i>Er hatte nicht mehr als Geschichten über sie, denn seine Mutter Rosalia ist verschwunden, als er zwei Jahre alt war... und Opa hing sehr an den Geschichten die sein Vater ihm erzählt hat.</i>",
                 A1_S1_09: "<i>Wir haben uns immer zusammen vorgestellt wie sie war... und bei einem waren wir uns einig... Ich hab nur ihr Aussehen geerbt und ihren Namen! </i>",
@@ -522,16 +522,16 @@ var Dejavu;
                 A1_S3_03: "Hallo Mama, den Umständen entsprechend... aber ich glaube Großvater wollte nicht mehr weiterkämpfen.",
                 A1_S3_04: "Und wer weiß, vielleicht trifft er jetzt seine Mutter Rosalia.",
                 A1_S4_03: "<i> Huch... was ist den das? </i>",
-                A1_S4_04: "<i> Das sieht nach einem Tagebuch aus... kann es das Tagebuch von Großvater sein, von dem Opa immer erzählt hat? </i>",
+                A1_S4_04: "<i> Das sieht nach einem Tagebuch aus... kann es das Tagebuch von Urgroßvater sein, von dem Opa immer erzählt hat? </i>",
                 A1_S4_06: "<i>Wenn das Mama sieht, wird sie es mir bestimmt wegnehmen</i>",
                 A1_S4_07: "<i> Soll ich es trotzdem mitnehmen? </i>",
                 A1_S5_01_A: "Hey Mama, ich bin echt kaputt von der Heimfahrt, ist es ok, wenn ich in mein Zimmer gehen würde und mich schon ins Bett legen würde?",
-                A1_S5_02_A: "<i>Opa hat mir zwar schon immer viel von Rosalia erzählt, aber sie aus den Augen von Großvater zu sehen... Ich bin gespannt was mich erwartet.</i>",
-                A1_S5_03_A: "<i>Wow, so sah <strong> MEINE </strong> Großmutter aus?! Sie ist wunderschön</i>",
+                A1_S5_02_A: "<i>Opa hat mir zwar schon immer viel von Rosalia erzählt, aber sie aus den Augen von Urgroßvater zu sehen... Ich bin gespannt was mich erwartet.</i>",
+                A1_S5_03_A: "<i>Wow, so sah <strong> MEINE </strong> Urgroßmutter aus?! Sie ist wunderschön</i>",
                 A1_S5_04_A: "<i>Ich sehe ihr wirklich sehr ähnlich. Sogar mein Muttermal ist an der gleichen Stelle... Da hat das Universum aber auch nur copy und paste gemacht.</i>",
                 A1_S5_05_A: "Rosalia hat mir heute mal wieder beim arbeiten zu geschaut. Sie sagt zwar immer, dass sie einfach nur gerne im Blumengarten ist aber dafür hat sie ein bisschen viel Bilder von mir gemacht. Als sie kurz abgelenkt war hab ich sie ihr klauen können und konnte dieses wunderschöne Bild von ihr schießen.",
                 A1_S5_06_A: "Sie ist einfach eine einzigartige Frau. Durch das Bild allein spüre ich ihr Selbstbewusstsein. Das ich diese Frau an meiner Seite haben darf...",
-                A1_S5_07_A: "<i> Jetzt bin ich aber wirklich müde, Großmutter scheint eine sehr interessante Person gewesen zu sein. Ich hätte sie gerne kennengelernt...",
+                A1_S5_07_A: "<i> Jetzt bin ich aber wirklich müde, Urgroßmutter scheint eine sehr interessante Person gewesen zu sein. Ich hätte sie gerne kennengelernt...",
                 A1_S5_02_B: "Wie.., Wie.. kommt den das hier her?",
                 A1_S5_03_B: "Ist das etwa das Tagebuch?... Ich hab das doch wieder zurückgelegt",
                 A1_S5_04_B: "Naja, wenn es schon hier liegt, dann kann ich vielleicht doch ein bisschen im Leben anderer herumschnüffeln",
@@ -673,7 +673,7 @@ var Dejavu;
                 A2_S9_02: "Ah, Hallo mein Schatz, hattest du einen schönen Tag?",
                 M1: "Ich hab mich schon gewundert, das hätte ja beim aufräumen auftauchen sollen",
                 M2: "Hast du denn schon etwas über deine Urgroßmutter herausfinden können?",
-                M4: "Ach quatsch, das ist das Tagebuch deines Großvaters, da sind wahre Gefühle und Begebenheiten drin.",
+                M4: "Ach quatsch, das ist das Tagebuch deines Ugroßvaters, da sind wahre Gefühle und Begebenheiten drin.",
                 M5: "Dein Opa hatte nur wilde Geschichten, die wenig mit der Wahrheit zu tun hatten.",
                 M7: "ja das stimmt natürlich mein Schatz, aber weißt du was wirklich echt war?",
                 M8: "Ich glaube mein Opa, also dein Urgroßvater, hat oft gedacht, dass ich vieles nicht verstehe als ich noch klein war.",
@@ -885,7 +885,7 @@ var Dejavu;
                 A2_S6_01_A: "Mein Opa ist gestern verstorben... dementsprechend bin ich eher etwas betrübt.",
                 A2_S6_03_A: "Ja schon, da ich seiner Mutter sehr ähnliche sehe hat er mich immer etwas bevorzugt.",
                 A2_S6_01_B: "ganz ok eigentlich, nichts besonderes... und wie geht es dir? ",
-                A2_S7_02_B: "Gleichfalls, machs gut",
+                A2_S7_02_B: "Gleichfalls, machs gut ",
                 A2_S8_01: "30.August 1887. Rosalia musste heute etwas länger arbeiten, deswegen habe ich auf unseren kleinen Jungen aufgepasst. Um seiner Mutter etwas näher zu sein, haben wir uns dafür entschieden den Abend im Blumengarten zu verbringen und sie dort zu treffen. Wir haben gewartet und gewartet, doch sie kam nicht. Nach einer Weile, wurde unser Junge quenglig und müde und wir sind nach Hause gegangen.",
                 A2_S8_02: "Sie ist seitdem nicht nach Hause gekommen... Ich mache mir Sorgen. Ich hoffe Sie ist nicht mit diesem Julius abgehauen, das wird sie mir sonst noch büßen.",
             },
@@ -910,7 +910,7 @@ var Dejavu;
         };
         let choicesCompliment = {
             ignore: "ignorieren",
-            takeCompliment: "Danke, dass ist sehr nett von dir",
+            takeCompliment: "Danke, das ist sehr nett von dir",
         };
         let choicesFeeling = {
             ok: "alles ok",
@@ -1162,7 +1162,7 @@ var Dejavu;
                 A3_S13_04: "In meinem Traum ist sie von etwas runtergestürzt...",
                 A3_S13_05: "Und sie meinte sie übt die letzte Drehung nochmal",
                 A3_S13_07: "Opa hat mir mal was erzählt, dass sich Rosalia oben in der Luft am wohlsten gefühlt hat",
-                A3_S13_11: "Nein, alles gut Mama... aber ich hab da eine Frage. Weißt du ob Großmutter Rosalia getanzt hat?",
+                A3_S13_11: "Nein, alles gut Mama... aber ich hab da eine Frage. Weißt du ob Urgroßmutter Rosalia getanzt hat?",
                 A3_S13_14: "Danke Mama, du bist die BESTE!",
                 A3_S13_15: "Wow, das ging aber schnell, das ist also das Bild.",
                 A3_S13_19: "Wirklich? Das ist ja perfekt.... Lass uns gleich hingehen"
@@ -1239,7 +1239,7 @@ var Dejavu;
         let text = {
             Narrator: {
                 A3_S11_01: "Nachdem du dich entschieden hast, dieses Abenteuer erst",
-                A3_S12_01: "Du rufst PIC an und erzählst im von deinem Traum und deinem Vorhaben, dass Geheimnis von dem Verschwinden deiner Urgroßmutter zu lüften",
+                A3_S12_01: "Du rufst ",
             },
             Rosi: {
                 A3_S11_01: "W... W...Was.... war das?",
@@ -1281,7 +1281,7 @@ var Dejavu;
                 Dejavu.dataForSave.lifepoints += 10;
                 Dejavu.handleFlower();
                 Dejavu.dataForSave.lovepoints += 20;
-                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A3_S12_01);
+                await Dejavu.ƒS.Speech.tell(Dejavu.characters.Narrator, text.Narrator.A3_S12_01 + Dejavu.dataForSave.partnerInCrimeName + " an und erzählst ihm von deinem Traum und deinem Vorhaben, dass Geheimnis von dem Verschwinden deiner Urgroßmutter zu lüften");
                 await Dejavu.ƒS.Speech.tell(Dejavu.characters.PIC, text.PIC.A3_S12_01);
                 let ChoiceMeeting = await Dejavu.ƒS.Menu.getInput(ChoicesMeeting, "choices");
                 switch (ChoiceMeeting) {
@@ -1463,7 +1463,7 @@ var Dejavu;
                 R5_A: "Oh wow, das ist aber sehr mutig, dich gegen die Familie zu stellen. Meine Urgroßmutter war auch so mutig",
                 R7_A: "Ja das war sie...",
                 R2_C: "Ja der Mord an meiner Urgroßmutter Rosalia",
-                R8_C: "Oh danke, dass sind sehr wichtige Informationen",
+                R8_C: "Oh danke, das sind sehr wichtige Informationen",
             },
             PIC: {
                 P5: "Klar! Clowns sind doch die Allwissenden auf einem Zirkus",

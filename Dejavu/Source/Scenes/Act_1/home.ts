@@ -29,7 +29,7 @@ namespace Dejavu {
         A1_S1_05:
           "<i>Endlich Zuhause... Ich hoffe, Opa hatte ein erfülltes Leben </i>",
         A1_S1_06:
-          "<i>Ich habe Opa immer gerne besucht, auch als er schon senil war, hatte ich das Gefühl, dass er mich immer sofort wiedererkannt hat.</i>",
+          "<i>Ich habe Opa immer gerne besucht, auch als er schon an Alzeheimer erkrankte, hatte ich das Gefühl, dass er mich immer sofort wiedererkannt hat.</i>",
         A1_S1_07:
           "<i>Da ich seiner Mutter und meiner Urgroßmutter sehr ähnlich sehe, hatten wir schon immer eine besondere Beziehung.</i>",
         A1_S1_08:
@@ -53,7 +53,7 @@ namespace Dejavu {
 
         A1_S4_03: "<i> Huch... was ist den das? </i>",
         A1_S4_04:
-          "<i> Das sieht nach einem Tagebuch aus... kann es das Tagebuch von Großvater sein, von dem Opa immer erzählt hat? </i>",
+          "<i> Das sieht nach einem Tagebuch aus... kann es das Tagebuch von Urgroßvater sein, von dem Opa immer erzählt hat? </i>",
         A1_S4_06:
           "<i>Wenn das Mama sieht, wird sie es mir bestimmt wegnehmen</i>",
         A1_S4_07: "<i> Soll ich es trotzdem mitnehmen? </i>",
@@ -61,9 +61,9 @@ namespace Dejavu {
         A1_S5_01_A:
           "Hey Mama, ich bin echt kaputt von der Heimfahrt, ist es ok, wenn ich in mein Zimmer gehen würde und mich schon ins Bett legen würde?",
         A1_S5_02_A:
-          "<i>Opa hat mir zwar schon immer viel von Rosalia erzählt, aber sie aus den Augen von Großvater zu sehen... Ich bin gespannt was mich erwartet.</i>",
+          "<i>Opa hat mir zwar schon immer viel von Rosalia erzählt, aber sie aus den Augen von Urgroßvater zu sehen... Ich bin gespannt was mich erwartet.</i>",
         A1_S5_03_A:
-          "<i>Wow, so sah <strong> MEINE </strong> Großmutter aus?! Sie ist wunderschön</i>",
+          "<i>Wow, so sah <strong> MEINE </strong> Urgroßmutter aus?! Sie ist wunderschön</i>",
         A1_S5_04_A:
           "<i>Ich sehe ihr wirklich sehr ähnlich. Sogar mein Muttermal ist an der gleichen Stelle... Da hat das Universum aber auch nur copy und paste gemacht.</i>",
         A1_S5_05_A:
@@ -71,7 +71,7 @@ namespace Dejavu {
         A1_S5_06_A:
           "Sie ist einfach eine einzigartige Frau. Durch das Bild allein spüre ich ihr Selbstbewusstsein. Das ich diese Frau an meiner Seite haben darf...",
         A1_S5_07_A:
-          "<i> Jetzt bin ich aber wirklich müde, Großmutter scheint eine sehr interessante Person gewesen zu sein. Ich hätte sie gerne kennengelernt...",
+          "<i> Jetzt bin ich aber wirklich müde, Urgroßmutter scheint eine sehr interessante Person gewesen zu sein. Ich hätte sie gerne kennengelernt...",
 
         A1_S5_02_B: "Wie.., Wie.. kommt den das hier her?",
         A1_S5_03_B:

@@ -18,7 +18,7 @@ namespace Dejavu {
             A3_S13_04: "In meinem Traum ist sie von etwas runtergestürzt...",
             A3_S13_05: "Und sie meinte sie übt die letzte Drehung nochmal",
             A3_S13_07: "Opa hat mir mal was erzählt, dass sich Rosalia oben in der Luft am wohlsten gefühlt hat",
-            A3_S13_11: "Nein, alles gut Mama... aber ich hab da eine Frage. Weißt du ob Großmutter Rosalia getanzt hat?",
+            A3_S13_11: "Nein, alles gut Mama... aber ich hab da eine Frage. Weißt du ob Urgroßmutter Rosalia getanzt hat?",
             A3_S13_14: "Danke Mama, du bist die BESTE!",
             A3_S13_15: "Wow, das ging aber schnell, das ist also das Bild.",
             A3_S13_19: "Wirklich? Das ist ja perfekt.... Lass uns gleich hingehen"

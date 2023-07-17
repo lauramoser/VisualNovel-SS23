@@ -36,7 +36,7 @@ namespace Dejavu {
         A2_S6_01_B:
           "ganz ok eigentlich, nichts besonderes... und wie geht es dir? ",
 
-        A2_S7_02_B: "Gleichfalls, machs gut",
+        A2_S7_02_B: "Gleichfalls, machs gut ",
         A2_S8_01:
           "30.August 1887. Rosalia musste heute etwas länger arbeiten, deswegen habe ich auf unseren kleinen Jungen aufgepasst. Um seiner Mutter etwas näher zu sein, haben wir uns dafür entschieden den Abend im Blumengarten zu verbringen und sie dort zu treffen. Wir haben gewartet und gewartet, doch sie kam nicht. Nach einer Weile, wurde unser Junge quenglig und müde und wir sind nach Hause gegangen.",
         A2_S8_02:
@@ -75,7 +75,7 @@ namespace Dejavu {
     };
     let choicesCompliment = {
       ignore: "ignorieren",
-      takeCompliment: "Danke, dass ist sehr nett von dir",
+      takeCompliment: "Danke, das ist sehr nett von dir",
     };
     let choicesFeeling = {
       ok: "alles ok",

@@ -246,7 +246,7 @@ namespace Dejavu {
     },
 
     Mom: {
-      name: "Mom",
+      name: "Mama",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
         smiling: "Images/Characters/Mom/Mom_smiling.png",
@@ -315,7 +315,7 @@ namespace Dejavu {
       },
     },
     RosaliasMother: {
-      name: "Rosalias Mother",
+      name: "Rosalias Mutter",
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
         angry:
