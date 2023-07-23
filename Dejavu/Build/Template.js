@@ -70,9 +70,9 @@ var Dejavu;
             edge: 1,
         },
         pzzle: {
-            duration: 2,
+            duration: 1.5,
             alpha: "./Images/Transitions/puzz.png",
-            edge: 1,
+            edge: 0.5,
         },
     };
     //Animations
@@ -1490,7 +1490,7 @@ var Dejavu;
                 C6_B: "Wenn ihr die Wahrsagerin fragt, würde ich euch nicht empfehlen sie in die Vergangenheit schauen zu lassen. Das endet nie gut für alle beteiligten",
                 C1_C: "hmm ein Mord?",
                 C3_C: "ich bin leider noch nicht lange bei diesem Zirkus... lass mich überlegen",
-                C4_C: "Ich glaube ich habe mal die Wahrsagerin und den Direktor mit einander sprechen lassen, dass sie mich eigentlich gar nicht einstellen wollen, weil ich von außerhalb komme",
+                C4_C: "Ich glaube ich habe mal die Wahrsagerin und den Direktor mit einander sprechen hören, dass sie mich eigentlich gar nicht einstellen wollen, weil ich von außerhalb komme",
                 C5_C: "Die hatten wohl früher mal ein Problem mit einer Seiltänzerin die für Schwierigkeiten gesorgt hat.",
                 C6_C: "Irgendwas mit... Sie musste beseitigt werden.",
                 C7_C: "Ich habe mir nie darüber Gedanken gemacht... war nur froh, dass sie mich doch eingestellt haben",
@@ -1694,8 +1694,8 @@ var Dejavu;
                 D2: "Oh Hallo ihr zwei",
                 D4: "Aber ja, viele Generationen vor mir haben alles für diesen Zirkus aufgegeben.",
                 D6: "Oh ja das ist es auch junge Dame",
-                D8: "Aber ja, sehr viel sogar..:",
-                D9: "Einmal mussten mein Opa sogar eine Leiche wegbringen.. das war wohl irgend eine verwöhnte Göre, die sich selbst in Schwierigkeiten gebracht hat.",
+                D8: "Aber ja, sehr viel sogar...",
+                D9: "Einmal musste mein Opa sogar eine Leiche wegbringen.. das war wohl irgend eine verwöhnte Göre, die sich selbst in Schwierigkeiten gebracht hat.",
                 D10: "Und die Drecksarbeit hing natürlich am Zirkus Direktor... so wie immer... wahrscheinlich hat sie ihre Seile nicht richtig überprüft und ist dann herunter gefallen... Tja... Außenstehenden sollte man auch keine Bühne geben... was sich mein Opa da nur gedacht hat.",
                 D11: "Oh was rede ich denn da nur... ich ... ich muss dann mal weiter",
             },

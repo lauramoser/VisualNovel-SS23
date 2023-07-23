@@ -45,7 +45,7 @@ namespace Dejavu {
 
         C1_C: "hmm ein Mord?",
         C3_C: "ich bin leider noch nicht lange bei diesem Zirkus... lass mich überlegen",
-        C4_C: "Ich glaube ich habe mal die Wahrsagerin und den Direktor mit einander sprechen lassen, dass sie mich eigentlich gar nicht einstellen wollen, weil ich von außerhalb komme",
+        C4_C: "Ich glaube ich habe mal die Wahrsagerin und den Direktor mit einander sprechen hören, dass sie mich eigentlich gar nicht einstellen wollen, weil ich von außerhalb komme",
         C5_C: "Die hatten wohl früher mal ein Problem mit einer Seiltänzerin die für Schwierigkeiten gesorgt hat.",
         C6_C: "Irgendwas mit... Sie musste beseitigt werden.",
         C7_C: "Ich habe mir nie darüber Gedanken gemacht... war nur froh, dass sie mich doch eingestellt haben",

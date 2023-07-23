@@ -73,9 +73,9 @@ namespace Dejavu {
       edge: 1,
     },
     pzzle: {
-      duration: 2,
+      duration: 1.5,
       alpha: "./Images/Transitions/puzz.png",
-      edge: 1,
+      edge: 0.5,
     },
   };
 
